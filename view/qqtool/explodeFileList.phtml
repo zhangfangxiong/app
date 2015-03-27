@@ -1,0 +1,100 @@
+<style>
+    .margin_aa {
+        margin-bottom: 10px;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<?php echo $GLOBALS['description'] ?>">
+    <meta name="keywords" content="<?php echo $GLOBALS['keywords'] ?>">
+    <meta name="author" content="<?php echo $GLOBALS['author'] ?>">
+
+    <title>
+        <?php echo $GLOBALS['title'] ?>
+    </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/bootstrap3.3.2/css/bootstrap.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+<!-- Docs master nav -->
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+    </div>
+</header>
+
+<div class="container bs-docs-container">
+    <form action="qqTool.php?action=exportFile" method="post" onsubmit="return importcfm()">
+        <div class="form-group">
+            <label for="exampleInputEmail2">填写导出文件名，如：aa.txt</label>
+            <input type="text" class="form-control" name="sExplodeName">
+        </div>
+        <div class="form-group">
+            <div class="margin_aa"><label>
+                    <input type="radio" name="importType" value="1"> 按导入时间导出
+                </label></div>
+            <?php
+            foreach ($aImportTimes as $key => $value) {
+                ?>
+                <label class="radio-inline">
+                    <input type="radio" name="importtime" id="sFileName<?php echo $key; ?>"
+                           value="<?php echo date("Y-m-d H:i:s",$value['time']); ?>"> <?php echo date("Y-m-d H:i:s",$value['time']); ?>
+                </label>
+            <?php
+            } ?>
+        </div>
+        <div class="form-group">
+            <div class="margin_aa"><label>
+                    <input type="radio" name="importType" value="2"> 自定义时间导出
+                </label></div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="exampleInputName2">导出开始时间</label>
+                    <input type="text" class="form-control" name="startTime">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">导出结束时间</label>
+                    <input type="text" class="form-control" name="endTime">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">导出文件</button>
+        </div>
+    </form>
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../static/jquery/jquery-2.1.1.js"></script>
+
+
+<script src="../static/bootstrap3.3.2/js/bootstrap.js"></script>
+<script language="javascript">
+    function importcfm() {
+        if (confirm('确定继续？')) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>

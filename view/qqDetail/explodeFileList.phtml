@@ -1,0 +1,174 @@
+
+<style>
+    .margin_aa {
+        margin-bottom: 10px;
+        font:14px bold;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<?php echo $GLOBALS['description'] ?>">
+    <meta name="keywords" content="<?php echo $GLOBALS['keywords'] ?>">
+    <meta name="author" content="<?php echo $GLOBALS['author'] ?>">
+
+    <title>
+        <?php echo $GLOBALS['title'] ?>
+    </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/bootstrap3.3.2/css/bootstrap.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+<!-- Docs master nav -->
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+    </div>
+</header>
+
+<div class="container bs-docs-container">
+    <form action="qqDetailTool.php?action=exportFile" method="post" onsubmit="return importcfm()">
+        <div class="form-group">
+            <label for="exampleInputEmail2"><input type="checkbox" name="adoption" value="1">是否标示（如果勾选，则导出数据做标示，之后所有筛选将自动忽略该数据）</label>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail2">填写导出文件名，如：aa.txt</label>
+            <input type="text" class="form-control" name="sExplodeName">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail2">填写导出数量（如果实际数量小于所输数量，则只导出实际数量），如：100000</label>
+            <input type="text" class="form-control" name="sExplodeNum">
+        </div>
+        <div class="form-group">
+            <div class="margin_aa"><label>
+                    性别
+                </label></div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <select name="sex">
+                        <option value="0">请选择</option>
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="margin_aa"><label>
+                     验证种类
+                </label></div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <select name="checktype">
+                        <option value="0">请选择</option>
+                        <option value="1">回答问题</option>
+                        <option value="2">拒加</option>
+                        <option value="3">审核问题</option>
+                        <option value="4">需要验证</option>
+                        <option value="5">直接添加</option>
+                        <option value="6">其他</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="margin_aa"><label>
+                    <input type="radio" name="check_age" value="1"> 年龄区间(输入年龄即可，如：12)
+                </label></div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="exampleInputName2">开始年龄</label>
+                    <input type="text" class="form-control" name="startAge">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">结束年龄</label>
+                    <input type="text" class="form-control" name="endAge">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="margin_aa"><label>
+                    <input type="radio" name="check_age" value="2"> 生日区间(输入年龄即可，如：1987-03-09)
+                </label></div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="exampleInputName2">开始生日</label>
+                    <input type="text" class="form-control" name="startBirth">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">结束生日</label>
+                    <input type="text" class="form-control" name="endBirth">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="margin_aa"><label>
+                    省列表
+                </label></div>
+            <div class="form-inline">
+                <?php
+                foreach ($aProvice as $key => $value) {
+                    ?>
+                    <label class="radio-inline">
+                        <input type="checkbox" name="province[]" id="province<?php echo $key; ?>"
+                               value="<?php echo $value['code']; ?>"> <?php echo $value['name']; ?>
+                    </label>
+                <?php
+                } ?>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="margin_aa"><label>
+                    市列表
+                </label></div>
+            <div class="form-inline">
+                <?php
+                foreach ($aCity as $key => $value) {
+                    ?>
+                    <label class="radio-inline">
+                        <input type="checkbox" name="city[]" id="city<?php echo $key; ?>"
+                               value="<?php echo $value['code']; ?>"> <?php echo $value['name']; ?>
+                    </label>
+                <?php
+                } ?>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">导出文件</button>
+        </div>
+    </form>
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../static/jquery/jquery-2.1.1.js"></script>
+
+
+<script src="../static/bootstrap3.3.2/js/bootstrap.js"></script>
+<script language="javascript">
+    function importcfm() {
+        if (confirm('确定继续？')) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>
