@@ -33,12 +33,7 @@ class baseWeixin extends base
                 echo $_GET['echostr'];
                 die;
             }
-            if (isset($_GET['action']) && $_GET['action']) {
-                $action = $_GET['action'] . "Action";
-            } else {
-                $action = "receiveMsgAction";
-            }
-            $this->$action();
+            parent::__construct();
         }
     }
 
