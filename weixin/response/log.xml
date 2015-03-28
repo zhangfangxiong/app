@@ -1,0 +1,66 @@
+21:43:25 R <xml><ToUserName><![CDATA[gh_204a5106b4bc]]></ToUserName>
+<FromUserName><![CDATA[oKZ1es2lJSz0mzack9Qw8u9hJUR4]]></FromUserName>
+<CreateTime>1426427260</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[v 规范]]></Content>
+<MsgId>6126458432026719031</MsgId>
+</xml>
+21:43:25 T <xml>
+<ToUserName><![CDATA[oKZ1es2lJSz0mzack9Qw8u9hJUR4]]></ToUserName>
+<FromUserName><![CDATA[gh_204a5106b4bc]]></FromUserName>
+<CreateTime>1426427005</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[2015-03-15 21:43:25
+技术支持 方倍工作室]]></Content>
+</xml>
+21:45:37 R <xml><ToUserName><![CDATA[gh_204a5106b4bc]]></ToUserName>
+<FromUserName><![CDATA[oKZ1es2lJSz0mzack9Qw8u9hJUR4]]></FromUserName>
+<CreateTime>1426427392</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[哈哈哈]]></Content>
+<MsgId>6126458998962402171</MsgId>
+</xml>
+21:45:37 T <xml>
+<ToUserName><![CDATA[oKZ1es2lJSz0mzack9Qw8u9hJUR4]]></ToUserName>
+<FromUserName><![CDATA[gh_204a5106b4bc]]></FromUserName>
+<CreateTime>1426427137</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[2015-03-15 21:45:37
+技术支持 方倍工作室]]></Content>
+</xml>
+23:10:22 R <xml><ToUserName><![CDATA[gh_204a5106b4bc]]></ToUserName>
+<FromUserName><![CDATA[oKZ1es2lJSz0mzack9Qw8u9hJUR4]]></FromUserName>
+<CreateTime>1426432477</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[文本]]></Content>
+<MsgId>6126480838871104059</MsgId>
+</xml>
+23:10:22 T <xml>
+<ToUserName><![CDATA[oKZ1es2lJSz0mzack9Qw8u9hJUR4]]></ToUserName>
+<FromUserName><![CDATA[gh_204a5106b4bc]]></FromUserName>
+<CreateTime>1426432222</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[这是个文本消息]]></Content>
+</xml>
+23:11:38 R <xml><ToUserName><![CDATA[gh_204a5106b4bc]]></ToUserName>
+<FromUserName><![CDATA[oKZ1es2lJSz0mzack9Qw8u9hJUR4]]></FromUserName>
+<CreateTime>1426432550</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[单图文]]></Content>
+<MsgId>6126481152403716692</MsgId>
+</xml>
+23:11:38 T <xml>
+<ToUserName><![CDATA[oKZ1es2lJSz0mzack9Qw8u9hJUR4]]></ToUserName>
+<FromUserName><![CDATA[gh_204a5106b4bc]]></FromUserName>
+<CreateTime>1426432298</CreateTime>
+<MsgType><![CDATA[news]]></MsgType>
+<ArticleCount>1</ArticleCount>
+<Articles>
+    <item>
+        <Title><![CDATA[单图文标题]]></Title>
+        <Description><![CDATA[单图文内容]]></Description>
+        <PicUrl><![CDATA[http://discuz.comli.com/weixin/weather/icon/cartoon.jpg]]></PicUrl>
+        <Url><![CDATA[http://m.cnblogs.com/?u=txw1958]]></Url>
+    </item>
+</Articles>
+</xml>
