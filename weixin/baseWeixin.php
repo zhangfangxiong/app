@@ -5,12 +5,13 @@
  * Date: 15/3/8
  * Time: 下午3:20
  */
-include_once("../lib/DB.php");
-include_once("../lib/memcache.php");
-include_once("../lib/function.php");
-include_once("../lib/base.php");
-include_once("../config/DBconf_weixin.php");
-include_once("../config/globalConfig.php");
+
+include_once(dirname(dirname(__FILE__))."/lib/DB.php");
+include_once(dirname(dirname(__FILE__))."/lib/memcache.php");
+include_once(dirname(dirname(__FILE__))."/lib/function.php");
+include_once(dirname(dirname(__FILE__))."/lib/base.php");
+include_once(dirname(dirname(__FILE__))."/config/DBconf_weixin.php");
+include_once(dirname(dirname(__FILE__))."/config/globalConfig.php");
 
 class baseWeixin extends base
 {
