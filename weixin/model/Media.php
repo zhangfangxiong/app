@@ -9,11 +9,29 @@ include_once(dirname(dirname(dirname(__FILE__))) . "/lib/ModelBase.php");
 
 class Media extends ModelBase
 {
-    //const UPLOADURL = "https://api.weixin.qq.com/cgi-bin/media/uploadnews?access_token=ACCESS_TOKEN";
+    const NEWSUPLOADURL = "https://api.weixin.qq.com/cgi-bin/media/uploadnews";//图文素材接口
     const UPLOADURL = "http://file.api.weixin.qq.com/cgi-bin/media/upload";//上传素材接口
-    const DOWNLOADURL = "http://file.api.weixin.qq.com/cgi-bin/media/get";
+    const DOWNLOADURL = "http://file.api.weixin.qq.com/cgi-bin/media/get";//素材下载接口
     private $aMediaList = array();
-    private $aMediaType = array("image"=>"media_id","voice"=>"voice_media_id","video"=>"video_media_id","thumb"=>"thumb_media_id");
+
+    /**
+     * 上传图文素材
+     * @param $sToken
+     * @param $aData
+     * @return mixed
+     */
+    public function uploadNewsFile($sToken,$aData)
+    {
+        $aFile = json_encode(array("articles" => $aData));
+        $sUploadUrl = self::NEWSUPLOADURL . "?access_token=" . $sToken;
+        $sReturn = $this->curl($sUploadUrl, true, $aFile);
+        $aData = json_decode($sReturn, true);
+        $sMedia_id = $aData["media_id"];
+        //将数据存入数据库中
+        $oDB = $this->getDB();
+        $oDB->insert("media", $aData);
+        return $sMedia_id;
+    }
 
     /**
      * 上传文件
@@ -29,8 +47,10 @@ class Media extends ModelBase
         $sReturn = $this->curl($sUploadUrl, true, $aFile);
         $aData = json_decode($sReturn, true);
         //更改所需media_id的key
-        $aData["media_id"] = $aData[$this->aMediaType[$aData["type"]]];
-        unset($aData[$this->aMediaType[$aData["type"]]]);
+        if ($type == "thumb") {
+            $aData["media_id"] = $aData["thumb_media_id"];
+            unset($aData["thumb_media_id"]);
+        }
         $sMedia_id = $aData["media_id"];
         //将数据存入数据库中
         $oDB = $this->getDB();
@@ -64,7 +84,7 @@ class Media extends ModelBase
             foreach ($aData as $key => $value) {
                 $tmp[$value["type"]][] = $value;
             }
-            $this->aMediaList = $aData;
+            $this->aMediaList = $tmp;
         }
         return $this->aMediaList;
     }
@@ -76,9 +96,9 @@ class Media extends ModelBase
      */
     public function getMediaByType($sType)
     {
-        if (!isset($this->aMediaList[$sType]) ) {
+        if (!isset($this->aMediaList[$sType])) {
             $created_at = time() - 3600 * 24 * 3;//三天过期时间
-            $sSql = "SELECT * FROM media WHERE created_at >" . $created_at." AND type = '".$sType."'";
+            $sSql = "SELECT * FROM media WHERE created_at >" . $created_at . " AND type = '" . $sType . "'";
             $oDB = $this->getDB();
             $aData = $oDB->get_all($sSql);
             $this->aMediaList[$sType] = $aData;
