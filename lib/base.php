@@ -107,7 +107,7 @@ class base
      * @param $url
      * 访问url
      */
-    protected function curl($sUrl)
+    protected function curl($sUrl,$bPost = false,$aData = array())
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_DNS_USE_GLOBAL_CACHE, true);
@@ -115,12 +115,17 @@ class base
         curl_setopt($ch, CURLOPT_URL, $sUrl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         //curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        if ($bPost) {
+            curl_setopt ( $ch, CURLOPT_POST, 1 );
+        }
+        if ($bPost && !empty($aData)) {
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $aData);
+        }
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
         $content = curl_exec($ch);
         $response = curl_getinfo($ch);
         curl_close($ch);
-
         return $content;
     }
 

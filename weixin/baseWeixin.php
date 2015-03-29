@@ -22,20 +22,20 @@ class baseWeixin extends base
     const APPID = "wx9b2a25e390a27d33";
     const APPSECRET = "84796fa0c79fd86b5087263cbbb27268";
     const TOKEN = "aaaabbbbccccdddd";
-    const ACCESSTOKENURL = "https://api.weixin.qq.com/cgi-bin/token";
-    const GETWEIXINIPURL = "https://api.weixin.qq.com/cgi-bin/getcallbackip";
+    const ACCESSTOKENURL = "https://api.weixin.qq.com/cgi-bin/token";//获取TOKEN接口
+    const GETWEIXINIPURL = "https://api.weixin.qq.com/cgi-bin/getcallbackip";//获取IP接口
     const RESTYPE = "text";//回复的类型
 
     public function __construct()
     {
-        if ($this->checkSignature()) {
+        //if ($this->checkSignature()) {
             if (isset($_GET['echostr'])) {
                 //第一次配置的基础验证
                 echo $_GET['echostr'];
                 die;
             }
             parent::__construct();
-        }
+        //}
     }
 
     /**
@@ -76,7 +76,7 @@ class baseWeixin extends base
                 $tokenParamArr['secret'] = self::APPSECRET;
                 $tokenParamArr['grant_type'] = 'client_credential';
                 $tokenUrl .= "?" . http_build_query($tokenParamArr);
-                $data = $this->curl($tokenUrl);
+                $data = $this->curl($tokenUrl,false);
                 $data = json_decode($data, true);
                 $oMem->set('weixin_AccessToken', $data['access_token'], 7200);
                 $sAccesstoken = $data['access_token'];
@@ -107,7 +107,7 @@ class baseWeixin extends base
         $sUrl = self::GETWEIXINIPURL;
         $sAccessToken = $this->getAccessToken();
         $sUrl .= "?access_token=" . $sAccessToken;
-        $sData = $this->curl($sUrl);
+        $sData = $this->curl($sUrl,false);
 
         return $sData;
     }
