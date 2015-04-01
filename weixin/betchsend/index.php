@@ -3,65 +3,79 @@ include_once("../baseWeixin.php");
 include_once("../model/Media.php");
 include_once("../model/Group.php");
 include_once("../model/User.php");
+include_once("../model/Batchsend.php");
 
 
 class batchsend_index extends baseWeixin
 {
-    public function indexAction()
-    {
-        $sFielename = $GLOBALS['FILEPATH'] . "m_happy.jpg";
-        $sToken = $this->getAccessToken();
 
+    /**
+     * 创建群发
+     */
+    public function initBatchAction()
+    {
+        $sFielename = $GLOBALS['FILEPATH'] . "12yuexiao.jpg";
+        $sToken = $this->getAccessToken();
         //上传图文消息
         $oMedia = new Media();
-        $aThumb = $oMedia->getMediaByType("thumb");
-        if (empty($aThumb)) {
-            //调用上传接口
-            $sMedia_id = $oMedia->uploadFile($sFielename, $sToken, "thumb");
-        } else {
-            //测试阶段，先选取第一张有效缩略图
-            $sMedia_id = $aThumb[0]['media_id'];
+        $aMediaIds = $oMedia->getMediaByType("thumb");
+        $aNews = $oMedia->initNewsTmp($aMediaIds);
+        //调用上传news接口
+        $aNews = $oMedia->uploadNewsFile($sToken,$aNews);
+        //调用分组接口,判断该news用于哪个分组
+        $oGroup = new Group();
+        $aGroupList = $oGroup->getGroupList($sToken);
+        //这里现在是想分到100和101分组
+        $aSendList = array(100,101);//群发的分组
+        $iSendTime = time();//群发的时间
+        $aNews["group_id"] = implode(",",$aSendList);
+        $aNews["send_time"] = $iSendTime;
+        //将数据存入数据库中
+        $oDB = $this->getDB();
+        $oDB->insert("batchsend", $aNews);
+
+        /**
+        //调用上传缩略图接口
+        $sMedia_id = $oMedia->uploadFile($sFielename, $sToken, "thumb");
+         */
+    }
+
+    /**
+     * 扫描群发表，群发队列中消息
+     */
+    public function batchSendAction()
+    {
+        $sToken = $this->getAccessToken();
+        $oBatchSend = new Batchsend();
+        $abatchSendList = $oBatchSend->batchSendList();
+        $sReturn = array();
+        foreach ($abatchSendList as $key=>$value) {
+            //生成群发模版
+            $sAction = ($value["type"] != "vedio") ? $value["type"]."Temp" : "mpvideoTemp";
+            $aGroupID = explode(",",$value["group_id"]);
+            foreach ($aGroupID as $k => $v) {
+                $sTemp = $oBatchSend->$sAction($v,$value["media_id"]);
+                $sReturn[] = $oBatchSend->patchSendByGroup($sToken,$sTemp);
+            }
         }
-        //这里到时候从数据库的模版中取
-        $news[] = array(
-            "thumb_media_id" => $sMedia_id,
-            "author" => "zfx",
-            "title" => "test",
-            "content_source_url" => "http://www.baidu.com",
-            "content" => "111111",
-            "digest" => "232323",
-            "show_cover_pic" => "1"
+        print_r($sReturn);
+    }
 
-        );
-        $news[] = array(
-            "thumb_media_id" => $sMedia_id,
-            "author" => "zfx1",
-            "title" => "test1",
-            "content_source_url" => "http://www.baidu.com1",
-            "content" => "111111",
-            "digest" => "232323",
-            "show_cover_pic" => "1"
-
-        );
-        //$sMedia_id = $oMedia->uploadNewsFile($sToken,$news);
+    /**
+     * 获取用户信息
+     */
+    public function indexAction()
+    {
+        $sToken = $this->getAccessToken();
+        //获取用户列表接口
         $oUser = new User();
         $aData = $oUser->getUserList($sToken);
-        $iOpenID = $aData['data']["openid"][0];
-        $oGroup = new Group();
-        $iData = $oGroup->updateUserGroup($sToken,$iOpenID,118);
-        print_r($iData);
+        $aUserInfo = array();
+        foreach ($aData["data"]["openid"] as $key => $value) {
+            $aUserInfo[] = $oUser->getUserInfo($sToken,$value);
+        }
+        print_r($aUserInfo);
         die;
-
-
-        $aData = $oGroup->getGroupList($sToken);
-        $iGroupID = $aData["groups"][4]["id"];
-        $aArr = array("group"=>array("id"=>$iGroupID,"name"=>"test6666666"));
-        $aData = $oGroup->updateGroupName($sToken,$aArr);
-        print_r($aData);
-        die;
-
-        //$sReturn = $aUpload->downloadfile($sMedia_id,$sToken);
-        //调用下载接口
         $this->display("weixin/index.phtml");
     }
 }
