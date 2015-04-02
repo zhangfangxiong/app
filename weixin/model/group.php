@@ -21,11 +21,11 @@ class Group extends ModelBase
      * @param $sName
      * @return mixed
      */
-    public function createGroup($sToken,$sName)
+    public  static function createGroup($sToken,$sName)
     {
         $aFile = json_encode(array("group" => array("name"=>$sName)));
         $sCreateGroupUrl = self::CREATEGROUPURL . "?access_token=" . $sToken;
-        $sReturn = $this->curl($sCreateGroupUrl, true, $aFile);
+        $sReturn = self::curl($sCreateGroupUrl, true, $aFile);
         $aData = json_decode($sReturn, true);
         return $aData;
     }
@@ -35,10 +35,10 @@ class Group extends ModelBase
      * @param $sToken
      * @return mixed
      */
-    public function getGroupList($sToken)
+    public  static function getGroupList($sToken)
     {
         $sGetGroupList = self::GROUPLIST . "?access_token=" . $sToken;
-        $sReturn = $this->curl($sGetGroupList);
+        $sReturn = self::curl($sGetGroupList);
         return json_decode($sReturn,true);
     }
 
@@ -48,10 +48,10 @@ class Group extends ModelBase
      * @param $sOpenID
      * @return mixed
      */
-    public function getGroupByUserID($sToken,$sOpenID)
+    public  static function getGroupByUserID($sToken,$sOpenID)
     {
         $sGetGroupList = self::USERINGROUP . "?access_token=" . $sToken;
-        $sReturn = $this->curl($sGetGroupList,true,json_encode(array("openid"=>$sOpenID)));
+        $sReturn = self::curl($sGetGroupList,true,json_encode(array("openid"=>$sOpenID)));
         return json_decode($sReturn,true);
     }
 
@@ -61,10 +61,10 @@ class Group extends ModelBase
      * @param $sOpenID
      * @return mixed
      */
-    public function updateUserGroup($sToken,$sOpenID,$sGroupID)
+    public  static function updateUserGroup($sToken,$sOpenID,$sGroupID)
     {
         $sGetGroupList = self::UPDATEUSERGROUP . "?access_token=" . $sToken;
-        $sReturn = $this->curl($sGetGroupList,true,json_encode(array("openid"=>$sOpenID,"to_groupid"=>$sGroupID)));
+        $sReturn = self::curl($sGetGroupList,true,json_encode(array("openid"=>$sOpenID,"to_groupid"=>$sGroupID)));
         return json_decode($sReturn,true);
     }
 
@@ -74,13 +74,13 @@ class Group extends ModelBase
      * @param $aData
      * @return mixed
      */
-    public function updateGroupName($sToken,$aData)
+    public  static function updateGroupName($sToken,$aData)
     {
         //格式
         //$aData = array("group"=>array("id"=>$iGroupID,"name"=>"test6666666"));
 
         $sGetGroupList = self::UPDATEGROUPNAME . "?access_token=" . $sToken;
-        $sReturn = $this->curl($sGetGroupList,true,json_encode($aData));
+        $sReturn = self::curl($sGetGroupList,true,json_encode($aData));
         return json_decode($sReturn,true);
     }
 }

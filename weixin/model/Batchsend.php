@@ -22,10 +22,10 @@ class Batchsend extends ModelBase
      * @param $sData
      * @return mixed
      */
-    public function patchSendByGroup($sToken,$sData)
+    public static function patchSendByGroup($sToken,$sData)
     {
         $sGroupSendUrl = self::GROUPSEND . "?access_token=" . $sToken;
-        $sReturn = $this->curl($sGroupSendUrl,true,$sData);
+        $sReturn = self::curl($sGroupSendUrl,true,$sData);
         return $sReturn;
     }
 
@@ -33,15 +33,15 @@ class Batchsend extends ModelBase
      * 群发列表
      * @return array
      */
-    public function batchSendList()
+    public static function batchSendList()
     {
-        if (empty($this->batchSendList)) {
+        if (empty(self::batchSendList)) {
             $sSql = "SELECT * FROM batchsend WHERE has_send =0";
-            $oDB = $this->getDB();
+            $oDB = self::getDB();
             $aData = $oDB->get_all($sSql);
-            $this->batchSendList = $aData;
+            self::$batchSendList = $aData;
         }
-        return $this->batchSendList;
+        return self::$batchSendList;
     }
 
     /**
@@ -51,7 +51,7 @@ class Batchsend extends ModelBase
      * @param bool $is_to_all
      * @return string
      */
-    public function newsTemp($group_id,$media_id,$is_to_all=false)
+    public static function newsTemp($group_id,$media_id,$is_to_all=false)
     {
         $aData =  array(
             "filter" => array(
@@ -73,7 +73,7 @@ class Batchsend extends ModelBase
      * @param bool $is_to_all
      * @return string
      */
-    public function textTemp($group_id,$sContent,$is_to_all=false)
+    public static function textTemp($group_id,$sContent,$is_to_all=false)
     {
         $aData =  array(
             "filter" => array(
@@ -95,7 +95,7 @@ class Batchsend extends ModelBase
      * @param bool $is_to_all
      * @return string
      */
-    public function voiceTemp($group_id,$media_id,$is_to_all=false)
+    public static function voiceTemp($group_id,$media_id,$is_to_all=false)
     {
         $aData =  array(
             "filter" => array(
@@ -117,7 +117,7 @@ class Batchsend extends ModelBase
      * @param bool $is_to_all
      * @return string
      */
-    public function imageTemp($group_id,$media_id,$is_to_all=false)
+    public static function imageTemp($group_id,$media_id,$is_to_all=false)
     {
         $aData =  array(
             "filter" => array(
@@ -139,7 +139,7 @@ class Batchsend extends ModelBase
      * @param bool $is_to_all
      * @return string
      */
-    public function mpvideoTemp($group_id,$media_id,$is_to_all=false)
+    public static function mpvideoTemp($group_id,$media_id,$is_to_all=false)
     {
         $aData =  array(
             "filter" => array(
@@ -159,7 +159,7 @@ class Batchsend extends ModelBase
      * @param $sOpenID
      * @param $media_id
      */
-    public function newsPreview($sOpenID,$media_id)
+    public static function newsPreview($sOpenID,$media_id)
     {
         $aData = array(
             "touser" => $sOpenID,
@@ -176,7 +176,7 @@ class Batchsend extends ModelBase
      * @param $sOpenID
      * @param $sContent
      */
-    public function textPreview($sOpenID,$sContent)
+    public static function textPreview($sOpenID,$sContent)
     {
         $aData = array(
             "touser" => $sOpenID,
@@ -193,7 +193,7 @@ class Batchsend extends ModelBase
      * @param $sOpenID
      * @param $media_id
      */
-    public function voicePreview($sOpenID,$media_id)
+    public static function voicePreview($sOpenID,$media_id)
     {
         $aData = array(
             "touser" => $sOpenID,
@@ -210,7 +210,7 @@ class Batchsend extends ModelBase
      * @param $sOpenID
      * @param $media_id
      */
-    public function imagePreview($sOpenID,$media_id)
+    public static function imagePreview($sOpenID,$media_id)
     {
         $aData = array(
             "touser" => $sOpenID,
@@ -227,7 +227,7 @@ class Batchsend extends ModelBase
      * @param $sOpenID
      * @param $media_id
      */
-    public function mpvideoPreview($sOpenID,$media_id)
+    public static function mpvideoPreview($sOpenID,$media_id)
     {
         $aData = array(
             "touser" => $sOpenID,
@@ -244,7 +244,7 @@ class Batchsend extends ModelBase
      * @param $aOpenIDs
      * @param $media_id
      */
-    public function newsSendByOpenID($aOpenIDs,$media_id)
+    public static function newsSendByOpenID($aOpenIDs,$media_id)
     {
         $aData = array(
             "touser" => $aOpenIDs,
@@ -261,7 +261,7 @@ class Batchsend extends ModelBase
      * @param $aOpenIDs
      * @param $media_id
      */
-    public function textSendByOpenID($aOpenIDs,$content)
+    public static function textSendByOpenID($aOpenIDs,$content)
     {
         $aData = array(
             "touser" => $aOpenIDs,
@@ -278,7 +278,7 @@ class Batchsend extends ModelBase
      * @param $aOpenIDs
      * @param $media_id
      */
-    public function voiceSendByOpenID($aOpenIDs,$media_id)
+    public static function voiceSendByOpenID($aOpenIDs,$media_id)
     {
         $aData = array(
             "touser" => $aOpenIDs,
@@ -295,7 +295,7 @@ class Batchsend extends ModelBase
      * @param $aOpenIDs
      * @param $media_id
      */
-    public function imageSendByOpenID($aOpenIDs,$media_id)
+    public static function imageSendByOpenID($aOpenIDs,$media_id)
     {
         $aData = array(
             "touser" => $aOpenIDs,
@@ -315,7 +315,7 @@ class Batchsend extends ModelBase
      * @param $description
      * @return string
      */
-    public function videoSendByOpenID($aOpenIDs,$media_id,$title,$description)
+    public static function videoSendByOpenID($aOpenIDs,$media_id,$title,$description)
     {
         $aData = array(
             "touser" => $aOpenIDs,

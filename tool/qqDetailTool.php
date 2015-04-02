@@ -22,11 +22,9 @@ class qqDetailTool extends baseTool
     public function explodeFileListAction()
     {
         $oDB = $this->getDB();
-        $oProvince = new Model_Provice();
-        $aProvice = $oProvince->getProvinceList();
+        $aProvice = Model_Provice::getProvinceList();
         $this->assign('aProvice', $aProvice);
-        $oCity = new Model_city();
-        $aCity = $oCity->getCityList();
+        $aCity = Model_city::getCityList();
         $this->assign('aCity', $aCity);
         $this->display("qqDetail/explodeFileList.phtml");
     }
@@ -148,8 +146,6 @@ class qqDetailTool extends baseTool
         $iTime = (isset($_POST['CreateTime']) && $_POST['CreateTime']) ? strtotime($_POST['CreateTime']) : time();
         if ($oFile) {
             $oDB = $this->getDB();
-            $oProvince = new Model_Provice();
-            $oCity = new Model_city();
             $i = 1;
             while (!feof($oFile)) {
                 //组装成存入数据表格式
@@ -160,8 +156,8 @@ class qqDetailTool extends baseTool
                     continue;
                 }
                 if ($sData) {
-                    $aProvince = $oProvince->getProvinceByName($aData[1]);
-                    $aCity = $oCity->getCityByName($aData[2]);
+                    $aProvince = Model_Provice::getProvinceByName($aData[1]);
+                    $aCity = Model_city::getCityByName($aData[2]);
                     $iProvinceID = empty($aProvince) ? 0 : $aProvince['code'];
                     $iCityID = empty($aCity) ? 0 : $aCity['code'];
                     if ($aData[3] == self::BOY) {
@@ -194,8 +190,6 @@ class qqDetailTool extends baseTool
 
     private function _importxls($sFileName)//xls格式的最多支持6W数据，需要先把内存调到512
     {
-        $oProvince = new Model_Provice();
-        $oCity = new Model_city();
         echo (memory_get_usage() / 1024) . "<br>";
         $oData = new Spreadsheet_Excel_Reader($GLOBALS['FILEPATH'] . $sFileName);
         echo (memory_get_usage() / 1024) . "<br>";
@@ -207,8 +201,8 @@ class qqDetailTool extends baseTool
                 if ($key == 1) {
                     continue;
                 }
-                $aProvince = $oProvince->getProvinceByName($value[2]);
-                $aCity = $oCity->getCityByName($value[3]);
+                $aProvince = Model_Provice::getProvinceByName($value[2]);
+                $aCity = Model_city::getCityByName($value[3]);
                 $iProvinceID = empty($aProvince) ? 0 : $aProvince['code'];
                 $iCityID = empty($aCity) ? 0 : $aCity['code'];
                 if ($value[4] == self::BOY) {
@@ -386,17 +380,15 @@ class qqDetailTool extends baseTool
             $iLimitNum = $iListNum > $iLimit ? $iLimit : $iListNum;
             $sql .= "LIMIT " . $iStart . "," . $iLimitNum;
             $aData = $oDb->get_all($sql);
-            $oProvince = new Model_Provice();
-            $oCity = new Model_city();
             foreach ($aData as $key => $value) {
                 foreach ($value as $k => $v) {
                     if ($k == "province") {
-                        $aProvince = $oProvince->getProvinceByID($v);
+                        $aProvince = Model_Provice::getProvinceByID($v);
                         if (!empty($aProvince)) {
                             $aData[$key][$k] = $aProvince["name"];
                         }
                     } elseif ($k == "city") {
-                        $aCity = $oCity->getCityByID($v);
+                        $aCity = Model_city::getCityByID($v);
                         if (!empty($aCity)) {
                             $aData[$key][$k] = $aCity["name"];
                         }

@@ -27,7 +27,7 @@ class Media extends ModelBase
      * @param $aData
      * @return mixed
      */
-    public function uploadNewsFile($sToken,$aData)
+    public static function uploadNewsFile($sToken,$aData)
     {
         //data格式
         /**
@@ -44,7 +44,7 @@ class Media extends ModelBase
          */
         $aFile = json_encode(array("articles" => $aData));
         $sUploadUrl = self::NEWSUPLOADURL . "?access_token=" . $sToken;
-        $sReturn = $this->curl($sUploadUrl, true, $aFile);
+        $sReturn = self::curl($sUploadUrl, true, $aFile);
         $aData = json_decode($sReturn, true);
         return $aData;
     }
@@ -56,11 +56,11 @@ class Media extends ModelBase
      * @param $type
      * @return mixed
      */
-    public function uploadFile($sFileName, $sToken, $type)
+    public static function uploadFile($sFileName, $sToken, $type)
     {
         $aFile = array("media" => "@" . $sFileName);
         $sUploadUrl = self::UPLOADURL . "?access_token=" . $sToken . "&type=" . $type;
-        $sReturn = $this->curl($sUploadUrl, true, $aFile);
+        $sReturn = self::curl($sUploadUrl, true, $aFile);
         $aData = json_decode($sReturn, true);
         return $aData;
     }
@@ -71,10 +71,10 @@ class Media extends ModelBase
      * @param $sToken
      * @return mixed
      */
-    public function downloadfile($sMedia_id, $sToken)
+    public static function downloadfile($sMedia_id, $sToken)
     {
         $sDownloadUrl = self::DOWNLOADURL . "?access_token=" . $sToken . "&media_id=" . $sMedia_id;
-        return $this->curl($sDownloadUrl);
+        return self::curl($sDownloadUrl);
     }
 
     /**
@@ -84,27 +84,27 @@ class Media extends ModelBase
      * @param int $count
      * @return mixed
      */
-    public function getMediaByType($sToken,$sType,$offset=0,$count=20)
+    public static function getMediaByType($sToken,$sType,$offset=0,$count=20)
     {
-        if (!isset($this->aMediaList[$sType])) {
+        if (!isset(self::$aMediaList[$sType])) {
             $aData = array(
                 "type" => $sType,
                 "offset" => $offset,
                 "count" => $count
             );
             $sPermanentUrl = self::PERMANENTLIST . "?access_token=" . $sToken ;
-            $sReturn = $this->curl($sPermanentUrl, true, $aData);
+            $sReturn = self::curl($sPermanentUrl, true, $aData);
             $aData = json_decode($sReturn, true);
-            $this->aMediaList[$sType] = $aData;
+            self::$aMediaList[$sType] = $aData;
         }
-        return $this->aMediaList[$sType];
+        return self::$aMediaList[$sType];
     }
 
     /**
      * 新建新闻模版(暂时搞个最简单的生成，临时)
      * @param $aThumb_media_ids(根据传进来的媒体缩略图数目创建模版)
      */
-    public function initNewsTmp($aThumb_media_ids = array())
+    public static function initNewsTmp($aThumb_media_ids = array())
     {
         $news = array();
         if (empty($aThumb_media_ids)) {
@@ -129,7 +129,7 @@ class Media extends ModelBase
      * 新建永久新闻素材
      * @param $aData
      */
-    public function initPermanentNews($sToken,$aData)
+    public static function initPermanentNews($sToken,$aData)
     {
         /**data格式***/
         /**
@@ -161,7 +161,7 @@ class Media extends ModelBase
         }
         $aFile = json_encode($aData);
         $sUploadUrl = self::PERMANENTNEWS . "?access_token=" . $sToken;
-        $sReturn = $this->curl($sUploadUrl, true, $aFile);
+        $sReturn = self::curl($sUploadUrl, true, $aFile);
         $aData = json_decode($sReturn, true);
     }
 
@@ -172,11 +172,11 @@ class Media extends ModelBase
      * @param $type
      * @return mixed
      */
-    public function uploadPermanentFile($sFileName, $sToken, $type)
+    public static function uploadPermanentFile($sFileName, $sToken, $type)
     {
         $aFile = array("media" => "@" . $sFileName);
         $sUploadUrl = self::PERMANENTORTHER . "?access_token=" . $sToken . "&type=" . $type;
-        $sReturn = $this->curl($sUploadUrl, true, $aFile);
+        $sReturn = self::curl($sUploadUrl, true, $aFile);
         $aData = json_decode($sReturn, true);
         return $aData;
     }
@@ -187,10 +187,10 @@ class Media extends ModelBase
      * @param $sToken
      * @return mixed
      */
-    public function downloadPermanentfile($sMedia_id, $sToken)
+    public static function downloadPermanentfile($sMedia_id, $sToken)
     {
         $sDownloadUrl = self::DOWNPERMANENT . "?access_token=" . $sToken . "&media_id=" . $sMedia_id;
-        return $this->curl($sDownloadUrl, true,array("media_id"=>$sMedia_id));
+        return self::curl($sDownloadUrl, true,array("media_id"=>$sMedia_id));
     }
 
     /**
@@ -199,10 +199,10 @@ class Media extends ModelBase
      * @param $sToken
      * @return mixed
      */
-    public function deletePermanentfile($sMedia_id, $sToken)
+    public static function deletePermanentfile($sMedia_id, $sToken)
     {
         $sDownloadUrl = self::DELETEPERMANENT . "?access_token=" . $sToken . "&media_id=" . $sMedia_id;
-        return $this->curl($sDownloadUrl, true,array("media_id"=>$sMedia_id));
+        return self::curl($sDownloadUrl, true,array("media_id"=>$sMedia_id));
     }
 
     /**
@@ -210,9 +210,9 @@ class Media extends ModelBase
      * @param $sToken
      * @return mixed
      */
-    public function getPermanentNum($sToken)
+    public static function getPermanentNum($sToken)
     {
         $sDownloadUrl = self::PERMANENTNUM . "?access_token=" . $sToken;
-        return $this->curl($sDownloadUrl);
+        return self::curl($sDownloadUrl);
     }
 }

@@ -18,17 +18,17 @@ class User extends ModelBase
      * @param $sToken
      * @return mixed
      */
-    public function getUserList($sToken)
+    public static function getUserList($sToken)
     {
         $sGetUserList = self::GETUSERLIST . "?access_token=" . $sToken;
-        $sReturn = $this->curl($sGetUserList);
+        $sReturn = self::curl($sGetUserList);
         return json_decode($sReturn,true);
     }
 
-    public function getUserInfo($sToken,$sOpenID,$lang="zh_CN")
+    public static function getUserInfo($sToken,$sOpenID,$lang="zh_CN")
     {
         $sGetUserInfo = self::USERINFO . "?access_token=" . $sToken."&openid=".$sOpenID."&lang=".$lang;
-        $sReturn = $this->curl($sGetUserInfo);
+        $sReturn = self::curl($sGetUserInfo);
         return json_decode($sReturn,true);
     }
 }

@@ -2,38 +2,33 @@
 class Model_Provice extends base
 {
     private $aProvinceList = array();
-
-
-    public function __construct ()
-    {
-
-    }
+    
 
     /**
      * 获取省列表,以ID为Key
      */
-    public function getProvinceList()
+    public static function getProvinceList()
     {
-        if (empty($this->aProvinceList)) {
-            $oMem = $this->getMem();
+        if (empty(self::$aProvinceList)) {
+            $oMem = self::getMem();
             $aData = $oMem->get("Tool_Province_List");
             if (!$aData) {
                 $sSql = "SELECT * FROM province";
-                $oDB = $this->getDB();
+                $oDB = self::getDB();
                 $aData = $oDB->get_all($sSql,"code");
                 $oMem->set("Tool_Province_List",$aData);
             }
-            $this->aProvinceList = $aData;
+            self::$aProvinceList = $aData;
         }
-        return $this->aProvinceList;
+        return self::$aProvinceList;
     }
 
     /**
      * 获取省列表，以省名为key
      */
-    public function getProvinceListName()
+    public static function getProvinceListName()
     {
-        $aProList = $this->getProvinceList();
+        $aProList = self::getProvinceList();
         $aTmp = array();
         if (!empty($aProList)) {
             foreach ( $aProList as $key => $value ) {
@@ -50,18 +45,18 @@ class Model_Provice extends base
      * @param $sCode
      * @return mixed
      */
-    public function getProvinceByID($sCode)
+    public static function getProvinceByID($sCode)
     {
-        $aProList = $this->getProvinceList();
+        $aProList = self::getProvinceList();
         return isset($aProList[$sCode]) ? $aProList[$sCode] : array();
     }
 
     /**
      * @param $sName
      */
-    public function getProvinceByName($sName)
+    public static function getProvinceByName($sName)
     {
-        $aProvince = $this->getProvinceListName();
+        $aProvince = self::getProvinceListName();
         return isset($aProvince[$sName]) ? $aProvince[$sName] : array();
     }
 }

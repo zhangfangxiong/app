@@ -17,11 +17,10 @@ class batchsend_index extends baseWeixin
         $sFielename = $GLOBALS['FILEPATH'] . "12yuexiao.jpg";
         $sToken = $this->getAccessToken();
         //上传图文消息
-        $oMedia = new Media();
-        $aMediaIds = $oMedia->getMediaByType("thumb");
-        $aNews = $oMedia->initNewsTmp($aMediaIds);
+        $aMediaIds = Media::getPermanentNum('thumb');
+        $aNews = Media::initNewsTmp($aMediaIds);
         //调用上传news接口
-        $aNews = $oMedia->uploadNewsFile($sToken,$aNews);
+        $aNews = Media::uploadNewsFile($sToken,$aNews);
         //调用分组接口,判断该news用于哪个分组
         $oGroup = new Group();
         $aGroupList = $oGroup->getGroupList($sToken);
@@ -46,16 +45,15 @@ class batchsend_index extends baseWeixin
     public function batchSendAction()
     {
         $sToken = $this->getAccessToken();
-        $oBatchSend = new Batchsend();
-        $abatchSendList = $oBatchSend->batchSendList();
+        $abatchSendList = Batchsend::batchSendList();
         $sReturn = array();
         foreach ($abatchSendList as $key=>$value) {
             //生成群发模版
             $sAction = ($value["type"] != "vedio") ? $value["type"]."Temp" : "mpvideoTemp";
             $aGroupID = explode(",",$value["group_id"]);
             foreach ($aGroupID as $k => $v) {
-                $sTemp = $oBatchSend->$sAction($v,$value["media_id"]);
-                $sReturn[] = $oBatchSend->patchSendByGroup($sToken,$sTemp);
+                $sTemp = Batchsend::$sAction($v,$value["media_id"]);
+                $sReturn[] = Batchsend::patchSendByGroup($sToken,$sTemp);
             }
         }
         print_r($sReturn);
@@ -69,10 +67,10 @@ class batchsend_index extends baseWeixin
         $sToken = $this->getAccessToken();
         //获取用户列表接口
         $oUser = new User();
-        $aData = $oUser->getUserList($sToken);
+        $aData = User::getUserList($sToken);
         $aUserInfo = array();
         foreach ($aData["data"]["openid"] as $key => $value) {
-            $aUserInfo[] = $oUser->getUserInfo($sToken,$value);
+            $aUserInfo[] = User::getUserInfo($sToken,$value);
         }
         print_r($aUserInfo);
         die;
