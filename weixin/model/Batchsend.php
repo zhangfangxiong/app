@@ -35,7 +35,7 @@ class Batchsend extends ModelBase
      */
     public static function batchSendList()
     {
-        if (empty(self::batchSendList)) {
+        if (empty(self::$batchSendList)) {
             $sSql = "SELECT * FROM batchsend WHERE has_send =0";
             $oDB = self::getDB();
             $aData = $oDB->get_all($sSql);

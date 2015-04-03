@@ -5,14 +5,19 @@
  * Date: 15/4/1
  * Time: 下午11:22
  */
-include_once("../baseWeixin.php");
+include_once('../baseWeixin.php');
 class receive_index extends baseWeixin
 {
     private static $sResponseTpe = 'txt';//回复类型
     public function indexAction()
     {
-        $xMsg = $this->receiveMsg();
-        print_r($xMsg);
+        //接收消息的结构大致为
+        /**
+        Array ( [URL] => http://wx.maimaimiao.com/zfx/test/weixin/receive/ [ToUserName] => asasas [FromUserName] => sasasasa [CreateTime] => sasasas [MsgType] => event [Event] => sasasasa [Latitude] => 11111 [Longitude] => 111111 [Precision] => 11111 [MsgId] => 11111 )
+         */
+        $aMsg = $this->receiveMsg();//接收的信息
+        //调用回复接口
+        print_r($aMsg);
         die;
     }
 }
