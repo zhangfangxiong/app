@@ -17,7 +17,9 @@ class receive_index extends baseWeixin
          */
         $aMsg = $this->receiveMsg();//接收的信息
         //调用回复接口
-        print_r($aMsg);
+        $sToken = $this->getAccessToken();
+        $sResponse = response::initResponse(self::$sResponseTpe, $aMsg,$sToken);
+        echo $sResponse;
         die;
     }
 }
