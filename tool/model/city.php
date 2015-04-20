@@ -1,8 +1,8 @@
 <?php
 class Model_city extends base
 {
-    private $aCityList = array();//所有城市列表
-    private $aProvinceCitys = array();//省下城市列表
+    private static $aCityList = array();//所有城市列表
+    private static $aProvinceCitys = array();//省下城市列表
 
     /**
      * 获取市列表,以ID为Key

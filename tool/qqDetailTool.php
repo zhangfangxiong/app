@@ -21,12 +21,9 @@ class qqDetailTool extends baseTool
 
     public function explodeFileListAction()
     {
-        $oDB = $this->getDB();
-        $oProvince = new Model_Provice();
-        $aProvice = $oProvince->getProvinceList();
+        $aProvice = Model_Provice::getProvinceList();
         $this->assign('aProvice', $aProvice);
-        $oCity = new Model_city();
-        $aCity = $oCity->getCityList();
+        $aCity = Model_city::getCityList();
         $this->assign('aCity', $aCity);
         $this->display("qqDetail/explodeFileList.phtml");
     }
@@ -386,17 +383,15 @@ class qqDetailTool extends baseTool
             $iLimitNum = $iListNum > $iLimit ? $iLimit : $iListNum;
             $sql .= "LIMIT " . $iStart . "," . $iLimitNum;
             $aData = $oDb->get_all($sql);
-            $oProvince = new Model_Provice();
-            $oCity = new Model_city();
             foreach ($aData as $key => $value) {
                 foreach ($value as $k => $v) {
                     if ($k == "province") {
-                        $aProvince = $oProvince->getProvinceByID($v);
+                        $aProvince = Model_Provice::getProvinceByID($v);
                         if (!empty($aProvince)) {
                             $aData[$key][$k] = $aProvince["name"];
                         }
                     } elseif ($k == "city") {
-                        $aCity = $oCity->getCityByID($v);
+                        $aCity = Model_city::getCityByID($v);
                         if (!empty($aCity)) {
                             $aData[$key][$k] = $aCity["name"];
                         }

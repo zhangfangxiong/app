@@ -1,8 +1,7 @@
 <?php
 class Model_Provice extends base
 {
-    private $aProvinceList = array();
-    
+    private static $aProvinceList = array();
 
     /**
      * 获取省列表,以ID为Key
@@ -10,14 +9,14 @@ class Model_Provice extends base
     public static function getProvinceList()
     {
         if (empty(self::$aProvinceList)) {
-            $oMem = self::getMem();
-            $aData = $oMem->get("Tool_Province_List");
-            if (!$aData) {
+            //$oMem = self::getMem();
+            //$aData = $oMem->get("Tool_Province_List");
+            //if (!$aData) {
                 $sSql = "SELECT * FROM province";
                 $oDB = self::getDB();
                 $aData = $oDB->get_all($sSql,"code");
-                $oMem->set("Tool_Province_List",$aData);
-            }
+                //$oMem->set("Tool_Province_List",$aData);
+            //}
             self::$aProvinceList = $aData;
         }
         return self::$aProvinceList;

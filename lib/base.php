@@ -8,8 +8,8 @@
 
 class base
 {
-    protected $oDb = null;
-    protected $oMem = null;
+    protected static $oDb = null;
+    protected static $oMem = null;
     protected $tplVars = array();
     public function __construct ()
     {
@@ -48,10 +48,10 @@ class base
      */
     protected function getDB()
     {
-        if ($this->oDb == null) {
-            $this->oDb = new DB();
+        if (self::$oDb == null) {
+            self::$oDb = new DB();
         }
-        return $this->oDb;
+        return self::$oDb;
     }
 
     /**
@@ -60,10 +60,10 @@ class base
      */
     protected function getMem()
     {
-        if ($this->oMem == null) {
-            $this->oMem = new Lib_Memcache();
+        if (self::$oMem == null) {
+            self::$oMem = new Lib_Memcache();
         }
-        return $this->oMem;
+        return self::$oMem;
     }
 
     /**
