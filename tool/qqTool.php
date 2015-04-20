@@ -4,7 +4,7 @@ include_once("baseTool.php");
 class qqTool extends baseTool
 {
     private $_iImportSupportType = array(".txt");//支持导入的格式
-    const EXLODENUM = 50000;//每次读取表的数据条数
+    const EXLODENUM = 3;//每次读取表的数据条数
 
     public function indexAction()
     {
@@ -19,6 +19,11 @@ class qqTool extends baseTool
 
         $this->assign('aImportTimes', $aData);
         $this->display("qqtool/explodeFileList.phtml");
+    }
+
+    public function exportQQnumHasNoDetailListAction()
+    {
+        $this->display("qqtool/exportQQnumHasNoDetailList.phtml");
     }
 
     /**
@@ -96,6 +101,62 @@ class qqTool extends baseTool
     }
 
     /**
+     * 导出qq表和qqdetail表的非重复数据
+     */
+    public function exportQQnumHasNoDetailAction()
+    {
+        if (!$_POST['sExplodeName']) {
+            showError("请输入导出名", true);
+        }
+        $sFileName = $_POST['sExplodeName'];
+        $iSuffix = substr($sFileName, strpos($sFileName, '.'), strlen($sFileName) - 1);
+        if (!in_array($iSuffix, $this->_iImportSupportType)) {
+            showError("不支持导出" . $iSuffix . "格式文件", true);
+        }
+        //获取本文件目录的文件夹地址
+        $aFilesNames = scandir($GLOBALS['FILEPATH']);
+        if (in_array($sFileName, $aFilesNames)) {
+            showError("已存在已该名存在的文件，请更改文件名以免覆盖", true);
+        }
+        $startTime = $_POST['startTime'];
+        $endTime = $_POST['endTime'];
+        if (!$startTime) {
+            showError("请选择导出时间,开始时间必须输入", true);
+        }
+        if (!$endTime) {
+            $endTime = date("Y-m-d H:i:s", time());
+        }
+        $oDb = $this->getDB();
+        $sSql = "SELECT COUNT(*) AS count FROM qqlist a WHERE qqnum NOT IN (SELECT qqnum FROM qqdetail) AND CreateTime>='" . strtotime(
+                $startTime
+            ) . "' AND CreateTime <='" . strtotime($endTime) . "'";
+        $iTotalNum = $oDb->get_one($sSql);//总条数
+        $iTotalNum = $iTotalNum['count'];
+        $sSql = "SELECT * FROM qqlist WHERE qqnum NOT IN (SELECT qqnum FROM qqdetail) AND CreateTime>='" . strtotime(
+                $startTime
+            ) . "' AND CreateTime <='" . strtotime($endTime) . "' order by id";
+        $iLimit = self::EXLODENUM;//每次读取的条数
+        $iExplodeTimes = ceil($iTotalNum / $iLimit);//需要读取的总次数
+        $sFilePath = $GLOBALS['FILEPATH'];
+        $sFileName = $sFilePath . $sFileName;
+        $fp = fopen($sFileName, "w+");
+        for ($i = 0; $i < $iExplodeTimes; $i++) {
+            $iStartID = 0;
+            $iStartID += $i * $iLimit;
+            $iListNum = $iTotalNum - $i * $iLimit;//剩余条数
+            $iLimitNum = $iListNum > $iLimit ? $iLimit : $iListNum;
+            $sLimitSql = $sSql. " LIMIT " . $iStartID . "," . $iLimitNum;
+            $aData = $oDb->get_all($sLimitSql);
+            foreach ($aData as $key => $value) {
+                fwrite($fp, $value['qqnum'] . "\r\n");
+            }
+        }
+        fclose($fp);
+        //$this->_operateLog(1, time());//记录导出log
+        showOk("文件导出完成", $GLOBALS['CURRURL']);
+    }
+
+    /**
      * 导出文件
      */
     public function exportFileAction()
@@ -125,7 +186,7 @@ class qqTool extends baseTool
             showError("请选择导出时间,开始时间必须输入", true);
         }
         if ($_POST['importType'] == 2 && !$endTime) {
-            $endTime = date("Y-m-d H:i:s",time());
+            $endTime = date("Y-m-d H:i:s", time());
         }
         $oDb = $this->getDB();
         if ($_POST['importType'] == 1) {
@@ -157,11 +218,11 @@ class qqTool extends baseTool
             $iStartID = $iFirstID;
             $iStartID += $i * $iLimit - 1;
             $iListNum = $iTotalNum - $i * $iLimit;//剩余条数
-            $iLimitNum =  $iListNum > $iLimit ? $iLimit : $iListNum;
+            $iLimitNum = $iListNum > $iLimit ? $iLimit : $iListNum;
             $sSql = "SELECT * FROM qqlist LIMIT " . $iStartID . "," . $iLimitNum;
             $aData = $oDb->get_all($sSql);
             foreach ($aData as $key => $value) {
-                fwrite($fp, $value['qqnum'] . "\n");
+                fwrite($fp, $value['qqnum'] . "\r\n");
             }
         }
         fclose($fp);
