@@ -4,7 +4,7 @@ include_once("baseTool.php");
 class qqTool extends baseTool
 {
     private $_iImportSupportType = array(".txt");//支持导入的格式
-    const EXLODENUM = 3;//每次读取表的数据条数
+    const EXLODENUM = 5000;//每次读取表的数据条数
 
     public function indexAction()
     {
@@ -118,23 +118,12 @@ class qqTool extends baseTool
         if (in_array($sFileName, $aFilesNames)) {
             showError("已存在已该名存在的文件，请更改文件名以免覆盖", true);
         }
-        $startTime = $_POST['startTime'];
-        $endTime = $_POST['endTime'];
-        if (!$startTime) {
-            showError("请选择导出时间,开始时间必须输入", true);
-        }
-        if (!$endTime) {
-            $endTime = date("Y-m-d H:i:s", time());
-        }
+        $sNum = $_POST['sExplodeNum'];//导出数量
         $oDb = $this->getDB();
-        $sSql = "SELECT COUNT(*) AS count FROM qqlist a WHERE qqnum NOT IN (SELECT qqnum FROM qqdetail) AND CreateTime>='" . strtotime(
-                $startTime
-            ) . "' AND CreateTime <='" . strtotime($endTime) . "'";
+        $sSql = "SELECT COUNT(*) AS count FROM qqlist a WHERE qqnum NOT IN (SELECT qqnum FROM qqDetail)";
         $iTotalNum = $oDb->get_one($sSql);//总条数
-        $iTotalNum = $iTotalNum['count'];
-        $sSql = "SELECT * FROM qqlist WHERE qqnum NOT IN (SELECT qqnum FROM qqdetail) AND CreateTime>='" . strtotime(
-                $startTime
-            ) . "' AND CreateTime <='" . strtotime($endTime) . "' order by id";
+        $iTotalNum = min($sNum,$iTotalNum['count']);
+        $sSql = "SELECT * FROM qqlist WHERE qqnum NOT IN (SELECT qqnum FROM qqDetail) order by id";
         $iLimit = self::EXLODENUM;//每次读取的条数
         $iExplodeTimes = ceil($iTotalNum / $iLimit);//需要读取的总次数
         $sFilePath = $GLOBALS['FILEPATH'];
