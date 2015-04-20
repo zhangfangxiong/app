@@ -70,14 +70,13 @@ class Media extends ModelBase
     /**
      * 设置账号头像
      * @param $kf_account
-     * @param $nickname
-     * @param $password
      * @param $sToken
+     * @param $sImageName
      * @return mixed
      */
-    public static function uploadHeadImg($kf_account, $nickname, $password,$sToken)
+    public static function uploadHeadImg($kf_account, $sToken,$sImageName)
     {
-        $aFile = array('media' => '@test.jpg');
+        $aFile = array('media' => '@'.$sImageName);
         $addKFUrl = self::UPLOADHEADINGIMG . "?access_token=" . $sToken.'&kf_account='.$kf_account;
         $sReturn = self::curl($addKFUrl, true, $aFile);
         $aData = json_decode($sReturn, true);
@@ -85,10 +84,7 @@ class Media extends ModelBase
     }
 
     /**
-     * 设置账号头像
-     * @param $kf_account
-     * @param $nickname
-     * @param $password
+     * 获取账号列表
      * @param $sToken
      * @return mixed
      */
@@ -98,5 +94,34 @@ class Media extends ModelBase
         $sReturn = self::curl($addKFUrl);
         $aData = json_decode($sReturn, true);
         return $aData;
+    }
+
+    /**
+     * 发送消息
+     */
+    public static function sendMessage($aData,$sType)
+    {
+
+    }
+
+    /**
+     * 根据种类获取回复需要的数据
+     * @param $sType 回复信息种类
+     * @param $aData (基础数据，接收微信时候的用户信息，接收的时候传进来的)
+     * @param $sToken
+     */
+    private static function getResponseDataByType($sType, $aData,$sToken)
+    {
+        if (!isset($aData['ToUserName']) || !isset($aData['FromUserName'])) {
+            return null;
+        }
+        $aReponseData['ToUserName'] = $aData['FromUserName'];
+        $aReponseData['FromUserName'] = $aData['ToUserName'];
+        $aReponseData['CreateTime'] = time();
+        $aReponseData['MsgType'] = $sType;
+        //以上四个数据是肯定有的，其他数据根据类型不同，需求不一样,根据type不同，解析到不同的方法获取数据
+        $sAction = 'initData'.$sType;
+        self::$sAction($aReponseData,$aData,$sToken);
+        return $aReponseData;
     }
 }

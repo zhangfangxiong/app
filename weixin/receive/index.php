@@ -16,6 +16,7 @@ class receive_index extends baseWeixin
         Array ( [URL] => http://wx.maimaimiao.com/zfx/test/weixin/receive/ [ToUserName] => asasas [FromUserName] => sasasasa [CreateTime] => sasasas [MsgType] => event [Event] => sasasasa [Latitude] => 11111 [Longitude] => 111111 [Precision] => 11111 [MsgId] => 11111 )
          */
         $aMsg = $this->receiveMsg();//接收的信息
+        //微信没有消息列表接口，需要自己存入数据库，不然无法调用客服接口
         //调用回复接口
         $sToken = $this->getAccessToken();
         $sResponse = response::initResponse(self::$sResponseTpe, $aMsg,$sToken);

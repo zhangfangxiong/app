@@ -476,8 +476,8 @@ class response extends ModelBase
         if (!isset($aData['ToUserName']) || !isset($aData['FromUserName'])) {
             return null;
         }
-        $aReponseData['ToUserName'] = $aData['ToUserName'];
-        $aReponseData['FromUserName'] = $aData['FromUserName'];
+        $aReponseData['ToUserName'] = $aData['FromUserName'];
+        $aReponseData['FromUserName'] = $aData['ToUserName'];
         $aReponseData['CreateTime'] = time();
         $aReponseData['MsgType'] = $sType;
         //以上四个数据是肯定有的，其他数据根据类型不同，需求不一样,根据type不同，解析到不同的方法获取数据
