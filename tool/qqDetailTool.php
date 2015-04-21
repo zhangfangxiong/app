@@ -9,7 +9,7 @@ include_once('../lib/excelReader.php');
 class qqDetailTool extends baseTool
 {
     private $_iImportSupportType = array(".xls", ".csv", ".txt");//支持导入的格式
-    const EXLODENUM = 50000;//每次读取表的数据条数
+    const EXLODENUM = 5000;//每次读取表的数据条数
     const BOY = "男";
     const GIRL = "女";
     private $_aCheck = array(0 => "请选择", 1 => "回答问题", 2 => "拒加", 3 => "审核问题", 4 => "需要验证", 5 => "直接添加", 6 => "其他");
@@ -358,18 +358,17 @@ class qqDetailTool extends baseTool
                 }
             }
         }
-        $sSql = "SELECT COUNT(*) AS count FROM  qqDetail";
+        $sSql = "SELECT COUNT(*) AS count FROM  qqDetail WHERE adoption=0 ";
         if ($sWhere) {
-            $sSql .= " WHERE " . $sWhere . " 1 ";
+            $sSql .= "AND " . $sWhere.'1 ';
         }
         $oDb = $this->getDB();
         $iTotalNum = $oDb->get_one($sSql);//总条数
         $iTotalNum = MIN($iTotalNum['count'], $_POST['sExplodeNum']);
-        $sSql = "SELECT * FROM  qqDetail ";
+        $sSql = "SELECT * FROM  qqDetail WHERE adoption=0 ";
         if ($sWhere) {
-            $sSql .= "WHERE adoption=0 AND " . $sWhere . " 1 ";
+            $sSql .= "AND " . $sWhere.'1 ';
         }
-        $iStart = 0;//第一条记录id
         $iLimit = self::EXLODENUM;//每次读取的条数
         $iExplodeTimes = ceil($iTotalNum / $iLimit);//需要读取的总次数
         $sFilePath = $GLOBALS['FILEPATH'];
@@ -378,10 +377,12 @@ class qqDetailTool extends baseTool
         $sTime = time();
         for ($i = 0; $i < $iExplodeTimes; $i++) {
             $sql = $sSql;
-            $iStart += $i * $iLimit;
+            $iStart = $i * $iLimit;
             $iListNum = $iTotalNum - $i * $iLimit;//剩余条数
             $iLimitNum = $iListNum > $iLimit ? $iLimit : $iListNum;
             $sql .= "LIMIT " . $iStart . "," . $iLimitNum;
+            print_r($sql);
+            echo "\r\n";
             $aData = $oDb->get_all($sql);
             foreach ($aData as $key => $value) {
                 foreach ($value as $k => $v) {
@@ -405,7 +406,7 @@ class qqDetailTool extends baseTool
                         }
                     } elseif ($k == "checktype") {
                         $aData[$key][$k] = $this->_aCheck[$v];
-                    } elseif ($k == "adoption") {
+                    } elseif ($k == "adoption" && $_POST['adoption']) {
                         $aData[$key][$k] = date("Y-m-d H:i:s", $sTime);
                         $oDb->update("qqDetail", array("adoption" => $sTime), "id=" . $value['id']);
                     } elseif ($k == "importtime") {
@@ -415,6 +416,9 @@ class qqDetailTool extends baseTool
                     }
                 }
                 unset($aData[$key]['id']);
+                unset($aData[$key]['adoption']);
+                unset($aData[$key]['importtime']);
+                unset($aData[$key]['birth']);
                 $sStr = implode("|", $aData[$key]);
                 fwrite($fp, $sStr . "\r\n");
             }
