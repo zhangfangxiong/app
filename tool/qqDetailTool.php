@@ -261,7 +261,6 @@ class qqDetailTool extends baseTool
 
                 break;
         }
-
         return true;
     }
 
@@ -308,6 +307,8 @@ class qqDetailTool extends baseTool
                 showError("生日格式有误", true);
             }
         }
+
+        $iIfCheck = $_POST['adoption'];
 
         $aData = array();
         if ($_POST['sex']) {
@@ -375,14 +376,14 @@ class qqDetailTool extends baseTool
         $sFileName = $sFilePath . $sFileName;
         $fp = fopen($sFileName, "w+");
         $sTime = time();
+        $j= 0;
+        $aUpdateSql = array();
         for ($i = 0; $i < $iExplodeTimes; $i++) {
             $sql = $sSql;
             $iStart = $i * $iLimit;
             $iListNum = $iTotalNum - $i * $iLimit;//剩余条数
             $iLimitNum = $iListNum > $iLimit ? $iLimit : $iListNum;
             $sql .= "LIMIT " . $iStart . "," . $iLimitNum;
-            print_r($sql);
-            echo "\r\n";
             $aData = $oDb->get_all($sql);
             foreach ($aData as $key => $value) {
                 foreach ($value as $k => $v) {
@@ -406,14 +407,15 @@ class qqDetailTool extends baseTool
                         }
                     } elseif ($k == "checktype") {
                         $aData[$key][$k] = $this->_aCheck[$v];
-                    } elseif ($k == "adoption" && $_POST['adoption']) {
-                        $aData[$key][$k] = date("Y-m-d H:i:s", $sTime);
-                        $oDb->update("qqDetail", array("adoption" => $sTime), "id=" . $value['id']);
                     } elseif ($k == "importtime") {
                         unset($aData[$key][$k]);
                     } elseif ($k == "birth") {
                         $aData[$key][$k] = date("Y-m-d", $v);
                     }
+                }
+                if ($iIfCheck) {
+                    $j++;
+                    $aUpdateSql[] = 'update qqDetail SET adoption = '.$sTime.' WHERE id ='.$value['id'];
                 }
                 unset($aData[$key]['id']);
                 unset($aData[$key]['adoption']);
@@ -421,6 +423,11 @@ class qqDetailTool extends baseTool
                 unset($aData[$key]['birth']);
                 $sStr = implode("|", $aData[$key]);
                 fwrite($fp, $sStr . "\r\n");
+            }
+        }
+        if (!empty($aUpdateSql)) {
+            foreach ($aUpdateSql as $value) {
+                $oDb->query($value);
             }
         }
         fclose($fp);

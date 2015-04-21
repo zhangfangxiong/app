@@ -102,7 +102,7 @@ Class DB {
         $value = "";
         while( list($key,$val) = each($dataArray))
             $value .= "$key = '$val',";
-        $value .= substr( $value,0,-1);
+        $value = substr( $value,0,-1);
         $sql = "update $table set $value where 1=1 and $condition";
         $this->write_log("更新 ".$sql);
         if(!$this->query($sql)) return false;
