@@ -9,7 +9,7 @@ include_once(dirname(dirname(dirname(__FILE__))) . "/lib/ModelBase.php");
 
 class response extends ModelBase
 {
-    private $aResponseTemp = array();
+    private static $aResponseTemp = array();
 
     /**
      * 获取所有回复模版数组
@@ -18,7 +18,7 @@ class response extends ModelBase
     private static function getReponseTemp()
     {
         if (!self::$aResponseTemp) {
-            self::$aResponseTemp = include('../config/responseTemp.php');
+            self::$aResponseTemp = include('../conf/responseTemp.php');
         }
         return self::$aResponseTemp;
     }
@@ -43,7 +43,7 @@ class response extends ModelBase
      * @param $aReponseData要回复的数据
      * @param $aReceiveData接收的数据
      */
-    private static function initDataTxt(&$aReponseData,$aReceiveData)
+    private static function initDataText(&$aReponseData,$aReceiveData)
     {
         //还差content数据
         //可以根据接收的内容或者不同的事件回复不同的信息
@@ -55,9 +55,9 @@ class response extends ModelBase
             } elseif ($aReceiveData['Event']=='SCAN') { //关注后的扫描
                 $aReponseData['Content'] = '扫描成功，谢谢使用';
             } elseif ($aReceiveData['Event']=='LOCATION') { //用户上报地理位置推送
-                $aReponseData['Content'] = '您当前纬度：'.$aReceiveData['Latitude'].'\n\r';
-                $aReponseData['Content'] .= '您当前经度：'.$aReceiveData['Longitude'].'\n\r';
-                $aReponseData['Content'] .= '您当前精度：'.$aReceiveData['Precision'].'\n\r';
+                $aReponseData['Content'] = '您当前纬度：'.$aReceiveData['Latitude']."\n\r";
+                $aReponseData['Content'] .= '您当前经度：'.$aReceiveData['Longitude']."\n\r";
+                $aReponseData['Content'] .= '您当前精度：'.$aReceiveData['Precision']."\n\r";
             } elseif ($aReceiveData['Event']=='CLICK') { //点击菜单拉取消息时的事件推送
                 $aReponseData['Content'] = '您点击了第'.$aReceiveData['EventKey'].'个菜单';
             } elseif ($aReceiveData['Event']=='VIEW') { //点击菜单跳转链接时的事件推送
@@ -66,24 +66,24 @@ class response extends ModelBase
         } elseif ($aReceiveData['MsgType'] == 'text') {//文本类型
             $aReponseData['Content'] = '你发送的内容是'.$aReceiveData['Content'];
         } elseif ($aReceiveData['MsgType'] == 'image') {//图片类型
-            $aReponseData['Content'] = '你发送的图片ID是'.$aReceiveData[' MediaId'];
+            $aReponseData['Content'] = '你发送的图片URL是'.$aReceiveData['PicUrl'];
         } elseif ($aReceiveData['MsgType'] == 'voice') {//语音类型
-            $aReponseData['Content'] = '你发送的语音ID是'.$aReceiveData[' MediaId'];
+            $aReponseData['Content'] = '你发送的语音ID是'.$aReceiveData['MediaId'];
         } elseif ($aReceiveData['MsgType'] == 'video') {//视频类型
-            $aReponseData['Content'] = '你发送的视频媒体ID是'.$aReceiveData[' MediaId'].'\n\r';
-            $aReponseData['Content'] .= '缩略图的媒体ID是'.$aReceiveData[' ThumbMediaId'];
+            $aReponseData['Content'] = '你发送的视频媒体ID是'.$aReceiveData['MediaId']."\n\r";
+            $aReponseData['Content'] .= '缩略图的媒体ID是'.$aReceiveData['ThumbMediaId'];
         } elseif ($aReceiveData['MsgType'] == 'shortvideo') {//小视频类型
-            $aReponseData['Content'] = '你发送的小视频媒体ID是'.$aReceiveData[' MediaId'].'\n\r';
+            $aReponseData['Content'] = '你发送的小视频媒体ID是'.$aReceiveData['MediaId']."\n\r";
             $aReponseData['Content'] .= '缩略图的媒体ID是'.$aReceiveData[' ThumbMediaId'];
         } elseif ($aReceiveData['MsgType'] == 'location') { //当前位置信息
-            $aReponseData['Content'] = '您当前纬度：'.$aReceiveData['Location_X'].'\n\r';
-            $aReponseData['Content'] .= '您当前经度：'.$aReceiveData['Location_Y'].'\n\r';
-            $aReponseData['Content'] .= '您当前精度：'.$aReceiveData['Scale'].'\n\r';
-            $aReponseData['Content'] .= '位置信息：'.$aReceiveData['Label'].'\n\r';
+            $aReponseData['Content'] = '您当前纬度：'.$aReceiveData['Location_X']."\n\r";
+            $aReponseData['Content'] .= '您当前经度：'.$aReceiveData['Location_Y']."\n\r";
+            $aReponseData['Content'] .= '您当前精度：'.$aReceiveData['Scale']."\n\r";
+            $aReponseData['Content'] .= '位置信息：'.$aReceiveData['Label']."\n\r";
         } elseif ($aReceiveData['MsgType'] == 'link') { //链接类型
-            $aReponseData['Content'] = '您发送的链接标题：'.$aReceiveData['Title'].'\n\r';
-            $aReponseData['Content'] .= '您发送的链接描述：'.$aReceiveData['Description'].'\n\r';
-            $aReponseData['Content'] .= '您发送的链接URL：'.$aReceiveData['Url'].'\n\r';
+            $aReponseData['Content'] = '您发送的链接标题：'.$aReceiveData['Title']."\n\r";
+            $aReponseData['Content'] .= '您发送的链接描述：'.$aReceiveData['Description']."\n\r";
+            $aReponseData['Content'] .= '您发送的链接URL：'.$aReceiveData['Url']."\n\r";
         }
     }
 
@@ -106,9 +106,9 @@ class response extends ModelBase
             } elseif ($aReceiveData['Event']=='SCAN') { //关注后的扫描
                 $aReponseData['media_id'] = '扫描成功，谢谢使用';
             } elseif ($aReceiveData['Event']=='LOCATION') { //用户上报地理位置推送
-                $aReponseData['media_id'] = '您当前纬度：'.$aReceiveData['Latitude'].'\n\r';
-                $aReponseData['media_id'] .= '您当前经度：'.$aReceiveData['Longitude'].'\n\r';
-                $aReponseData['media_id'] .= '您当前精度：'.$aReceiveData['Precision'].'\n\r';
+                $aReponseData['media_id'] = '您当前纬度：'.$aReceiveData['Latitude']."\n\r";
+                $aReponseData['media_id'] .= '您当前经度：'.$aReceiveData['Longitude']."\n\r";
+                $aReponseData['media_id'] .= '您当前精度：'.$aReceiveData['Precision']."\n\r";
             } elseif ($aReceiveData['Event']=='CLICK') { //点击菜单拉取消息时的事件推送
                 $aReponseData['media_id'] = '您点击了第'.$aReceiveData['EventKey'].'个菜单';
             } elseif ($aReceiveData['Event']=='VIEW') { //点击菜单跳转链接时的事件推送
@@ -117,24 +117,24 @@ class response extends ModelBase
         } elseif ($aReceiveData['MsgType'] == 'text') {//文本类型
             $aReponseData['media_id'] = '你发送的内容是'.$aReceiveData['Content'];
         } elseif ($aReceiveData['MsgType'] == 'image') {//图片类型
-            $aReponseData['media_id'] = '你发送的图片ID是'.$aReceiveData[' MediaId'];
+            $aReponseData['media_id'] = '你发送的图片ID是'.$aReceiveData['MediaId'];
         } elseif ($aReceiveData['MsgType'] == 'voice') {//语音类型
-            $aReponseData['media_id'] = '你发送的语音ID是'.$aReceiveData[' MediaId'];
+            $aReponseData['media_id'] = '你发送的语音ID是'.$aReceiveData['MediaId'];
         } elseif ($aReceiveData['MsgType'] == 'video') {//视频类型
-            $aReponseData['media_id'] = '你发送的视频媒体ID是'.$aReceiveData[' MediaId'].'\n\r';
+            $aReponseData['media_id'] = '你发送的视频媒体ID是'.$aReceiveData['MediaId']."\n\r";
             $aReponseData['media_id'] .= '缩略图的媒体ID是'.$aReceiveData[' ThumbMediaId'];
         } elseif ($aReceiveData['MsgType'] == 'shortvideo') {//小视频类型
-            $aReponseData['media_id'] = '你发送的小视频媒体ID是'.$aReceiveData[' MediaId'].'\n\r';
+            $aReponseData['media_id'] = '你发送的小视频媒体ID是'.$aReceiveData['MediaId']."\n\r";
             $aReponseData['media_id'] .= '缩略图的媒体ID是'.$aReceiveData[' ThumbMediaId'];
         } elseif ($aReceiveData['MsgType'] == 'location') { //当前位置信息
-            $aReponseData['media_id'] = '您当前纬度：'.$aReceiveData['Location_X'].'\n\r';
-            $aReponseData['media_id'] .= '您当前经度：'.$aReceiveData['Location_Y'].'\n\r';
-            $aReponseData['media_id'] .= '您当前精度：'.$aReceiveData['Scale'].'\n\r';
-            $aReponseData['media_id'] .= '位置信息：'.$aReceiveData['Label'].'\n\r';
+            $aReponseData['media_id'] = '您当前纬度：'.$aReceiveData['Location_X']."\n\r";
+            $aReponseData['media_id'] .= '您当前经度：'.$aReceiveData['Location_Y']."\n\r";
+            $aReponseData['media_id'] .= '您当前精度：'.$aReceiveData['Scale']."\n\r";
+            $aReponseData['media_id'] .= '位置信息：'.$aReceiveData['Label']."\n\r";
         } elseif ($aReceiveData['MsgType'] == 'link') { //链接类型
-            $aReponseData['media_id'] = '您发送的链接标题：'.$aReceiveData['Title'].'\n\r';
-            $aReponseData['media_id'] .= '您发送的链接描述：'.$aReceiveData['Description'].'\n\r';
-            $aReponseData['media_id'] .= '您发送的链接URL：'.$aReceiveData['Url'].'\n\r';
+            $aReponseData['media_id'] = '您发送的链接标题：'.$aReceiveData['Title']."\n\r";
+            $aReponseData['media_id'] .= '您发送的链接描述：'.$aReceiveData['Description']."\n\r";
+            $aReponseData['media_id'] .= '您发送的链接URL：'.$aReceiveData['Url']."\n\r";
         }
     }
 
@@ -157,9 +157,9 @@ class response extends ModelBase
             } elseif ($aReceiveData['Event']=='SCAN') { //关注后的扫描
                 $aReponseData['media_id'] = '扫描成功，谢谢使用';
             } elseif ($aReceiveData['Event']=='LOCATION') { //用户上报地理位置推送
-                $aReponseData['media_id'] = '您当前纬度：'.$aReceiveData['Latitude'].'\n\r';
-                $aReponseData['media_id'] .= '您当前经度：'.$aReceiveData['Longitude'].'\n\r';
-                $aReponseData['media_id'] .= '您当前精度：'.$aReceiveData['Precision'].'\n\r';
+                $aReponseData['media_id'] = '您当前纬度：'.$aReceiveData['Latitude']."\n\r";
+                $aReponseData['media_id'] .= '您当前经度：'.$aReceiveData['Longitude']."\n\r";
+                $aReponseData['media_id'] .= '您当前精度：'.$aReceiveData['Precision']."\n\r";
             } elseif ($aReceiveData['Event']=='CLICK') { //点击菜单拉取消息时的事件推送
                 $aReponseData['media_id'] = '您点击了第'.$aReceiveData['EventKey'].'个菜单';
             } elseif ($aReceiveData['Event']=='VIEW') { //点击菜单跳转链接时的事件推送
@@ -168,24 +168,24 @@ class response extends ModelBase
         } elseif ($aReceiveData['MsgType'] == 'text') {//文本类型
             $aReponseData['media_id'] = '你发送的内容是'.$aReceiveData['Content'];
         } elseif ($aReceiveData['MsgType'] == 'image') {//图片类型
-            $aReponseData['media_id'] = '你发送的图片ID是'.$aReceiveData[' MediaId'];
+            $aReponseData['media_id'] = '你发送的图片ID是'.$aReceiveData['MediaId'];
         } elseif ($aReceiveData['MsgType'] == 'voice') {//语音类型
-            $aReponseData['media_id'] = '你发送的语音ID是'.$aReceiveData[' MediaId'];
+            $aReponseData['media_id'] = '你发送的语音ID是'.$aReceiveData['MediaId'];
         } elseif ($aReceiveData['MsgType'] == 'video') {//视频类型
-            $aReponseData['media_id'] = '你发送的视频媒体ID是'.$aReceiveData[' MediaId'].'\n\r';
+            $aReponseData['media_id'] = '你发送的视频媒体ID是'.$aReceiveData['MediaId']."\n\r";
             $aReponseData['media_id'] .= '缩略图的媒体ID是'.$aReceiveData[' ThumbMediaId'];
         } elseif ($aReceiveData['MsgType'] == 'shortvideo') {//小视频类型
-            $aReponseData['media_id'] = '你发送的小视频媒体ID是'.$aReceiveData[' MediaId'].'\n\r';
+            $aReponseData['media_id'] = '你发送的小视频媒体ID是'.$aReceiveData['MediaId']."\n\r";
             $aReponseData['media_id'] .= '缩略图的媒体ID是'.$aReceiveData[' ThumbMediaId'];
         } elseif ($aReceiveData['MsgType'] == 'location') { //当前位置信息
-            $aReponseData['media_id'] = '您当前纬度：'.$aReceiveData['Location_X'].'\n\r';
-            $aReponseData['media_id'] .= '您当前经度：'.$aReceiveData['Location_Y'].'\n\r';
-            $aReponseData['media_id'] .= '您当前精度：'.$aReceiveData['Scale'].'\n\r';
-            $aReponseData['media_id'] .= '位置信息：'.$aReceiveData['Label'].'\n\r';
+            $aReponseData['media_id'] = '您当前纬度：'.$aReceiveData['Location_X']."\n\r";
+            $aReponseData['media_id'] .= '您当前经度：'.$aReceiveData['Location_Y']."\n\r";
+            $aReponseData['media_id'] .= '您当前精度：'.$aReceiveData['Scale']."\n\r";
+            $aReponseData['media_id'] .= '位置信息：'.$aReceiveData['Label']."\n\r";
         } elseif ($aReceiveData['MsgType'] == 'link') { //链接类型
-            $aReponseData['media_id'] = '您发送的链接标题：'.$aReceiveData['Title'].'\n\r';
-            $aReponseData['media_id'] .= '您发送的链接描述：'.$aReceiveData['Description'].'\n\r';
-            $aReponseData['media_id'] .= '您发送的链接URL：'.$aReceiveData['Url'].'\n\r';
+            $aReponseData['media_id'] = '您发送的链接标题：'.$aReceiveData['Title']."\n\r";
+            $aReponseData['media_id'] .= '您发送的链接描述：'.$aReceiveData['Description']."\n\r";
+            $aReponseData['media_id'] .= '您发送的链接URL：'.$aReceiveData['Url']."\n\r";
         }
     }
 
@@ -214,9 +214,9 @@ class response extends ModelBase
                 $aReponseData['Title'] = '欢迎订阅';
                 $aReponseData['Description'] = '欢迎订阅';
             } elseif ($aReceiveData['Event']=='LOCATION') { //用户上报地理位置推送
-                $aReponseData['media_id'] = '您当前纬度：'.$aReceiveData['Latitude'].'\n\r';
-                $aReponseData['media_id'] .= '您当前经度：'.$aReceiveData['Longitude'].'\n\r';
-                $aReponseData['media_id'] .= '您当前精度：'.$aReceiveData['Precision'].'\n\r';
+                $aReponseData['media_id'] = '您当前纬度：'.$aReceiveData['Latitude']."\n\r";
+                $aReponseData['media_id'] .= '您当前经度：'.$aReceiveData['Longitude']."\n\r";
+                $aReponseData['media_id'] .= '您当前精度：'.$aReceiveData['Precision']."\n\r";
                 $aReponseData['Title'] = '欢迎订阅';
                 $aReponseData['Description'] = '欢迎订阅';
             } elseif ($aReceiveData['Event']=='CLICK') { //点击菜单拉取消息时的事件推送
@@ -233,34 +233,34 @@ class response extends ModelBase
             $aReponseData['Title'] = '欢迎订阅';
             $aReponseData['Description'] = '欢迎订阅';
         } elseif ($aReceiveData['MsgType'] == 'image') {//图片类型
-            $aReponseData['media_id'] = '你发送的图片ID是'.$aReceiveData[' MediaId'];
+            $aReponseData['media_id'] = '你发送的图片ID是'.$aReceiveData['MediaId'];
             $aReponseData['Title'] = '欢迎订阅';
             $aReponseData['Description'] = '欢迎订阅';
         } elseif ($aReceiveData['MsgType'] == 'voice') {//语音类型
-            $aReponseData['media_id'] = '你发送的语音ID是'.$aReceiveData[' MediaId'];
+            $aReponseData['media_id'] = '你发送的语音ID是'.$aReceiveData['MediaId'];
             $aReponseData['Title'] = '欢迎订阅';
             $aReponseData['Description'] = '欢迎订阅';
         } elseif ($aReceiveData['MsgType'] == 'video') {//视频类型
-            $aReponseData['media_id'] = '你发送的视频媒体ID是'.$aReceiveData[' MediaId'].'\n\r';
+            $aReponseData['media_id'] = '你发送的视频媒体ID是'.$aReceiveData['MediaId']."\n\r";
             $aReponseData['media_id'] .= '缩略图的媒体ID是'.$aReceiveData[' ThumbMediaId'];
             $aReponseData['Title'] = '欢迎订阅';
             $aReponseData['Description'] = '欢迎订阅';
         } elseif ($aReceiveData['MsgType'] == 'shortvideo') {//小视频类型
-            $aReponseData['media_id'] = '你发送的小视频媒体ID是'.$aReceiveData[' MediaId'].'\n\r';
+            $aReponseData['media_id'] = '你发送的小视频媒体ID是'.$aReceiveData['MediaId']."\n\r";
             $aReponseData['media_id'] .= '缩略图的媒体ID是'.$aReceiveData[' ThumbMediaId'];
             $aReponseData['Title'] = '欢迎订阅';
             $aReponseData['Description'] = '欢迎订阅';
         } elseif ($aReceiveData['MsgType'] == 'location') { //当前位置信息
-            $aReponseData['media_id'] = '您当前纬度：'.$aReceiveData['Location_X'].'\n\r';
-            $aReponseData['media_id'] .= '您当前经度：'.$aReceiveData['Location_Y'].'\n\r';
-            $aReponseData['media_id'] .= '您当前精度：'.$aReceiveData['Scale'].'\n\r';
-            $aReponseData['media_id'] .= '位置信息：'.$aReceiveData['Label'].'\n\r';
+            $aReponseData['media_id'] = '您当前纬度：'.$aReceiveData['Location_X']."\n\r";
+            $aReponseData['media_id'] .= '您当前经度：'.$aReceiveData['Location_Y']."\n\r";
+            $aReponseData['media_id'] .= '您当前精度：'.$aReceiveData['Scale']."\n\r";
+            $aReponseData['media_id'] .= '位置信息：'.$aReceiveData['Label']."\n\r";
             $aReponseData['Title'] = '欢迎订阅';
             $aReponseData['Description'] = '欢迎订阅';
         } elseif ($aReceiveData['MsgType'] == 'link') { //链接类型
-            $aReponseData['media_id'] = '您发送的链接标题：'.$aReceiveData['Title'].'\n\r';
-            $aReponseData['media_id'] .= '您发送的链接描述：'.$aReceiveData['Description'].'\n\r';
-            $aReponseData['media_id'] .= '您发送的链接URL：'.$aReceiveData['Url'].'\n\r';
+            $aReponseData['media_id'] = '您发送的链接标题：'.$aReceiveData['Title']."\n\r";
+            $aReponseData['media_id'] .= '您发送的链接描述：'.$aReceiveData['Description']."\n\r";
+            $aReponseData['media_id'] .= '您发送的链接URL：'.$aReceiveData['Url']."\n\r";
             $aReponseData['Title'] = '欢迎订阅';
             $aReponseData['Description'] = '欢迎订阅';
         }
@@ -496,6 +496,7 @@ class response extends ModelBase
     {
         $xResponsetemp = self::getReponseTempByType($sType);//获取对应类型XML格式的回复模版
         $aReponseData = self::getResponseDataByType($sType, $aData,$sToken);//获取回复的数据
-        return sprintf($xResponsetemp,$aReponseData);
+        //$aData = array_values($aReponseData);
+        return vsprintf($xResponsetemp,$aReponseData);
     }
 }

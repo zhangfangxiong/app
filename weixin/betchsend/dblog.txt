@@ -1,0 +1,384 @@
+2015-03-29 17:33:55 插入 insert into media(type,media_id,created_at) values('image','EwyEEp2dDomRkLg6eZjnlNsP8EyaVIeOdzFCZT6DZd3jOdxezenyDBsQzou89_Le','1427621636')
+2015-03-29 17:33:55 查询 insert into media(type,media_id,created_at) values('image','EwyEEp2dDomRkLg6eZjnlNsP8EyaVIeOdzFCZT6DZd3jOdxezenyDBsQzou89_Le','1427621636')
+2015-03-29 17:33:55 释放结果集
+2015-03-29 17:33:55 完成整个查询任务,所用时间为0.00266003608704
+2015-03-29 17:48:12 插入 insert into media(type,media_id,created_at) values('image','iOZ1tmPesCgUs_1MXfIpGgyl7O8MQo5M_OJGHb4whaPwqviCrxsgT2X_VpJ-bPxM','1427622493')
+2015-03-29 17:48:12 查询 insert into media(type,media_id,created_at) values('image','iOZ1tmPesCgUs_1MXfIpGgyl7O8MQo5M_OJGHb4whaPwqviCrxsgT2X_VpJ-bPxM','1427622493')
+2015-03-29 17:48:12 查询 SELECT * FROM media WHERE created_at >1427363292
+2015-03-29 17:48:12 获取全部记录 SELECT * FROM media WHERE created_at >1427363292
+2015-03-29 17:48:12 释放结果集
+2015-03-29 17:48:12 完成整个查询任务,所用时间为0.00214815139771
+2015-03-29 17:49:55 插入 insert into media(errcode,errmsg) values('40006','invalid meida size')
+2015-03-29 17:49:55 查询 insert into media(errcode,errmsg) values('40006','invalid meida size')
+2015-03-29 17:49:55 Query Error: insert into media(errcode,errmsg) values('40006','invalid meida size')
+Unknown column 'errcode' in 'field list'
+2015-03-29 17:49:55 释放结果集
+2015-03-29 17:49:55 完成整个查询任务,所用时间为0.00180697441101
+2015-03-29 17:52:00 插入 insert into media(type,thumb_media_id,created_at) values('thumb','ci6oCSOj81SOkdbBtFUcion0BjVOe84oE1WPnQQ_QSAWnmAPTy-bYUldgFDbI1rX','1427622721')
+2015-03-29 17:52:00 查询 insert into media(type,thumb_media_id,created_at) values('thumb','ci6oCSOj81SOkdbBtFUcion0BjVOe84oE1WPnQQ_QSAWnmAPTy-bYUldgFDbI1rX','1427622721')
+2015-03-29 17:52:00 Query Error: insert into media(type,thumb_media_id,created_at) values('thumb','ci6oCSOj81SOkdbBtFUcion0BjVOe84oE1WPnQQ_QSAWnmAPTy-bYUldgFDbI1rX','1427622721')
+Unknown column 'thumb_media_id' in 'field list'
+2015-03-29 17:52:00 释放结果集
+2015-03-29 17:52:00 完成整个查询任务,所用时间为0.00151395797729
+2015-03-29 18:13:30 插入 insert into media(type,created_at,media_id) values('thumb','1427624011','qGu4z4m5R6GhM4zhsXUm5ktFdEdHoJFvM2JZ7i2B31HfIJdAD8gKiww4i1QZRBZi')
+2015-03-29 18:13:30 查询 insert into media(type,created_at,media_id) values('thumb','1427624011','qGu4z4m5R6GhM4zhsXUm5ktFdEdHoJFvM2JZ7i2B31HfIJdAD8gKiww4i1QZRBZi')
+2015-03-29 18:13:30 查询 SELECT * FROM media WHERE created_at >1427364810
+2015-03-29 18:13:30 获取全部记录 SELECT * FROM media WHERE created_at >1427364810
+2015-03-29 18:13:30 释放结果集
+2015-03-29 18:13:30 完成整个查询任务,所用时间为0.00171899795532
+2015-03-29 18:15:14 插入 insert into media(type,created_at,media_id) values('thumb','1427624115','sgqhYprK-DmotkmlB82NJuiqQpjjZgVbaLuI7bOA97CNxtO6UgJVlaNBo0eILVr0')
+2015-03-29 18:15:14 查询 insert into media(type,created_at,media_id) values('thumb','1427624115','sgqhYprK-DmotkmlB82NJuiqQpjjZgVbaLuI7bOA97CNxtO6UgJVlaNBo0eILVr0')
+2015-03-29 18:15:14 查询 SELECT * FROM media WHERE created_at >1427364914
+2015-03-29 18:15:14 获取全部记录 SELECT * FROM media WHERE created_at >1427364914
+2015-03-29 18:15:14 释放结果集
+2015-03-29 18:15:14 完成整个查询任务,所用时间为0.00366497039795
+2015-03-29 18:19:35 插入 insert into media(type,created_at,media_id) values('thumb','1427624376','eNLbJZP3zpylYmzjVUcWn1GJXGd4VH9rEejjUftOZV-nbDUCvoWze4DhTMqMJtmT')
+2015-03-29 18:19:35 查询 insert into media(type,created_at,media_id) values('thumb','1427624376','eNLbJZP3zpylYmzjVUcWn1GJXGd4VH9rEejjUftOZV-nbDUCvoWze4DhTMqMJtmT')
+2015-03-29 18:19:35 查询 SELECT * FROM media WHERE created_at >1427365175
+2015-03-29 18:19:35 获取全部记录 SELECT * FROM media WHERE created_at >1427365175
+2015-03-29 18:19:35 释放结果集
+2015-03-29 18:19:35 完成整个查询任务,所用时间为0.00276803970337
+2015-03-29 18:29:52 插入 insert into media(type,created_at,media_id) values('thumb','1427624993','di3jwbn9Vxsh1d3l_BUfPY8kru2a1phX1ZXtOpSzXe_uE6bZdqoxvW5K7TSJVcFi')
+2015-03-29 18:29:52 查询 insert into media(type,created_at,media_id) values('thumb','1427624993','di3jwbn9Vxsh1d3l_BUfPY8kru2a1phX1ZXtOpSzXe_uE6bZdqoxvW5K7TSJVcFi')
+2015-03-29 18:29:52 查询 SELECT * FROM media WHERE created_at >1427365792 AND type = 'thumb'
+2015-03-29 18:29:52 获取全部记录 SELECT * FROM media WHERE created_at >1427365792 AND type = 'thumb'
+2015-03-29 18:29:52 释放结果集
+2015-03-29 18:29:52 完成整个查询任务,所用时间为0.00243806838989
+2015-03-29 18:32:01 插入 insert into media(type,created_at,media_id) values('thumb','1427625122','cWNd8W2fEMrRUSvuifScMGcdfN0oTmmjzBUKPe0rdWWDiyqdWoJItanpvOeSp5FW')
+2015-03-29 18:32:01 查询 insert into media(type,created_at,media_id) values('thumb','1427625122','cWNd8W2fEMrRUSvuifScMGcdfN0oTmmjzBUKPe0rdWWDiyqdWoJItanpvOeSp5FW')
+2015-03-29 18:32:01 查询 SELECT * FROM media WHERE created_at >1427365921 AND type = 'thumb'
+2015-03-29 18:32:01 获取全部记录 SELECT * FROM media WHERE created_at >1427365921 AND type = 'thumb'
+2015-03-29 18:32:01 释放结果集
+2015-03-29 18:32:01 完成整个查询任务,所用时间为0.00161790847778
+2015-03-29 18:34:05 插入 insert into media(type,created_at,media_id) values('thumb','1427625246','zio4yl0EINmTfdes46x_SuEDGkEB-_F62n2qohMrso9DoCPun9DDFLCrgjiDsSwH')
+2015-03-29 18:34:05 查询 insert into media(type,created_at,media_id) values('thumb','1427625246','zio4yl0EINmTfdes46x_SuEDGkEB-_F62n2qohMrso9DoCPun9DDFLCrgjiDsSwH')
+2015-03-29 18:34:05 释放结果集
+2015-03-29 18:34:05 完成整个查询任务,所用时间为0.00855207443237
+2015-03-29 18:57:56 查询 SELECT * FROM media WHERE created_at >1427367476 AND type = 'thumb'
+2015-03-29 18:57:56 获取全部记录 SELECT * FROM media WHERE created_at >1427367476 AND type = 'thumb'
+2015-03-29 18:57:56 释放结果集
+2015-03-29 18:57:56 完成整个查询任务,所用时间为0.00154304504395
+2015-03-29 19:00:19 查询 SELECT * FROM media WHERE created_at >1427367619 AND type = 'thumb'
+2015-03-29 19:00:19 获取全部记录 SELECT * FROM media WHERE created_at >1427367619 AND type = 'thumb'
+2015-03-29 19:00:19 释放结果集
+2015-03-29 19:00:19 完成整个查询任务,所用时间为0.00124716758728
+2015-03-29 19:08:06 查询 SELECT * FROM media WHERE created_at >1427368086 AND type = 'thumb'
+2015-03-29 19:08:06 获取全部记录 SELECT * FROM media WHERE created_at >1427368086 AND type = 'thumb'
+2015-03-29 19:08:07 释放结果集
+2015-03-29 19:08:07 完成整个查询任务,所用时间为0.00147199630737
+2015-03-29 19:13:43 查询 SELECT * FROM media WHERE created_at >1427368423 AND type = 'thumb'
+2015-03-29 19:13:43 获取全部记录 SELECT * FROM media WHERE created_at >1427368423 AND type = 'thumb'
+2015-03-29 19:13:43 释放结果集
+2015-03-29 19:13:43 完成整个查询任务,所用时间为0.0017569065094
+2015-03-29 19:14:42 查询 SELECT * FROM media WHERE created_at >1427368482 AND type = 'thumb'
+2015-03-29 19:14:42 获取全部记录 SELECT * FROM media WHERE created_at >1427368482 AND type = 'thumb'
+2015-03-29 19:14:42 释放结果集
+2015-03-29 19:14:42 完成整个查询任务,所用时间为0.301177024841
+2015-03-29 19:15:20 查询 SELECT * FROM media WHERE created_at >1427368520 AND type = 'thumb'
+2015-03-29 19:15:20 获取全部记录 SELECT * FROM media WHERE created_at >1427368520 AND type = 'thumb'
+2015-03-29 19:15:21 释放结果集
+2015-03-29 19:15:21 完成整个查询任务,所用时间为0.351505994797
+2015-03-29 19:15:39 查询 SELECT * FROM media WHERE created_at >1427368539 AND type = 'thumb'
+2015-03-29 19:15:39 获取全部记录 SELECT * FROM media WHERE created_at >1427368539 AND type = 'thumb'
+2015-03-29 19:15:39 释放结果集
+2015-03-29 19:15:39 完成整个查询任务,所用时间为0.00342702865601
+2015-03-29 19:16:21 查询 SELECT * FROM media WHERE created_at >1427368581 AND type = 'thumb'
+2015-03-29 19:16:21 获取全部记录 SELECT * FROM media WHERE created_at >1427368581 AND type = 'thumb'
+2015-03-29 19:16:21 释放结果集
+2015-03-29 19:16:21 完成整个查询任务,所用时间为0.356698036194
+2015-03-29 19:18:10 查询 SELECT * FROM media WHERE created_at >1427368690 AND type = 'thumb'
+2015-03-29 19:18:10 获取全部记录 SELECT * FROM media WHERE created_at >1427368690 AND type = 'thumb'
+2015-03-29 19:18:10 释放结果集
+2015-03-29 19:18:10 完成整个查询任务,所用时间为0.00181818008423
+2015-03-29 19:18:24 查询 SELECT * FROM media WHERE created_at >1427368704 AND type = 'thumb'
+2015-03-29 19:18:24 获取全部记录 SELECT * FROM media WHERE created_at >1427368704 AND type = 'thumb'
+2015-03-29 19:18:24 释放结果集
+2015-03-29 19:18:24 完成整个查询任务,所用时间为0.00205993652344
+2015-03-29 19:18:56 查询 SELECT * FROM media WHERE created_at >1427368736 AND type = 'thumb'
+2015-03-29 19:18:56 获取全部记录 SELECT * FROM media WHERE created_at >1427368736 AND type = 'thumb'
+2015-03-29 19:18:56 释放结果集
+2015-03-29 19:18:56 完成整个查询任务,所用时间为0.292858839035
+2015-03-29 19:19:06 查询 SELECT * FROM media WHERE created_at >1427368746 AND type = 'thumb'
+2015-03-29 19:19:06 获取全部记录 SELECT * FROM media WHERE created_at >1427368746 AND type = 'thumb'
+2015-03-29 19:19:06 释放结果集
+2015-03-29 19:19:06 完成整个查询任务,所用时间为0.271224021912
+2015-03-29 19:23:55 查询 SELECT * FROM media WHERE created_at >1427369035 AND type = 'thumb'
+2015-03-29 19:23:55 获取全部记录 SELECT * FROM media WHERE created_at >1427369035 AND type = 'thumb'
+2015-03-29 19:23:55 释放结果集
+2015-03-29 19:23:55 完成整个查询任务,所用时间为0.00166893005371
+2015-03-29 19:25:26 查询 SELECT * FROM media WHERE created_at >1427369126 AND type = 'thumb'
+2015-03-29 19:25:26 获取全部记录 SELECT * FROM media WHERE created_at >1427369126 AND type = 'thumb'
+2015-03-29 19:25:28 释放结果集
+2015-03-29 19:25:28 完成整个查询任务,所用时间为1.93209719658
+2015-03-29 19:57:54 插入 insert into media(type,created_at) values('voice','1427630275')
+2015-03-29 19:57:54 查询 insert into media(type,created_at) values('voice','1427630275')
+2015-03-29 19:57:54 释放结果集
+2015-03-29 19:57:54 完成整个查询任务,所用时间为0.00163102149963
+2015-03-29 20:44:15 插入 insert into media(type,media_id,created_at) values('voice','6xmIMP5RrqwbNRGAOm19Bx4jqEmUqcitDvnJEuL3WTP1_MosDvLIRu-3kVvoYcBu','1427633056')
+2015-03-29 20:44:15 查询 insert into media(type,media_id,created_at) values('voice','6xmIMP5RrqwbNRGAOm19Bx4jqEmUqcitDvnJEuL3WTP1_MosDvLIRu-3kVvoYcBu','1427633056')
+2015-03-29 20:44:15 释放结果集
+2015-03-29 20:44:15 完成整个查询任务,所用时间为0.00157690048218
+2015-03-29 20:45:05 插入 insert into media(type,media_id,created_at) values('video','Gv5-bXV7d-fGa491m1DSaKf3BguDKLz-A1VRxWX5-0lmnCgTWc77hzSJLoAkmdS7','1427633105')
+2015-03-29 20:45:05 查询 insert into media(type,media_id,created_at) values('video','Gv5-bXV7d-fGa491m1DSaKf3BguDKLz-A1VRxWX5-0lmnCgTWc77hzSJLoAkmdS7','1427633105')
+2015-03-29 20:45:05 释放结果集
+2015-03-29 20:45:05 完成整个查询任务,所用时间为0.00130987167358
+2015-03-29 20:45:57 插入 insert into media(type,thumb_media_id,created_at) values('thumb','','1427633158')
+2015-03-29 20:45:57 查询 insert into media(type,thumb_media_id,created_at) values('thumb','','1427633158')
+2015-03-29 20:45:57 Query Error: insert into media(type,thumb_media_id,created_at) values('thumb','','1427633158')
+Unknown column 'thumb_media_id' in 'field list'
+2015-03-29 20:45:57 释放结果集
+2015-03-29 20:45:57 完成整个查询任务,所用时间为0.00166606903076
+2015-03-29 20:47:45 插入 insert into media(type,created_at,media_id) values('thumb','1427633266','RGt5hxsq2I5Q8n9LnN2h1F0NeXYfTX8bNA-Cl3CS36SUN4dRBbMnow1tInd6T25d')
+2015-03-29 20:47:45 查询 insert into media(type,created_at,media_id) values('thumb','1427633266','RGt5hxsq2I5Q8n9LnN2h1F0NeXYfTX8bNA-Cl3CS36SUN4dRBbMnow1tInd6T25d')
+2015-03-29 20:47:45 释放结果集
+2015-03-29 20:47:45 完成整个查询任务,所用时间为0.00276184082031
+2015-03-29 20:49:33 查询 SELECT * FROM media WHERE created_at >1427374173
+2015-03-29 20:49:33 获取全部记录 SELECT * FROM media WHERE created_at >1427374173
+2015-03-29 20:49:33 释放结果集
+2015-03-29 20:49:33 完成整个查询任务,所用时间为0.00270009040833
+2015-03-29 20:50:28 查询 SELECT * FROM media WHERE created_at >1427374228
+2015-03-29 20:50:28 获取全部记录 SELECT * FROM media WHERE created_at >1427374228
+2015-03-29 20:50:28 释放结果集
+2015-03-29 20:50:28 完成整个查询任务,所用时间为0.00164389610291
+2015-03-29 20:51:07 查询 SELECT * FROM media WHERE created_at >1427374267
+2015-03-29 20:51:07 获取全部记录 SELECT * FROM media WHERE created_at >1427374267
+2015-03-29 20:51:07 释放结果集
+2015-03-29 20:51:07 完成整个查询任务,所用时间为0.00202202796936
+2015-03-29 20:56:59 查询 SELECT * FROM media WHERE created_at >1427374619 AND type = 'thumb'
+2015-03-29 20:56:59 获取全部记录 SELECT * FROM media WHERE created_at >1427374619 AND type = 'thumb'
+2015-03-29 20:57:02 释放结果集
+2015-03-29 20:57:02 完成整个查询任务,所用时间为2.80142498016
+2015-03-29 20:58:58 查询 SELECT * FROM media WHERE created_at >1427374738 AND type = 'thumb'
+2015-03-29 20:58:58 获取全部记录 SELECT * FROM media WHERE created_at >1427374738 AND type = 'thumb'
+2015-03-29 20:59:01 插入 insert into media(type,media_id,created_at) values('news','daod7BmQthZL8SNqX83v7jOc5iKXEzrWfM10kVY7XWWIZ1eFuQXXXHFJudY19hsd','1427633942')
+2015-03-29 20:59:01 查询 insert into media(type,media_id,created_at) values('news','daod7BmQthZL8SNqX83v7jOc5iKXEzrWfM10kVY7XWWIZ1eFuQXXXHFJudY19hsd','1427633942')
+2015-03-29 20:59:01 释放结果集
+2015-03-29 20:59:01 完成整个查询任务,所用时间为3.1289460659
+2015-03-29 21:33:34 查询 SELECT * FROM media WHERE created_at >1427376814 AND type = 'thumb'
+2015-03-29 21:33:34 获取全部记录 SELECT * FROM media WHERE created_at >1427376814 AND type = 'thumb'
+2015-03-29 21:33:35 释放结果集
+2015-03-29 21:33:35 完成整个查询任务,所用时间为0.457890987396
+2015-03-29 21:34:12 查询 SELECT * FROM media WHERE created_at >1427376852 AND type = 'thumb'
+2015-03-29 21:34:12 获取全部记录 SELECT * FROM media WHERE created_at >1427376852 AND type = 'thumb'
+2015-03-29 21:34:12 释放结果集
+2015-03-29 21:34:12 完成整个查询任务,所用时间为0.00175404548645
+2015-03-29 21:35:28 查询 SELECT * FROM media WHERE created_at >1427376928 AND type = 'thumb'
+2015-03-29 21:35:28 获取全部记录 SELECT * FROM media WHERE created_at >1427376928 AND type = 'thumb'
+2015-03-29 21:35:28 释放结果集
+2015-03-29 21:35:28 完成整个查询任务,所用时间为0.00188302993774
+2015-03-29 21:35:49 查询 SELECT * FROM media WHERE created_at >1427376949 AND type = 'thumb'
+2015-03-29 21:35:49 获取全部记录 SELECT * FROM media WHERE created_at >1427376949 AND type = 'thumb'
+2015-03-29 21:35:49 释放结果集
+2015-03-29 21:35:49 完成整个查询任务,所用时间为0.43039393425
+2015-03-29 21:45:21 查询 SELECT * FROM media WHERE created_at >1427377521 AND type = 'thumb'
+2015-03-29 21:45:21 获取全部记录 SELECT * FROM media WHERE created_at >1427377521 AND type = 'thumb'
+2015-03-29 21:45:22 释放结果集
+2015-03-29 21:45:22 完成整个查询任务,所用时间为0.456472158432
+2015-03-29 21:46:50 查询 SELECT * FROM media WHERE created_at >1427377610 AND type = 'thumb'
+2015-03-29 21:46:50 获取全部记录 SELECT * FROM media WHERE created_at >1427377610 AND type = 'thumb'
+2015-03-29 21:46:51 释放结果集
+2015-03-29 21:46:51 完成整个查询任务,所用时间为0.461521863937
+2015-03-30 00:05:34 查询 SELECT * FROM media WHERE created_at >1427385934 AND type = 'thumb'
+2015-03-30 00:05:34 获取全部记录 SELECT * FROM media WHERE created_at >1427385934 AND type = 'thumb'
+2015-03-30 00:05:34 释放结果集
+2015-03-30 00:05:34 完成整个查询任务,所用时间为0.210217952728
+2015-03-30 00:10:37 查询 SELECT * FROM media WHERE created_at >1427386237 AND type = 'thumb'
+2015-03-30 00:10:37 获取全部记录 SELECT * FROM media WHERE created_at >1427386237 AND type = 'thumb'
+2015-03-30 00:10:37 释放结果集
+2015-03-30 00:10:37 完成整个查询任务,所用时间为0.354768037796
+2015-03-30 00:14:59 查询 SELECT * FROM media WHERE created_at >1427386499 AND type = 'thumb'
+2015-03-30 00:14:59 获取全部记录 SELECT * FROM media WHERE created_at >1427386499 AND type = 'thumb'
+2015-03-30 00:14:59 释放结果集
+2015-03-30 00:14:59 完成整个查询任务,所用时间为0.451349020004
+2015-03-30 00:15:22 查询 SELECT * FROM media WHERE created_at >1427386522 AND type = 'thumb'
+2015-03-30 00:15:22 获取全部记录 SELECT * FROM media WHERE created_at >1427386522 AND type = 'thumb'
+2015-03-30 00:15:22 释放结果集
+2015-03-30 00:15:22 完成整个查询任务,所用时间为0.236783027649
+2015-03-30 00:16:11 查询 SELECT * FROM media WHERE created_at >1427386571 AND type = 'thumb'
+2015-03-30 00:16:11 获取全部记录 SELECT * FROM media WHERE created_at >1427386571 AND type = 'thumb'
+2015-03-30 00:16:11 释放结果集
+2015-03-30 00:16:11 完成整个查询任务,所用时间为0.406011104584
+2015-03-30 00:32:31 查询 SELECT * FROM media WHERE created_at >1427387551 AND type = 'thumb'
+2015-03-30 00:32:31 获取全部记录 SELECT * FROM media WHERE created_at >1427387551 AND type = 'thumb'
+2015-03-30 00:32:31 释放结果集
+2015-03-30 00:32:31 完成整个查询任务,所用时间为0.353600025177
+2015-03-30 00:34:27 查询 SELECT * FROM media WHERE created_at >1427387667 AND type = 'thumb'
+2015-03-30 00:34:27 获取全部记录 SELECT * FROM media WHERE created_at >1427387667 AND type = 'thumb'
+2015-03-30 00:34:28 释放结果集
+2015-03-30 00:34:28 完成整个查询任务,所用时间为0.355376958847
+2015-03-30 00:36:10 查询 SELECT * FROM media WHERE created_at >1427387770 AND type = 'thumb'
+2015-03-30 00:36:10 获取全部记录 SELECT * FROM media WHERE created_at >1427387770 AND type = 'thumb'
+2015-03-30 00:36:10 释放结果集
+2015-03-30 00:36:10 完成整个查询任务,所用时间为0.440979957581
+2015-03-30 00:37:05 查询 SELECT * FROM media WHERE created_at >1427387825 AND type = 'thumb'
+2015-03-30 00:37:05 获取全部记录 SELECT * FROM media WHERE created_at >1427387825 AND type = 'thumb'
+2015-03-30 00:37:06 释放结果集
+2015-03-30 00:37:06 完成整个查询任务,所用时间为0.585941076279
+2015-03-30 21:33:23 查询 SELECT * FROM media WHERE created_at >1427463203 AND type = 'thumb'
+2015-03-30 21:33:23 获取全部记录 SELECT * FROM media WHERE created_at >1427463203 AND type = 'thumb'
+2015-03-30 21:33:24 释放结果集
+2015-03-30 21:33:24 完成整个查询任务,所用时间为0.256535053253
+2015-03-30 21:33:37 查询 SELECT * FROM media WHERE created_at >1427463217 AND type = 'thumb'
+2015-03-30 21:33:37 获取全部记录 SELECT * FROM media WHERE created_at >1427463217 AND type = 'thumb'
+2015-03-30 21:33:38 释放结果集
+2015-03-30 21:33:38 完成整个查询任务,所用时间为0.366451025009
+2015-03-30 21:43:17 查询 SELECT * FROM media WHERE created_at >1427463797 AND type = 'news'
+2015-03-30 21:43:17 获取全部记录 SELECT * FROM media WHERE created_at >1427463797 AND type = 'news'
+2015-03-30 21:43:17 释放结果集
+2015-03-30 21:43:17 完成整个查询任务,所用时间为0.00198197364807
+2015-03-30 21:45:10 查询 SELECT * FROM media WHERE created_at >1427463910 AND type = 'news'
+2015-03-30 21:45:10 获取全部记录 SELECT * FROM media WHERE created_at >1427463910 AND type = 'news'
+2015-03-30 21:45:10 释放结果集
+2015-03-30 21:45:10 完成整个查询任务,所用时间为0.603670120239
+2015-03-30 21:50:58 查询 SELECT * FROM media WHERE created_at >1427464257 AND type = 'news'
+2015-03-30 21:50:58 获取全部记录 SELECT * FROM media WHERE created_at >1427464257 AND type = 'news'
+2015-03-30 21:50:58 释放结果集
+2015-03-30 21:50:58 完成整个查询任务,所用时间为0.400043010712
+2015-03-30 21:51:37 查询 SELECT * FROM media WHERE created_at >1427464296 AND type = 'news'
+2015-03-30 21:51:37 获取全部记录 SELECT * FROM media WHERE created_at >1427464296 AND type = 'news'
+2015-03-30 21:51:37 释放结果集
+2015-03-30 21:51:37 完成整个查询任务,所用时间为0.697293996811
+2015-03-30 21:52:57 查询 SELECT * FROM media WHERE created_at >1427464377 AND type = 'news'
+2015-03-30 21:52:57 获取全部记录 SELECT * FROM media WHERE created_at >1427464377 AND type = 'news'
+2015-03-30 21:52:58 释放结果集
+2015-03-30 21:52:58 完成整个查询任务,所用时间为0.962193012238
+2015-03-30 22:01:31 查询 SELECT * FROM media WHERE created_at >1427464891 AND type = 'video'
+2015-03-30 22:01:31 获取全部记录 SELECT * FROM media WHERE created_at >1427464891 AND type = 'video'
+2015-03-30 22:01:31 释放结果集
+2015-03-30 22:01:31 完成整个查询任务,所用时间为0.00585699081421
+2015-03-30 22:02:36 查询 SELECT * FROM media WHERE created_at >1427464956 AND type = 'video'
+2015-03-30 22:02:36 获取全部记录 SELECT * FROM media WHERE created_at >1427464956 AND type = 'video'
+2015-03-30 22:02:37 释放结果集
+2015-03-30 22:02:37 完成整个查询任务,所用时间为0.92364692688
+2015-03-30 22:04:17 查询 SELECT * FROM media WHERE created_at >1427465057 AND type = 'video'
+2015-03-30 22:04:17 获取全部记录 SELECT * FROM media WHERE created_at >1427465057 AND type = 'video'
+2015-03-30 22:04:17 释放结果集
+2015-03-30 22:04:17 完成整个查询任务,所用时间为0.478429079056
+2015-03-30 22:07:50 查询 SELECT * FROM media WHERE created_at >1427465270 AND type = 'video'
+2015-03-30 22:07:50 获取全部记录 SELECT * FROM media WHERE created_at >1427465270 AND type = 'video'
+2015-03-30 22:07:51 释放结果集
+2015-03-30 22:07:51 完成整个查询任务,所用时间为1.05240607262
+2015-03-30 22:09:01 查询 SELECT * FROM media WHERE created_at >1427465341 AND type = 'image'
+2015-03-30 22:09:01 获取全部记录 SELECT * FROM media WHERE created_at >1427465341 AND type = 'image'
+2015-03-30 22:09:01 释放结果集
+2015-03-30 22:09:01 完成整个查询任务,所用时间为0.501408100128
+2015-03-30 22:09:17 查询 SELECT * FROM media WHERE created_at >1427465357 AND type = 'image'
+2015-03-30 22:09:17 获取全部记录 SELECT * FROM media WHERE created_at >1427465357 AND type = 'image'
+2015-03-30 22:09:18 释放结果集
+2015-03-30 22:09:18 完成整个查询任务,所用时间为1.02899193764
+2015-03-31 00:55:58 插入 insert into media(type,created_at,media_id) values('thumb','1427734561','zhLUqVRlM2iiIXNu2-7oPtv0auF6vP2ybZCbL2m5ljGzUy6yqPhGc9jhynkmUs2x')
+2015-03-31 00:55:58 查询 insert into media(type,created_at,media_id) values('thumb','1427734561','zhLUqVRlM2iiIXNu2-7oPtv0auF6vP2ybZCbL2m5ljGzUy6yqPhGc9jhynkmUs2x')
+2015-03-31 00:55:58 释放结果集
+2015-03-31 00:55:58 完成整个查询任务,所用时间为0.00936913490295
+2015-03-31 00:56:37 插入 insert into media(type,created_at,media_id) values('thumb','1427734600','qGLPeOKhBvNXIZxfMXRlyQM1YJOq1cVn85am8Ie-YjKEjBpVgp0PNfJWqtEPZyfK')
+2015-03-31 00:56:37 查询 insert into media(type,created_at,media_id) values('thumb','1427734600','qGLPeOKhBvNXIZxfMXRlyQM1YJOq1cVn85am8Ie-YjKEjBpVgp0PNfJWqtEPZyfK')
+2015-03-31 00:56:37 释放结果集
+2015-03-31 00:56:37 完成整个查询任务,所用时间为0.00234413146973
+2015-03-31 00:56:41 插入 insert into media(type,created_at,media_id) values('thumb','1427734604','4yw1VRd_Nva5__uRBJUgS_AbXoxlRg_6GXqRjvvDydWSzSv5MCS6Xy21oIdT8JxR')
+2015-03-31 00:56:41 查询 insert into media(type,created_at,media_id) values('thumb','1427734604','4yw1VRd_Nva5__uRBJUgS_AbXoxlRg_6GXqRjvvDydWSzSv5MCS6Xy21oIdT8JxR')
+2015-03-31 00:56:41 释放结果集
+2015-03-31 00:56:41 完成整个查询任务,所用时间为0.0015971660614
+2015-03-31 00:56:48 插入 insert into media(type,created_at,media_id) values('thumb','1427734610','at0hndovy_00Bcyg4rx2wVEiZ1f3S_xHvPShlJQqd-TaHlw7SzNW_CKjI2yV4tv7')
+2015-03-31 00:56:48 查询 insert into media(type,created_at,media_id) values('thumb','1427734610','at0hndovy_00Bcyg4rx2wVEiZ1f3S_xHvPShlJQqd-TaHlw7SzNW_CKjI2yV4tv7')
+2015-03-31 00:56:48 释放结果集
+2015-03-31 00:56:48 完成整个查询任务,所用时间为0.00177097320557
+2015-03-31 01:01:06 查询 SELECT * FROM media WHERE created_at >1427475666 AND type = 'thumb'
+2015-03-31 01:01:06 获取全部记录 SELECT * FROM media WHERE created_at >1427475666 AND type = 'thumb'
+2015-03-31 01:01:06 释放结果集
+2015-03-31 01:01:06 完成整个查询任务,所用时间为0.00178194046021
+2015-03-31 01:07:46 查询 SELECT * FROM media WHERE created_at >1427476066 AND type = 'thumb'
+2015-03-31 01:07:46 获取全部记录 SELECT * FROM media WHERE created_at >1427476066 AND type = 'thumb'
+2015-03-31 01:07:46 释放结果集
+2015-03-31 01:07:46 完成整个查询任务,所用时间为0.5942029953
+2015-03-31 01:09:09 查询 SELECT * FROM media WHERE created_at >1427476149 AND type = 'thumb'
+2015-03-31 01:09:09 获取全部记录 SELECT * FROM media WHERE created_at >1427476149 AND type = 'thumb'
+2015-03-31 01:09:09 释放结果集
+2015-03-31 01:09:09 完成整个查询任务,所用时间为0.00185513496399
+2015-03-31 01:10:46 查询 SELECT * FROM media WHERE created_at >1427476246 AND type = 'thumb'
+2015-03-31 01:10:46 获取全部记录 SELECT * FROM media WHERE created_at >1427476246 AND type = 'thumb'
+2015-03-31 01:10:46 释放结果集
+2015-03-31 01:10:46 完成整个查询任务,所用时间为0.00160908699036
+2015-03-31 01:10:49 查询 SELECT * FROM media WHERE created_at >1427476249 AND type = 'thumb'
+2015-03-31 01:10:49 获取全部记录 SELECT * FROM media WHERE created_at >1427476249 AND type = 'thumb'
+2015-03-31 01:10:49 释放结果集
+2015-03-31 01:10:49 完成整个查询任务,所用时间为0.00285601615906
+2015-03-31 01:11:08 查询 SELECT * FROM media WHERE created_at >1427476268 AND type = 'thumb'
+2015-03-31 01:11:08 获取全部记录 SELECT * FROM media WHERE created_at >1427476268 AND type = 'thumb'
+2015-03-31 01:11:08 释放结果集
+2015-03-31 01:11:08 完成整个查询任务,所用时间为0.00164318084717
+2015-03-31 01:11:53 查询 SELECT * FROM media WHERE created_at >1427476313 AND type = 'thumb'
+2015-03-31 01:11:53 获取全部记录 SELECT * FROM media WHERE created_at >1427476313 AND type = 'thumb'
+2015-03-31 01:11:53 释放结果集
+2015-03-31 01:11:53 完成整个查询任务,所用时间为0.00236392021179
+2015-03-31 01:12:15 查询 SELECT * FROM media WHERE created_at >1427476335 AND type = 'thumb'
+2015-03-31 01:12:15 获取全部记录 SELECT * FROM media WHERE created_at >1427476335 AND type = 'thumb'
+2015-03-31 01:12:18 释放结果集
+2015-03-31 01:12:18 完成整个查询任务,所用时间为3.52668595314
+2015-03-31 01:27:02 查询 SELECT * FROM media WHERE created_at >1427477222 AND type = 'thumb'
+2015-03-31 01:27:02 获取全部记录 SELECT * FROM media WHERE created_at >1427477222 AND type = 'thumb'
+2015-03-31 01:27:05 插入 insert into media(type,media_id,created_at) values('news','9662nvmm-XL82YlzCmphRUdAQPqd9nRWz49aXnFJszFJ4j7DkkRNzFervOE8F3iW','1427736427')
+2015-03-31 01:27:05 查询 insert into media(type,media_id,created_at) values('news','9662nvmm-XL82YlzCmphRUdAQPqd9nRWz49aXnFJszFJ4j7DkkRNzFervOE8F3iW','1427736427')
+2015-03-31 01:27:05 释放结果集
+2015-03-31 01:27:05 完成整个查询任务,所用时间为3.05510592461
+2015-03-31 01:29:49 查询 SELECT * FROM media WHERE created_at >1427477389 AND type = 'thumb'
+2015-03-31 01:29:49 获取全部记录 SELECT * FROM media WHERE created_at >1427477389 AND type = 'thumb'
+2015-03-31 01:29:51 插入 insert into media(type,media_id,created_at) values('news','23gWjhCUQSnnNNyxzsZgYaztbwsrVQL1BV7TuDq7obJpb2A5b7YufbmPqpXDrJuL','1427736594')
+2015-03-31 01:29:51 查询 insert into media(type,media_id,created_at) values('news','23gWjhCUQSnnNNyxzsZgYaztbwsrVQL1BV7TuDq7obJpb2A5b7YufbmPqpXDrJuL','1427736594')
+2015-03-31 01:29:52 插入 insert into batchsend(type,media_id,created_at,group_id,send_time) values('news','23gWjhCUQSnnNNyxzsZgYaztbwsrVQL1BV7TuDq7obJpb2A5b7YufbmPqpXDrJuL','1427736594','100,101','1427736592')
+2015-03-31 01:29:52 查询 insert into batchsend(type,media_id,created_at,group_id,send_time) values('news','23gWjhCUQSnnNNyxzsZgYaztbwsrVQL1BV7TuDq7obJpb2A5b7YufbmPqpXDrJuL','1427736594','100,101','1427736592')
+2015-03-31 01:29:52 Query Error: insert into batchsend(type,media_id,created_at,group_id,send_time) values('news','23gWjhCUQSnnNNyxzsZgYaztbwsrVQL1BV7TuDq7obJpb2A5b7YufbmPqpXDrJuL','1427736594','100,101','1427736592')
+Unknown column 'created_at' in 'field list'
+2015-03-31 01:29:52 释放结果集
+2015-03-31 01:29:52 完成整个查询任务,所用时间为2.67940807343
+2015-03-31 01:29:52 释放结果集
+2015-03-31 01:29:52 完成整个查询任务,所用时间为0.00173497200012
+2015-03-31 01:31:04 查询 SELECT * FROM media WHERE created_at >1427477464 AND type = 'thumb'
+2015-03-31 01:31:04 获取全部记录 SELECT * FROM media WHERE created_at >1427477464 AND type = 'thumb'
+2015-03-31 01:31:07 插入 insert into media(type,media_id,created_at) values('news','KEbe4BKDFC9wACdmg3PZJqdGewNeCcCH3UDsW1UWHc7JZomZGui9rwYcC5LKDYGx','1427736669')
+2015-03-31 01:31:07 查询 insert into media(type,media_id,created_at) values('news','KEbe4BKDFC9wACdmg3PZJqdGewNeCcCH3UDsW1UWHc7JZomZGui9rwYcC5LKDYGx','1427736669')
+2015-03-31 01:31:07 插入 insert into batchsend(type,media_id,created_at,group_id,send_time) values('news','KEbe4BKDFC9wACdmg3PZJqdGewNeCcCH3UDsW1UWHc7JZomZGui9rwYcC5LKDYGx','1427736669','100,101','1427736667')
+2015-03-31 01:31:07 查询 insert into batchsend(type,media_id,created_at,group_id,send_time) values('news','KEbe4BKDFC9wACdmg3PZJqdGewNeCcCH3UDsW1UWHc7JZomZGui9rwYcC5LKDYGx','1427736669','100,101','1427736667')
+2015-03-31 01:31:07 释放结果集
+2015-03-31 01:31:07 完成整个查询任务,所用时间为2.93435096741
+2015-03-31 01:31:07 释放结果集
+2015-03-31 01:31:07 完成整个查询任务,所用时间为0.00192403793335
+2015-03-31 01:32:29 查询 SELECT * FROM media WHERE created_at >1427477549 AND type = 'thumb'
+2015-03-31 01:32:29 获取全部记录 SELECT * FROM media WHERE created_at >1427477549 AND type = 'thumb'
+2015-03-31 01:32:31 插入 insert into media(type,media_id,created_at) values('news','sb-pIelAInYbzp_RDAhKcf6zG20mGmkhXbtq-f20tieIOoF88XZnEyr1HXPka6J7','1427736754')
+2015-03-31 01:32:31 查询 insert into media(type,media_id,created_at) values('news','sb-pIelAInYbzp_RDAhKcf6zG20mGmkhXbtq-f20tieIOoF88XZnEyr1HXPka6J7','1427736754')
+2015-03-31 01:32:31 插入 insert into batchsend(type,media_id,created_at,group_id,send_time) values('news','sb-pIelAInYbzp_RDAhKcf6zG20mGmkhXbtq-f20tieIOoF88XZnEyr1HXPka6J7','1427736754','100,101','1427736751')
+2015-03-31 01:32:31 查询 insert into batchsend(type,media_id,created_at,group_id,send_time) values('news','sb-pIelAInYbzp_RDAhKcf6zG20mGmkhXbtq-f20tieIOoF88XZnEyr1HXPka6J7','1427736754','100,101','1427736751')
+2015-03-31 01:32:31 释放结果集
+2015-03-31 01:32:31 完成整个查询任务,所用时间为2.18572998047
+2015-03-31 01:32:31 释放结果集
+2015-03-31 01:32:31 完成整个查询任务,所用时间为0.0014328956604
+2015-03-31 01:45:09 查询 SELECT * FROM media WHERE created_at >1427478309 AND type = 'thumb'
+2015-03-31 01:45:09 获取全部记录 SELECT * FROM media WHERE created_at >1427478309 AND type = 'thumb'
+2015-03-31 01:45:12 插入 insert into media(type,media_id,created_at) values('news','l6OdAY9P-0iSSpj2qqK0sa_HbCD-li2B6fHVNH1MTFHBEZJckvCUnohNSgvJsd4Q','1427737514')
+2015-03-31 01:45:12 查询 insert into media(type,media_id,created_at) values('news','l6OdAY9P-0iSSpj2qqK0sa_HbCD-li2B6fHVNH1MTFHBEZJckvCUnohNSgvJsd4Q','1427737514')
+2015-03-31 01:45:12 插入 insert into batchsend(type,media_id,created_at,group_id,send_time) values('news','l6OdAY9P-0iSSpj2qqK0sa_HbCD-li2B6fHVNH1MTFHBEZJckvCUnohNSgvJsd4Q','1427737514','100,101','1427737512')
+2015-03-31 01:45:12 查询 insert into batchsend(type,media_id,created_at,group_id,send_time) values('news','l6OdAY9P-0iSSpj2qqK0sa_HbCD-li2B6fHVNH1MTFHBEZJckvCUnohNSgvJsd4Q','1427737514','100,101','1427737512')
+2015-03-31 01:45:12 释放结果集
+2015-03-31 01:45:12 完成整个查询任务,所用时间为2.64475393295
+2015-03-31 01:45:12 释放结果集
+2015-03-31 01:45:12 完成整个查询任务,所用时间为0.0018630027771
+2015-03-31 01:45:24 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-03-31 01:45:24 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-03-31 01:45:24 释放结果集
+2015-03-31 01:45:24 完成整个查询任务,所用时间为0.00102782249451
+2015-03-31 01:57:22 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-03-31 01:57:22 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-03-31 01:57:22 释放结果集
+2015-03-31 01:57:22 完成整个查询任务,所用时间为0.00121998786926
+2015-03-31 01:57:53 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-03-31 01:57:53 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-03-31 01:57:53 释放结果集
+2015-03-31 01:57:53 完成整个查询任务,所用时间为0.00146389007568
+2015-03-31 02:01:17 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-03-31 02:01:17 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-03-31 02:01:18 释放结果集
+2015-03-31 02:01:18 完成整个查询任务,所用时间为0.348290920258
+2015-03-31 02:03:36 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-03-31 02:03:36 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-03-31 02:03:38 释放结果集
+2015-03-31 02:03:38 完成整个查询任务,所用时间为1.24467396736
