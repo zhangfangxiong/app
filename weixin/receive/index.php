@@ -10,6 +10,8 @@ include_once('../model/response.php');
 class receive_index extends baseWeixin
 {
     private static $sResponseTpe = 'text';//回复类型
+
+    //接收消息以及相关的操作
     public function indexAction()
     {
         //接收消息的结构大致为

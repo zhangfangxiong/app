@@ -21,7 +21,7 @@ class baseWeixin extends base
 
     const APPID = "wx9b2a25e390a27d33";
     const APPSECRET = "84796fa0c79fd86b5087263cbbb27268";
-    const TOKEN = "aaaabbbbccccdddd";
+    const TOKEN = "bcgyez1427551875";
     const ACCESSTOKENURL = "https://api.weixin.qq.com/cgi-bin/token";//获取TOKEN接口
     const GETWEIXINIPURL = "https://api.weixin.qq.com/cgi-bin/getcallbackip";//获取IP接口
     const RESTYPE = "text";//回复的类型
