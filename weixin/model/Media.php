@@ -19,7 +19,7 @@ class Media extends ModelBase
     const UPDATEPERMANENTNEWS = "https://api.weixin.qq.com/cgi-bin/material/update_news";//修改永久素材（这个暂时不弄，有需求再说）
     const PERMANENTNUM = "https://api.weixin.qq.com/cgi-bin/material/get_materialcount";//永久素材总数
     const PERMANENTLIST = "https://api.weixin.qq.com/cgi-bin/material/batchget_material";//获取相应类型的永久素材列表
-    private $aMediaList = array();
+    private static $aMediaList = array();
 
     /**
      * 上传临时图文素材
@@ -75,29 +75,6 @@ class Media extends ModelBase
     {
         $sDownloadUrl = self::DOWNLOADURL . "?access_token=" . $sToken . "&media_id=" . $sMedia_id;
         return self::curl($sDownloadUrl);
-    }
-
-    /**
-     * 获取某类媒体文件列表
-     * @param $sType
-     * @param int $offset
-     * @param int $count
-     * @return mixed
-     */
-    public static function getMediaByType($sToken,$sType,$offset=0,$count=20)
-    {
-        if (!isset(self::$aMediaList[$sType])) {
-            $aData = array(
-                "type" => $sType,
-                "offset" => $offset,
-                "count" => $count
-            );
-            $sPermanentUrl = self::PERMANENTLIST . "?access_token=" . $sToken ;
-            $sReturn = self::curl($sPermanentUrl, true, $aData);
-            $aData = json_decode($sReturn, true);
-            self::$aMediaList[$sType] = $aData;
-        }
-        return self::$aMediaList[$sType];
     }
 
     /**
@@ -213,6 +190,30 @@ class Media extends ModelBase
     public static function getPermanentNum($sToken)
     {
         $sDownloadUrl = self::PERMANENTNUM . "?access_token=" . $sToken;
-        return self::curl($sDownloadUrl);
+        $aData = json_decode(self::curl($sDownloadUrl), true);
+        return $aData;
+    }
+
+    /**
+     * 获取某类媒体文件列表
+     * @param $sType 图片（image）、视频（video）、语音 （voice）、图文（news）
+     * @param int $offset
+     * @param int $count
+     * @return mixed
+     */
+    public static function getMediaByType($sToken,$sType,$offset=0,$count=20)
+    {
+        if (!isset(self::$aMediaList[$sType])) {
+            $aData = array(
+                "type" => $sType,
+                "offset" => $offset,
+                "count" => $count
+            );
+            $sPermanentUrl = self::PERMANENTLIST . "?access_token=" . $sToken ;
+            $sReturn = self::curl($sPermanentUrl, true, json_encode($aData));
+            $aData = json_decode($sReturn, true);
+            self::$aMediaList[$sType] = $aData;
+        }
+        return self::$aMediaList[$sType];
     }
 }

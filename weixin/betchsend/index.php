@@ -10,6 +10,18 @@ class batchsend_index extends baseWeixin
 {
 
     /**
+     * 这个专门用来做测试用的
+     */
+    public function testAction()
+    {
+        $sToken = $this->getAccessToken();
+        $aMediaNumList = Media::getPermanentNum($sToken);//媒体文件数目列表
+        $aMediaList = Media::getMediaByType($sToken,"news");
+        print_r($aMediaList);
+        die;
+    }
+
+    /**
      * 创建群发
      */
     public function initBatchAction()
