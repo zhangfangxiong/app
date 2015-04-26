@@ -1,6 +1,20 @@
-<style>
+<style xmlns="http://www.w3.org/1999/html">
     .margin_aa {
         margin-bottom: 10px;
+    }
+
+    .form-select-css {
+        width: 100px;
+    }
+    .media-div {
+        width: 295px;
+        border:1px solid #204d74;
+    }
+    .media-image {
+        float: right;
+    }
+    .clear {
+        clear: both;
     }
 </style>
 <!DOCTYPE html>
@@ -20,6 +34,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../../static/bootstrap3.3.2/css/bootstrap.css" rel="stylesheet">
+    <link href="../../static/plug-in/ladytime/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" href="/favicon.ico">
@@ -27,19 +43,104 @@
 <body>
 <!-- Docs master nav -->
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-    <div class="container">
-    </div>
+    <h1 class="text-center">创建定时群发分组任务</h1>
 </header>
 
-<div class="container bs-docs-container">
 
-        <div class="form-group">
-            <a href="?action=explodeFileList" class="btn btn-primary">导出工具</a>
-        </div>
+<div class="container bs-docs-container">
+    <form action="?action=initBatch" method="post">
     <div class="form-group">
-        <a href="?action=getFileList" class="btn btn-primary">导入工具</a>
+        <div class="margin_aa"><label>
+                选择分组
+            </label></div>
+        <div class="form-inline">
+            <div class="form-group">
+                <select name="group_id" class="form-control" style="width: 150px">
+                    <option value="10000">请选择分组</option>
+                    <?php
+                    if (!empty($aGroupList['groups'])) {
+                        foreach ($aGroupList['groups'] as $key => $value) {
+                            ?>
+                            <option value="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></option>
+                        <?php
+                        }
+                    }
+                    ?>
+                </select>
+            </div>
+        </div>
     </div>
+    <div class="form-group">
+        <div class="margin_aa"><label>
+                选择图文模版
+            </label></div>
+        <div class="form-inline">
+            <div class="form-group">
+                <?php
+                if (!empty($aMediaList['item'])) {
+                    foreach ($aMediaList['item'] as $key => $value) {
+                        ?>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="media_id" id="media_id" value="<?php echo $value['media_id'];?>">
+                            </label>
+                        </div>
+                        <div class="media-div">
+                            <?php
+                            foreach($value['content']['news_item'] as $k =>$val) {
+                                ?>
+                                <div class="appmsg_item">
+                                    <h4><a target="_blank" href="<?php echo $val['url'];?>"><?php echo $val['title'];?></a></h4>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                    <?php
+
+                    }
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="margin_aa"><label>
+                选择群发日期
+            </label></div>
+        <div class="well">
+            <div id="datetimepicker1" class="input-append date">
+                <input data-format="yyyy-MM-dd" type="text" name="batchDate">
+    <span class="add-on">
+      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+      </i>
+    </span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="margin_aa"><label>
+                选择群发时间
+            </label></div>
+        <div class="form-inline">
+            <div class="form-group">
+                    <?php
+                    if (!empty($batchTime)) {
+                        foreach ($batchTime as $key => $value) {
+                            ?>
+                                <label>
+                                    <input type="radio" name="batchTime" id="batchTime" value="<?php echo $key;?>"> <?php echo $value;?>
+                                </label>
+                        <?php
+                        }
+                    }
+                    ?>
+            </div>
+        </div>
+    </div>
+        <button type="submit" class="btn btn-primary btn-lg">提交</button>
 </div>
+</form>
 
 <!-- Footer
 ================================================== -->
@@ -53,7 +154,15 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="../../static/jquery/jquery-2.1.1.js"></script>
 <script src="../../static/bootstrap3.3.2/js/bootstrap.js"></script>
+<script src="../../static/plug-in/ladytime/js/bootstrap-datetimepicker.min.js"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#datetimepicker1').datetimepicker({
+            language: 'pt-BR'
+        });
+    });
+</script>
 <!--
 <script type="text/javascript" language="JavaScript">
     wx.config({

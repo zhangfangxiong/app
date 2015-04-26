@@ -14,18 +14,47 @@ class Batchsend extends ModelBase
     const GROUPSEND = "https://api.weixin.qq.com/cgi-bin/message/mass/sendall";//分组群发接口
     const OPENIDSEND = "https://api.weixin.qq.com/cgi-bin/message/mass/send";//OpenID列表群发接口
     const PRIVIEW = "https://api.weixin.qq.com/cgi-bin/message/mass/preview";//预览接口
-    private $batchSendList = array();//群发列表，群发表中取得
+    private static $batchSendList = array();//群发列表，群发表中取得
 
     /**
      * 按分组群发
      * @param $sToken
-     * @param $sData
+     * @param $sData 生成群发模版
      * @return mixed
      */
-    public static function patchSendByGroup($sToken,$sData)
+    public static function batchSendByGroup($sToken,$sData)
     {
         $sGroupSendUrl = self::GROUPSEND . "?access_token=" . $sToken;
         $sReturn = self::curl($sGroupSendUrl,true,$sData);
+        return $sReturn;
+    }
+
+    /**
+     * 按openID群发
+     * @param $sToken
+     * @param $sData 生成群发模版
+     * @return mixed
+     */
+    public static function batchSendByOpenIDs($sToken,$sData)
+    {
+        $sGroupSendUrl = self::OPENIDSEND . "?access_token=" . $sToken;
+        $sReturn = self::curl($sGroupSendUrl,true,$sData);
+        return $sReturn;
+    }
+
+    /**
+     * 群发预览
+     * @param $sToken
+     * @param $sData 生成群发模版
+     * @return mixed
+     */
+    public static function batchSendPreview($sToken,$sOpenID,$media_id,$sType)
+    {
+        $sAction = $sType."Preview";
+        $sData = self::$sAction($sOpenID,$media_id);
+        $sGroupSendUrl = self::OPENIDSEND . "?access_token=" . $sToken;
+        $sReturn = self::curl($sGroupSendUrl,true,$sData);
+        print_r($sReturn);
         return $sReturn;
     }
 
