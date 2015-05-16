@@ -24,7 +24,14 @@ class batchsend_index extends baseWeixin
         $this->assign('aMediaList',$aMediaList);
         $this->assign('batchTime',self::$batchTime);
         $this->display("/weixin/index.phtml");
-        die;
+    }
+
+    /**
+     * 创建素材
+     */
+    public function initMaterialAction()
+    {
+        $this->display("/weixin/material.phtml");
     }
 
     /**

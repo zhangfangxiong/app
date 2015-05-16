@@ -15,7 +15,6 @@ include_once(dirname(dirname(__FILE__))."/config/globalConfig.php");
 
 class baseWeixin extends base
 {
-
     protected $tokenParamArr = array();
     protected $AccessToken = "";//这个应该存到memcache里面
 
