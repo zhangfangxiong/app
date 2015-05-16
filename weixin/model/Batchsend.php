@@ -26,7 +26,7 @@ class Batchsend extends ModelBase
     {
         $sGroupSendUrl = self::GROUPSEND . "?access_token=" . $sToken;
         $sReturn = self::curl($sGroupSendUrl,true,$sData);
-        return $sReturn;
+        return json_decode($sReturn,true);
     }
 
     /**
@@ -54,18 +54,21 @@ class Batchsend extends ModelBase
         $sData = self::$sAction($sOpenID,$media_id);
         $sGroupSendUrl = self::OPENIDSEND . "?access_token=" . $sToken;
         $sReturn = self::curl($sGroupSendUrl,true,$sData);
-        print_r($sReturn);
-        return $sReturn;
+        return json_decode($sReturn,true);
     }
 
     /**
      * 群发列表
+     * @iTime 发送时间
      * @return array
      */
-    public static function batchSendList()
+    public static function batchSendList($iTime)
     {
         if (empty(self::$batchSendList)) {
-            $sSql = "SELECT * FROM batchsend WHERE has_send =0";
+            //设定一个时间区间，以防延迟
+            $iStartTime = $iTime - 3600;
+            $iEndTime = $iTime + 3600;
+            $sSql = "SELECT * FROM batchsend WHERE has_send =0 AND send_time >=".$iStartTime." AND send_time <=".$iEndTime;
             $oDB = self::getDB();
             $aData = $oDB->get_all($sSql);
             self::$batchSendList = $aData;

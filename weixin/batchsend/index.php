@@ -9,7 +9,7 @@ include_once("../model/Batchsend.php");
 class batchsend_index extends baseWeixin
 {
 
-    private static $batchTime = array('00:00:00','12:00:00','18:00:00','22:00:00');//群发时间点，定死的
+    private static $batchTime = array('00:00:00','12:00:00','18:00:00','22:00:00','23:00:00');//群发时间点，定死的
 
     /**
      * 这个专门用来做测试用的
@@ -45,7 +45,7 @@ class batchsend_index extends baseWeixin
         if (empty($_POST['batchTime'])) {
             showError("请选择群发时间",true);
         }
-        $iSendTime = $_POST['batchDate'].' '.self::$batchTime[$_POST['batchTime']-1];//群发的时间
+        $iSendTime = $_POST['batchDate'].' '.self::$batchTime[$_POST['batchTime']];//群发的时间
         $aNews['created_at'] = time();
         $aNews['type'] = 'news';
         $aNews['media_id'] = $_POST['media_id'];
@@ -68,20 +68,26 @@ class batchsend_index extends baseWeixin
     public function batchSendAction()
     {
         $sToken = $this->getAccessToken();
-        $abatchSendList = Batchsend::batchSendList();
+        $iTime = time();
+        $abatchSendList = Batchsend::batchSendList($iTime);
         $sReturn = array();
         if (!empty($abatchSendList)) {
+            $oDb = self::getDB();
             foreach ($abatchSendList as $key=>$value) {
                 //生成群发模版
                 $sAction = ($value["type"] != "vedio") ? $value["type"]."Temp" : "mpvideoTemp";
                 $aGroupID = explode(",",$value["group_id"]);
                 foreach ($aGroupID as $k => $v) {
                     $sTemp = Batchsend::$sAction($v,$value["media_id"]);
-                    $sReturn[] = Batchsend::batchSendByGroup($sToken,$sTemp);
+                    $sReturn[$k] = Batchsend::batchSendByGroup($sToken,$sTemp);
+                    if ($sReturn[$k]['errcode'] == 0 ) {
+                        //发送成功处理
+                        $array = array('has_send'=>1,'send_secc_time'=>$iTime);
+                        $oDb->update('batchsend',$array,'id='.$value['id']);
+                    }
                 }
             }
         }
-
         print_r($sReturn);
     }
 
@@ -91,12 +97,13 @@ class batchsend_index extends baseWeixin
     public function PreviewAction()
     {
         $aOpenIDs[] = 'oKuqYjrEzNxwGJ23m8-GfU406bX0';//zfx
-        $aOpenIDs[] = 'oKuqYjjzqfTsxjluCF_EE1C1h3Uk';//东成
+        //$aOpenIDs[] = 'oKuqYjjzqfTsxjluCF_EE1C1h3Uk';//东成
         $sToken = $this->getAccessToken();
         $aMediaList = Media::getMediaByType($sToken,"news");//新闻媒体列表
         foreach($aOpenIDs as $key => $value) {
-            batchsend::batchSendPreview($sToken,$value,$aMediaList['item'][1]['media_id'],'news');
+            $aReturn[] = batchsend::batchSendPreview($sToken,$value,$aMediaList['item'][1]['media_id'],'news');
         }
+        print_r($aReturn);
     }
 
     /**
