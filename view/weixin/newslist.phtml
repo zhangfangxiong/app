@@ -1,0 +1,36 @@
+<?php include($GLOBALS['VIEWPATH'].'header.phtml'); ?>
+<style>
+    .padding-left-5{
+        padding-left: 5px;
+    }
+</style>
+<div class="container bs-docs-container">
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+        <h1 class="text-center">新闻列表</h1>
+    </header>
+    <div class="form-inline">
+        <div class="form-group">
+            <?php
+            if (!empty($aMediaList['item'])) {
+                foreach ($aMediaList['item'] as $key => $value) {
+                    ?>
+                    <div class="media-div">
+                        <?php
+                        foreach($value['content']['news_item'] as $k =>$val) {
+                            ?>
+                            <div class="appmsg_item">
+                                <h4><a target="_blank" href="<?php echo $val['url'];?>"><?php echo $val['title'];?></a><a href="?action=updateNews&mediaID=<?php echo $value['media_id'];?>&index=<?php echo $k; ?>"><span class="padding-left-5 glyphicon glyphicon-pencil" aria-hidden="true"></span></a></h4>
+                            </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                <?php
+
+                }
+            }
+            ?>
+        </div>
+    </div>
+</div>
+<?php include($GLOBALS['VIEWPATH'].'footer.phtml'); ?>

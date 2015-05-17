@@ -1,0 +1,76 @@
+<?php include($GLOBALS['VIEWPATH'] . 'header.phtml'); ?>
+<style>
+    #editor {
+        width: 800px;
+    }
+</style>
+<div class="container bs-docs-container">
+    <h1 class="text-center">新闻模版编辑</h1>
+
+    <form class="form-horizontal" action="" method="post" id="media">
+        <input name="media_id" type="hidden" value="<?php echo $aData['media_id']; ?>">
+        <input name="index" type="hidden" value="<?php echo $aData['index']; ?>">
+        <input name="thumb_media_id" type="hidden" value="<?php echo $aData['content']['thumb_media_id']; ?>">
+        <input name="show_cover_pic" type="hidden" value="<?php echo $aData['content']['show_cover_pic']; ?>">
+
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">标题</label>
+
+            <div class="col-sm-10">
+                <input class="form-control" name="title" type="text" value="<?php echo $aData['content']['title']; ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">作者</label>
+
+            <div class="col-sm-10">
+                <input class="form-control" name="author" type="text"
+                       value="<?php echo $aData['content']['author']; ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">源地址</label>
+
+            <div class="col-sm-10">
+                <input class="form-control" name="content_source_url" type="text"
+                       value="<?php echo $aData['content']['content_source_url']; ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">摘要</label>
+
+            <div class="col-sm-10">
+                <input class="form-control" name="digest" type="text"
+                       value="<?php echo $aData['content']['digest']; ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">内容</label>
+
+            <div class="col-sm-10">
+                <div class="edit-width">
+                    <?php include($GLOBALS['VIEWPATH'] . 'editor.phtml'); ?>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+
+            <div class="col-sm-10">
+                <input class="btn btn-primary" name="submit" type="submit" value="提交">
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $(function () {
+        UE.getEditor('editor').ready(function () {
+            //this是当前创建的编辑器实例
+            this.setContent('<?php echo $aData['content']['content']; ?>');
+        });
+        $('#media').submit(function () {
+            //做验证
+        })
+    });
+</script>
+<?php include($GLOBALS['VIEWPATH'] . 'footer.phtml'); ?>

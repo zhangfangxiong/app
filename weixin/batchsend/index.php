@@ -23,15 +23,7 @@ class batchsend_index extends baseWeixin
         $this->assign('aGroupList',$aGroupList);
         $this->assign('aMediaList',$aMediaList);
         $this->assign('batchTime',self::$batchTime);
-        $this->display("/weixin/index.phtml");
-    }
-
-    /**
-     * 创建素材
-     */
-    public function initMaterialAction()
-    {
-        $this->display("/weixin/material.phtml");
+        $this->display("/weixin/batchsend.phtml");
     }
 
     /**
@@ -39,7 +31,6 @@ class batchsend_index extends baseWeixin
      */
     public function initBatchAction()
     {
-        $sToken = $this->getAccessToken();
         if (empty($_POST['group_id']) || $_POST['group_id'] == 10000) {
             showError("请选择分组",true);
         }
@@ -62,11 +53,6 @@ class batchsend_index extends baseWeixin
         $oDB = $this->getDB();
         $oDB->insert("batchsend", $aNews);
         showOk('创建定时群发成功','?action=test');
-
-        /**
-        //调用上传缩略图接口
-        $sMedia_id = $oMedia->uploadFile($sFielename, $sToken, "thumb");
-         */
     }
 
     /**

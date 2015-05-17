@@ -1,17 +1,18 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: zhangfangxiong
  * Date: 15/3/8
  * Time: 下午3:20
  */
-
 class base
 {
     protected static $oDb = null;
     protected static $oMem = null;
     protected $tplVars = array();
-    public function __construct ()
+
+    public function __construct()
     {
         set_time_limit(0);
         if (isset($_GET['action']) && $_GET['action']) {
@@ -27,7 +28,7 @@ class base
      * @param $sVar
      * @param $mData
      */
-    protected function assign($sVar,$mData)
+    protected function assign($sVar, $mData)
     {
         $this->tplVars[$sVar] = $mData;
     }
@@ -38,8 +39,8 @@ class base
      */
     protected function display($sFileName)
     {
-        $sTemplate = $GLOBALS['VIEWPATH'].$sFileName;
-        echo $this->_run($sTemplate,$this->tplVars);
+        $sTemplate = $GLOBALS['VIEWPATH'] . $sFileName;
+        echo $this->_run($sTemplate, $this->tplVars);
     }
 
     /**
@@ -82,7 +83,7 @@ class base
      * @param bool $useEval
      * @return string
      */
-    protected function _run ($template, $vars, $useEval = false)
+    protected function _run($template, $vars, $useEval = false)
     {
         if ($vars == null && count($this->tplVars) > 0) {
             $vars = $this->tplVars;
@@ -96,7 +97,7 @@ class base
         if ($useEval == true) {
             eval('?>' . $template . '<?');
         } else {
-            include ($template);
+            include($template);
         }
         $content = ob_get_clean();
         return $content;
@@ -107,7 +108,7 @@ class base
      * @param $url
      * 访问url
      */
-    protected function curl($sUrl,$bPost = false,$aData = array())
+    protected function curl($sUrl, $bPost = false, $aData = array())
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_DNS_USE_GLOBAL_CACHE, true);
@@ -116,7 +117,7 @@ class base
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         //curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         if ($bPost) {
-            curl_setopt ( $ch, CURLOPT_POST, 1 );
+            curl_setopt($ch, CURLOPT_POST, 1);
         }
         if ($bPost && !empty($aData)) {
             curl_setopt($ch, CURLOPT_POSTFIELDS, $aData);
@@ -134,7 +135,8 @@ class base
      * @param $xXml
      * @return array
      */
-    protected function dealxml($xXml) {
+    protected function dealxml($xXml)
+    {
         //转换为simplexml对象
         $xmlResult = simplexml_load_string($xXml, null, LIBXML_NOCDATA);
         //foreach循环遍历
@@ -146,6 +148,15 @@ class base
         }
         return $aNode;
     }
+
+    protected function isPost()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            return true;
+        }
+        return false;
+    }
+
 
     /*
 $content = simplexml_load_string('<content><![CDATA[Hello, world!]]></content>');
