@@ -67,13 +67,14 @@
         <div class="margin_aa"><label>
                 选择群发日期
             </label></div>
-        <div class="well">
-            <div id="datetimepicker1" class="input-append date">
-                <input data-format="yyyy-MM-dd" type="text" name="batchDate">
-    <span class="add-on">
-      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-      </i>
-    </span>
+        <div class="container">
+            <div class="row">
+                <div id="datepicker" class="date col-md-2 col-xs-4 input-group" style="padding-top: 300px">
+                    <input type="text" class="form-control input-sm" placeholder="点击选择时间"/>
+                <span class="input-group-addon">
+                   <i class="glyphicon glyphicon-th-list"></i>
+                </span>
+                </div>
             </div>
         </div>
     </div>
@@ -100,6 +101,17 @@
         <button type="submit" class="btn btn-primary btn-lg">提交</button>
 </div>
 </form>
+<script src="<?php echo $GLOBALS['STATICPATH']; ?>plug-in/ladytime/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+    $('#datepicker').datepicker({
+        show: true,
+        format: 'yyyy-mm-dd',
+        language: 'zh-CN',
+        weekStart: 1,
+        autoclose: true,
+        orientation:'right',
+        todayBtn:'linked'
 
+    });</script>
 <?php include($GLOBALS['VIEWPATH'].'footer.phtml'); ?>
 
