@@ -10,6 +10,36 @@ class batchsend_index extends baseWeixin
 {
 
     private static $batchTime = array('00:00:00','12:00:00','18:00:00','22:00:00','23:00:00');//群发时间点，定死的
+    private static $ages = array();
+    private static $date = array();
+
+    //获取要群发的年龄段
+    private function getSendAges()
+    {
+        if (empty(self::$ages)) {
+            $iMax = 120;
+            $aData = array();
+            for ($i=0;$i<=$iMax;$i++) {
+                $aData[$i] = $i;
+            }
+            self::$ages = $aData;
+        }
+        return self::$ages;
+    }
+
+    //获取要群发的日期
+    private function getSendDate()
+    {
+        if (empty(self::$date)) {
+            $iMax = 31;
+            $aData = array();
+            for ($i=1;$i<=$iMax;$i++) {
+                $aData[$i] = $i;
+            }
+            self::$date = $aData;
+        }
+        return self::$date;
+    }
 
     /**
      * 这个专门用来做测试用的
@@ -19,10 +49,12 @@ class batchsend_index extends baseWeixin
         $sToken = $this->getAccessToken();
         //$aMediaNumList = Media::getPermanentNum($sToken);//媒体文件数目列表
         $aMediaList = Media::getMediaByType($sToken,"news");//新闻媒体列表
-        $aGroupList = Group::getGroupList($sToken);
-        $this->assign('aGroupList',$aGroupList);
+        //$aGroupList = Group::getGroupList($sToken);//获取分组
+        //$this->assign('aGroupList',$aGroupList);
         $this->assign('aMediaList',$aMediaList);
         $this->assign('batchTime',self::$batchTime);
+        $this->assign('aAgeList',$this->getSendAges());
+        $this->assign('aDateList',$this->getSendDate());
         $this->display("/weixin/batchsend.phtml");
     }
 
@@ -31,8 +63,8 @@ class batchsend_index extends baseWeixin
      */
     public function initBatchAction()
     {
-        if (empty($_POST['group_id']) || $_POST['group_id'] == 10000) {
-            showError("请选择分组",true);
+        if (intval($_POST['batchAge']) == 10000 ) {
+            showError("请选择年龄段",true);
         }
         if (empty($_POST['media_id'])) {
             showError("请选择图文模版",true);
@@ -43,12 +75,13 @@ class batchsend_index extends baseWeixin
         if (empty($_POST['batchTime'])) {
             showError("请选择群发时间",true);
         }
-        $iSendTime = $_POST['batchDate'].' '.self::$batchTime[$_POST['batchTime']];//群发的时间
         $aNews['created_at'] = time();
         $aNews['type'] = 'news';
         $aNews['media_id'] = $_POST['media_id'];
-        $aNews["group_id"] = $_POST['group_id'];
-        $aNews["send_time"] = strtotime($iSendTime);
+        $aNews['send_date'] = $_POST['batchDate'];
+        $aNews['send_time'] = $_POST['batchTime'];
+        $aNews['send_age'] = intval($_POST['batchAge']);
+        $sGroupName = date('Ym',strtotime('-'.$aNews['batchAge'].' month'));//要发送的组名
         //将数据存入数据库中
         $oDB = $this->getDB();
         $oDB->insert("batchsend", $aNews);
