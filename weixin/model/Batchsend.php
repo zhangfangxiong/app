@@ -58,25 +58,6 @@ class Batchsend extends ModelBase
     }
 
     /**
-     * 群发列表
-     * @iTime 发送时间
-     * @return array
-     */
-    public static function batchSendList($iTime)
-    {
-        if (empty(self::$batchSendList)) {
-            //设定一个时间区间，以防延迟
-            $iStartTime = $iTime - 3600;
-            $iEndTime = $iTime + 3600;
-            $sSql = "SELECT * FROM batchsend WHERE has_send =0 AND send_time >=".$iStartTime." AND send_time <=".$iEndTime;
-            $oDB = self::getDB();
-            $aData = $oDB->get_all($sSql);
-            self::$batchSendList = $aData;
-        }
-        return self::$batchSendList;
-    }
-
-    /**
      * 新闻群发模版
      * @param $group_id
      * @param $media_id
