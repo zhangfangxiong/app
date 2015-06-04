@@ -231,4 +231,26 @@ class Media extends ModelBase
         }
         return self::$aMediaList[$sType];
     }
+
+    /**
+     * 获取某类媒体文件列表(用mediaID当key)
+     * @param $sType 图片（image）、视频（video）、语音 （voice）、图文（news）
+     * @param int $offset
+     * @param int $count
+     * @return mixed
+     */
+    public static function getNewsWithKey($sToken, $sType, $offset = 0, $count = 20)
+    {
+        $aData = self::getMediaByType($sToken, $sType, $offset, $count);
+        $aTmp = array();
+        if (isset($aData['item']) && !empty($aData['item'])) {
+            $aItem = $aData['item'];
+            foreach ($aItem as $key => $value) {
+                $aTmp['list'][$value['media_id']] = $value['content']['news_item'];
+            }
+            $aTmp['total_count'] = $aData['total_count'];
+            $aTmp['item_count'] = $aData['item_count'];
+        }
+        return $aTmp;
+    }
 }

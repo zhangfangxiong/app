@@ -10,7 +10,7 @@ class batchsend_index extends baseWeixin
 {
 
     //private static $batchTime = array('00:00:00', '12:00:00', '18:00:00', '22:00:00', '23:00:00');//群发时间点，定死的
-    private static $batchTime = array('20:00:00', '12:00:00', '16:00:00', '22:00:00', '23:00:00');//群发时间点，定死的
+    private static $batchTime = array('00:00:00', '12:00:00', '16:00:00', '22:00:00', '23:00:00');//群发时间点，定死的
     private static $ages = array();
     private static $date = array();
     protected static $aSendList = array();
@@ -52,6 +52,46 @@ class batchsend_index extends baseWeixin
     }
 
     /**
+     * 获取群发任务列表
+     */
+    public function batchListAction()
+    {
+        $aData = $this->getSendList();//群发列表
+        $sToken = $this->getAccessToken();
+        $aMediaList = Media::getNewsWithKey($sToken, "news");//新闻媒体列表
+        $this->assign('aMediaList', $aMediaList);
+        $this->assign('aData', $aData);
+        $this->assign('aTime', self::$batchTime);
+        $this->display("/weixin/batchlist.phtml");
+    }
+
+    /**
+     * 编辑任务
+     */
+    public function editBatchAction()
+    {
+
+    }
+
+    /**
+     * 删除任务
+     */
+    public function deleteBatchAction()
+    {
+        if (empty($_GET['id'])) {
+            showMsg("非法操作", false);
+        }
+        $oDb = $this->getDB();
+        $result = $oDb->update('batchsend', array('status' => 0), 'id = ' . intval($_GET['id']));
+        if ($result) {
+            $oMem = $this->getMem();
+            $oMem->delete('aSendList');
+            showMsg("删除成功", true);
+        }
+        showMsg("删除失败", false);
+    }
+
+    /**
      * 这个专门用来做测试用的
      */
     public function testAction()
@@ -79,11 +119,18 @@ class batchsend_index extends baseWeixin
         $this->assign('batchTime', self::$batchTime);
         $this->assign('aAgeList', $this->getSendAges());
         $this->assign('aDateList', $this->getSendDate());
+        if ($_GET['id']) {//是编辑界面
+            $oDB = $this->getDB();
+            $aData = $oDB->get_one('SELECT * FROM batchsend WHERE id = ' . intval($_GET['id']));
+            if (!empty($aData)) {
+                $this->assign('aData', $aData);
+            }
+        }
         $this->display("/weixin/batchsend.phtml");
     }
 
     /**
-     * 创建群发操作
+     * 创建群发操作（或编辑）
      */
     public function initBatchAction()
     {
@@ -106,16 +153,25 @@ class batchsend_index extends baseWeixin
         $aNews['send_time'] = $_POST['batchTime'];
         $aNews['send_age'] = intval($_POST['batchAge']);
         $aNews['status'] = 1;
-        //将群发列表存入memcache
-        $aData = $this->getSendList();
-        //将数据存入数据库中
         $oDB = $this->getDB();
-        $oDB->insert("batchsend", $aNews);
         $oMem = $this->getMem();
-        $aNews['id'] = $oDB->insert_id();
-        $aData[] = $aNews;
-        $oMem->set('aSendList', $aData);
-        showOk('创建定时群发成功', '?action=initBatchPage');
+        if (!empty($_POST['id'])) {
+            //是编辑
+            $result = $oDB->update('batchsend', $aNews, 'id = ' . intval($_POST['id']));
+            if ($result) {
+                $oMem->delete('aSendList');
+                showOk('修改成功', '?action=batchList');
+            }
+        } else {
+            //将群发列表存入memcache
+            $aData = $this->getSendList();
+            //将数据存入数据库中
+            $oDB->insert("batchsend", $aNews);
+            $aNews['id'] = $oDB->insert_id();
+            $aData[] = $aNews;
+            $oMem->set('aSendList', $aData);
+            showOk('创建定时群发成功', '?action=batchList');
+        }
     }
 
     //获取群发列表
@@ -126,7 +182,7 @@ class batchsend_index extends baseWeixin
             $aData = $oMem->get('aSendList');
             if (empty($aData)) {
                 $oDB = $this->getDB();
-                $aData = $oDB->get_all('SELECT * FROM batchsend WHERE STATUS = 1');
+                $aData = $oDB->get_all('SELECT * FROM batchsend WHERE status = 1');
                 $oMem->set('aSendList', $aData);
             }
             self::$aSendList = $aData;
@@ -146,7 +202,7 @@ class batchsend_index extends baseWeixin
             $sCurrDate = date('Y-m-d');
             $iAllowableError = 3600;//容许误差
             $sToken = $this->getAccessToken();
-            $aGroupList  = Group::getGroupList($sToken);//获取分组
+            $aGroupList = Group::getGroupList($sToken);//获取分组
             if (!isset($aGroupList['groups']) || empty($aGroupList['groups'])) {
                 return false;//无分组
             }
@@ -159,7 +215,7 @@ class batchsend_index extends baseWeixin
             $oDB = $this->getDB();
             foreach ($aData as $key => $value) {
                 $sSendTime = self::$batchTime[$value['send_time']];//发送时间
-                $sSendFullTime = $sCurrDate.' '.$sSendTime;//发送的完整时间
+                $sSendFullTime = $sCurrDate . ' ' . $sSendTime;//发送的完整时间
                 if (date('j') == $value['send_date'] && abs(strtotime($sSendFullTime) - $iTime) <= $iAllowableError) {//判断发送时间是否为当前时间,允许一个小时误差
                     $sGroupName = date('Ym', strtotime('-' . $value['send_age'] . ' month'));//要发送的组名
                     //判断是否存在该分组
@@ -179,43 +235,15 @@ class batchsend_index extends baseWeixin
                         $aSendResult = Batchsend::batchSendByGroup($sToken, $sTemp);
                         //群发成功后写入log表
                         if (isset($aSendResult['errcode']) && $aSendResult['errcode'] == 0) {
-                            $oDB->insert('batchsendlog',$tmp);
+                            $oDB->insert('batchsendlog', $tmp);
                             $aLog[] = $tmp;
                         }
                     }
                 }
             }
         }
-        print_r($aLog);die;
-    }
-
-    /**
-     * 扫描群发表，群发队列中消息
-     */
-    public function batchSend1Action()
-    {
-        $sToken = $this->getAccessToken();
-        $iTime = time();
-        $abatchSendList = Batchsend::batchSendList($iTime);
-        $sReturn = array();
-        if (!empty($abatchSendList)) {
-            $oDb = self::getDB();
-            foreach ($abatchSendList as $key => $value) {
-                //生成群发模版
-                $sAction = ($value["type"] != "vedio") ? $value["type"] . "Temp" : "mpvideoTemp";
-                $aGroupID = explode(",", $value["group_id"]);
-                foreach ($aGroupID as $k => $v) {
-                    $sTemp = Batchsend::$sAction($v, $value["media_id"]);
-                    $sReturn[$k] = Batchsend::batchSendByGroup($sToken, $sTemp);
-                    if ($sReturn[$k]['errcode'] == 0) {
-                        //发送成功处理
-                        $array = array('has_send' => 1, 'send_secc_time' => $iTime);
-                        $oDb->update('batchsend', $array, 'id=' . $value['id']);
-                    }
-                }
-            }
-        }
-        print_r($sReturn);
+        print_r($aLog);
+        die;
     }
 
     /**

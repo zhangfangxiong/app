@@ -1,5 +1,5 @@
 <?php
-function showError($sMsg,$type=false)
+function showError($sMsg, $type = false)
 {
     echo "<script language='JavaScript'>";
     echo "alert('$sMsg');";
@@ -10,7 +10,17 @@ function showError($sMsg,$type=false)
     die;
 }
 
-function showOk($sMsg,$sHref="")
+//用于ajax请求
+function showMsg($sMsg, $bool = true)
+{
+    $aData = array();
+    $aData['status'] = $bool ? 1 : 0;
+    $aData['data'] = $sMsg;
+    echo json_encode($aData);
+    die;
+}
+
+function showOk($sMsg, $sHref = "")
 {
     echo "<script language='JavaScript'>";
     echo "alert('$sMsg');";
@@ -21,13 +31,14 @@ function showOk($sMsg,$sHref="")
     die;
 }
 
-function xml_parser($str){
+function xml_parser($str)
+{
     $xml_parser = xml_parser_create();
-    if(!xml_parse($xml_parser,$str,true)){
+    if (!xml_parse($xml_parser, $str, true)) {
         xml_parser_free($xml_parser);
         return false;
-    }else {
-        return (json_decode(json_encode(simplexml_load_string($str)),true));
+    } else {
+        return (json_decode(json_encode(simplexml_load_string($str)), true));
     }
 }
 

@@ -2,12 +2,13 @@
 
 <!-- Docs master nav -->
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-    <h1 class="text-center">创建定时群发分组任务</h1>
+    <h1 class="text-center"><?php echo isset($aData) ? '编辑' : '创建' ?>定时群发分组任务</h1>
 </header>
 
 
 <div class="container bs-docs-container">
     <form action="?action=initBatch" method="post">
+        <input type="hidden" value="<?php echo isset($aData) ? $aData['id'] : '' ?>" name="id">
         <div class="form-group">
             <div class="margin_aa"><label>
                     选择年龄段
@@ -20,7 +21,7 @@
                         if (!empty($aAgeList)) {
                             foreach ($aAgeList as $key => $value) {
                                 ?>
-                                <option value="<?php echo $value ?>"><?php echo $value ?>个月</option>
+                                <option <?php echo (isset($aData) && $aData['send_age'] == $value) ? 'selected' : '' ?> value="<?php echo $value ?>"><?php echo $value ?>个月</option>
                             <?php
                             }
                         }
@@ -41,7 +42,7 @@
                             ?>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="media_id" id="media_id"
+                                    <input <?php echo (isset($aData) && $aData['media_id'] == $value['media_id']) ? 'checked' : '' ?> type="radio" name="media_id" id="media_id"
                                            value="<?php echo $value['media_id']; ?>">
                                 </label>
                             </div>
@@ -75,7 +76,7 @@
                 if (!empty($aDateList)) {
                     foreach ($aDateList as $key => $value) {
                         ?>
-                        <option value="<?php echo $value ?>"><?php echo $value ?>号</option>
+                        <option <?php echo (isset($aData) && $aData['send_date'] == $value) ? 'selected' : '' ?> value="<?php echo $value ?>"><?php echo $value ?>号</option>
                     <?php
                     }
                 }
@@ -93,7 +94,7 @@
                         foreach ($batchTime as $key => $value) {
                             ?>
                             <label>
-                                <input type="radio" name="batchTime" id="batchTime"
+                                <input <?php echo (isset($aData) && $aData['send_time'] == $key) ? 'checked' : '' ?> type="radio" name="batchTime" id="batchTime"
                                        value="<?php echo $key; ?>"> <?php echo $value; ?>
                             </label>
                         <?php
