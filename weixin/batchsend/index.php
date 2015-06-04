@@ -66,6 +66,22 @@ class batchsend_index extends baseWeixin
     }
 
     /**
+     * 获取群发任务发送成功的log表
+     */
+    public function batchSeccListAction()
+    {
+        $aParam['startTime'] = $_POST['startTime'];
+        $aParam['endTime'] = $_POST['endTime'];
+        $aData = $this->getSendSeccList($aParam);
+        $sToken = $this->getAccessToken();
+        $aMediaList = Media::getNewsWithKey($sToken, "news");//新闻媒体列表
+        $this->assign('aMediaList', $aMediaList);
+        $this->assign('aData', $aData);
+        $this->assign('aParam',$aParam);
+        $this->display("/weixin/batchsecclist.phtml");
+    }
+
+    /**
      * 编辑任务
      */
     public function editBatchAction()
@@ -188,6 +204,22 @@ class batchsend_index extends baseWeixin
             self::$aSendList = $aData;
         }
         return self::$aSendList;
+    }
+
+    //按条件获取群发成功的log表
+    protected function getSendSeccList($param = array())
+    {
+        $oDB = $this->getDB();
+        $sql = 'SELECT * FROM batchsendlog WHERE 1';
+        if (isset($param['startTime']) && !empty($param['startTime'])) {
+            $sql .= ' AND iSeccTime >=' . strtotime($param['startTime']);
+        }
+        if (isset($param['endTime']) && !empty($param['endTime'])) {
+            $sql .= ' AND iSeccTime <=' . strtotime($param['endTime']);
+        }
+        $sql .= ' ORDER BY iSeccTime DESC';
+        $aData = $oDB->get_all($sql);
+        return $aData;
     }
 
     /**

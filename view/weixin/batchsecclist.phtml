@@ -1,0 +1,104 @@
+<?php include($GLOBALS['VIEWPATH'].'header.phtml'); ?>
+<style>
+    .padding-left-5{
+        padding-left: 5px;
+    }
+    .icon-class {
+        font-size: 14px;
+        color: #cccccc;
+    }
+    .icon-class-add {
+        font-size: 18px;
+        color:#666666;
+    }
+</style>
+<div class="container bs-docs-container">
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+        <h1 class="text-center">发送任务成功列表</h1>
+        <div class="form-group .col-xs-6">
+            <a href="?action=initBatchPage" title="新增任务"><button type="button" class="icon-class-add btn btn-default">新增任务</button></a>
+        </div>
+        <form class="form-inline search-form" role="form" method="post" id="myform" action="">
+            <div class="form-group .col-xs-2">
+                发送开始时间：
+                <input name="startTime" id="startTime" autocomplete="off" class="laydatetime form-control" validate="" type="text"
+                       value="<?php echo (isset($aParam['startTime']) && $aParam['startTime']) ?
+                           $aParam['startTime'] : '' ?>" class="form-control">
+            </div>
+            <div class="form-group .col-xs-2">
+                发送结束时间：
+                <input name="endTime" id="endTime"  autocomplete="off" class="laydatetime form-control" validate="" type="text"
+                       value="<?php echo (isset($aParam['endTime']) && $aParam['endTime']) ? $aParam['endTime'] : '' ?>" class="form-control">
+            </div>
+            <div class="form-group .col-xs-2">
+                <input type="submit" id="formbtn" class="btn btn-default btn-sm" value="搜索">
+            </div>
+</form>
+    </header>
+    <div class="pbody clearfix">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th class="text-center">发送成功时间</th>
+                <th class="text-center">群发年龄段</th>
+                <th class="text-center">指定发送日期</th>
+                <th class="text-center">指定发送时间</th>
+                <th class="text-center">发送文章</th>
+                <th class="text-center">发送组名</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($aData as $v) { ?>
+                <tr id="tr_<?php echo $v['iID'] ?>">
+                    <td class="text-center"><?php echo date('Y-m-d H:i:s',$v['iSeccTime']) ?></td>
+                    <td class="text-center"><?php echo $v['iSendAge']; ?>个月</td>
+                    <td class="text-center"><?php echo $v['iSendDate']; ?>号</td>
+                    <td class="text-center"><?php echo $v['iSendTime']; ?></td>
+                    <td class="text-center">
+                        <?php
+                        if(isset($aMediaList['list'][$v['iMediaID']])) {
+                            $aMedia = $aMediaList['list'][$v['iMediaID']];
+                            foreach ($aMedia as $key => $value) {
+                                ?>
+                                <a target="_blank" href="<?php echo $value['url'];?>"><?php echo $value['title'];?></a><br>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </td>
+                    <td class="text-center"><?php echo $v['iGroupName']; ?></td>
+                </tr>
+            <?php } ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript" charset="utf-8" src="<?php echo $GLOBALS['STATICPATH'] ?>plug-in/laydate/laydate.js"></script>
+<script>
+    var start = {
+        elem: '#startTime',
+        format: 'YYYY-MM-DD hh:mm:ss',
+        min: '2000-01-01 00:00:00', //设定最小日期为当前日期
+        max: '2099-06-16 23:59:59', //最大日期
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+            end.min = datas; //开始日选好后，重置结束日的最小日期
+            end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#endTime',
+        format: 'YYYY-MM-DD hh:mm:ss',
+        min: '2000-01-01 00:00:00',
+        max: laydate.now(),
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+            start.max = datas; //结束日选好后，重置开始日的最大日期
+        }
+    };
+    laydate(start);
+    laydate(end);
+</script>
+<?php include($GLOBALS['VIEWPATH'].'footer.phtml'); ?>
