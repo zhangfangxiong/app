@@ -112,7 +112,8 @@ class batchsend_index extends baseWeixin
      */
     public function testAction()
     {
-        $sToken = $this->getAccessToken();
+        echo 111;die;
+        /*$sToken = $this->getAccessToken();
         //$aMediaNumList = Media::getPermanentNum($sToken);//媒体文件数目列表
         $aMediaList = Media::getMediaByType($sToken, "news");//新闻媒体列表
         //$aGroupList = Group::getGroupList($sToken);//获取分组
@@ -121,7 +122,7 @@ class batchsend_index extends baseWeixin
         $this->assign('batchTime', self::$batchTime);
         $this->assign('aAgeList', $this->getSendAges());
         $this->assign('aDateList', $this->getSendDate());
-        $this->display("/weixin/batchsend.phtml");
+        $this->display("/weixin/batchsend.phtml");*/
     }
 
     /**
@@ -313,6 +314,5 @@ class batchsend_index extends baseWeixin
 }
 
 header("Content-Type:text/html;charset=utf-8");
-mysql_query("SET NAMES utf8");
 new batchsend_index();
 ?>

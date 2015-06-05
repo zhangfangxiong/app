@@ -14,13 +14,37 @@ class base
 
     public function __construct()
     {
+        $this->enviSet();
         set_time_limit(0);
-        if (isset($_GET['action']) && $_GET['action']) {
-            $action = $_GET['action'] . "Action";
+        if ($this->getCurrSapi()) {
+            if (isset($_GET['action']) && $_GET['action']) {
+                $action = $_GET['action'] . "Action";
+            } else {
+                $action = "indexAction";
+            }
+            $this->$action();
         } else {
-            $action = "indexAction";
+            print_r($_SERVER['argv']);die;
         }
-        $this->$action();
+    }
+
+    /**
+     * 判断当前运行环境
+     */
+    protected function getCurrSapi()
+    {
+        return php_sapi_name() == 'cli' ? 0 : 1;
+    }
+
+    /**
+     * 特殊环境的处理
+     */
+    protected function enviSet()
+    {
+        if (!$this->getCurrSapi()) {
+            //如果是cli环境
+            //ini_set('');
+        }
     }
 
     /**
