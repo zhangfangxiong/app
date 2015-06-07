@@ -17,15 +17,15 @@ class base
         $this->enviSet();
         set_time_limit(0);
         if ($this->getCurrSapi()) {
-            if (isset($_GET['action']) && $_GET['action']) {
-                $action = $_GET['action'] . "Action";
-            } else {
-                $action = "indexAction";
-            }
-            $this->$action();
+            $action = (isset($_GET['action']) && $_GET['action']) ? $_GET['action'] . 'Action' : 'indexAction';
+
         } else {
-            print_r($_SERVER['argv']);die;
+            $argc = $_SERVER['argv'];
+            if (isset($argc[1]) && $argc[1]) {
+                $action = ($argc[1] && $argc[1]) ? $argc[1] . 'Action' : 'indexAction';
+            }
         }
+        $this->$action();
     }
 
     /**

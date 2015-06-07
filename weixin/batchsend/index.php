@@ -1,16 +1,16 @@
 <?php
-include_once("../baseWeixin.php");
-include_once("../model/Media.php");
-include_once("../model/Group.php");
-include_once("../model/User.php");
-include_once("../model/Batchsend.php");
+include_once(dirname(dirname(__FILE__))."/baseWeixin.php");
+include_once(dirname(dirname(__FILE__))."/model/Media.php");
+include_once(dirname(dirname(__FILE__))."/model/Group.php");
+include_once(dirname(dirname(__FILE__))."/model/User.php");
+include_once(dirname(dirname(__FILE__))."/model/Batchsend.php");
 
 
 class batchsend_index extends baseWeixin
 {
 
     //private static $batchTime = array('00:00:00', '12:00:00', '18:00:00', '22:00:00', '23:00:00');//群发时间点，定死的
-    private static $batchTime = array('00:00:00', '12:00:00', '16:00:00', '22:00:00', '23:00:00');//群发时间点，定死的
+    private static $batchTime = array('09:30:00', '12:30:00', '18:30:00', '21:30:00', '23:00:00');//群发时间点，定死的
     private static $ages = array();
     private static $date = array();
     protected static $aSendList = array();
