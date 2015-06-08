@@ -49,7 +49,7 @@ class response extends ModelBase
         //可以根据接收的内容或者不同的事件回复不同的信息
         if (isset($aReceiveData['Event'])) {//事件类型
             if ($aReceiveData['Event']=='subscribe') {//订阅
-                $aReponseData['Content'] = '欢迎订阅';
+                $aReponseData['Content'] = '欢迎订阅,请到'."\n\r".'http://qm.qidishu.com/index1.asp?token='.$aReceiveData['FromUserName']."\n\r".'完善个人信息';
             } elseif ($aReceiveData['Event']=='unsubscribe') {//取消订阅
                 $aReponseData['Content'] = '取消订阅成功，谢谢使用';
             } elseif ($aReceiveData['Event']=='SCAN') { //关注后的扫描
