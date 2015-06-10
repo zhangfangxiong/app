@@ -1,5 +1,22 @@
 <?php include($GLOBALS['VIEWPATH'] . 'header.phtml'); ?>
 
+<style>
+    .mariginnews {
+        padding-bottom: 30px;
+    }
+
+    .padding_box {
+        margin-left: 10px;
+        border: 1px solid #D3D6DA;
+        vertical-align: top;
+        background-color: #D3D6DA;
+
+    }
+
+    .padding_box a {
+        color: #262626;
+    }
+</style>
 <!-- Docs master nav -->
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <h1 class="text-center"><?php echo isset($aData) ? '编辑' : '创建' ?>定时群发分组任务</h1>
@@ -9,103 +26,154 @@
 <div class="container bs-docs-container">
     <form action="?action=initBatch" method="post">
         <input type="hidden" value="<?php echo isset($aData) ? $aData['id'] : '' ?>" name="id">
-        <div class="form-group">
-            <div class="margin_aa"><label>
-                    选择年龄段
-                </label></div>
-            <div class="form-inline">
-                <div class="form-group">
-                    <select name="batchAge" class="form-control" style="width: 150px">
-                        <option value="10000">请选择年龄段</option>
+
+        <div id="news" class="pbody clearfix">
+            <form id="myform" class="form-horizontal" role="form" method="post" action="">
+                <div class="form-group mariginnews">
+                    <label class="col-sm-2 control-label"><strong style="color:red;">*</strong> 选择年龄段：</label>
+
+                    <div class="col-sm-10">
+                        <select name="batchAge" class="form-control" style="width: 150px">
+                            <option value="10000">请选择年龄段</option>
+                            <?php
+                            if (!empty($aAgeList)) {
+                                foreach ($aAgeList as $key => $value) {
+                                    ?>
+                                    <option <?php echo (isset($aData) && $aData['send_age'] == $value) ? 'selected' : '' ?>
+                                        value="<?php echo $value ?>"><?php echo $value ?>个月
+                                    </option>
+                                <?php
+                                }
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group mariginnews">
+                    <label class="col-sm-2 control-label"><strong style="color:red;">*</strong> 选择发送日期：</label>
+
+                    <div class="col-sm-10">
+                        <select name="batchDate" class="form-control" style="width: 150px">
+                            <option value="">请选择发送日期</option>
+                            <?php
+                            if (!empty($aDateList)) {
+                                foreach ($aDateList as $key => $value) {
+                                    ?>
+                                    <option <?php echo (isset($aData) && $aData['send_date'] == $value) ? 'selected' : '' ?>
+                                        value="<?php echo $value ?>"><?php echo $value ?>号
+                                    </option>
+                                <?php
+                                }
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group mariginnews">
+                    <label class="col-sm-2 control-label"><strong style="color:red;">*</strong> 选择群发时间：</label>
+
+                    <div class="col-sm-10">
                         <?php
-                        if (!empty($aAgeList)) {
-                            foreach ($aAgeList as $key => $value) {
+                        if (!empty($batchTime)) {
+                            foreach ($batchTime as $key => $value) {
                                 ?>
-                                <option <?php echo (isset($aData) && $aData['send_age'] == $value) ? 'selected' : '' ?> value="<?php echo $value ?>"><?php echo $value ?>个月</option>
+                                <label>
+                                    <input <?php echo (isset($aData) && $aData['send_time'] == $key) ? 'checked' : '' ?>
+                                        type="radio" name="batchTime" id="batchTime"
+                                        value="<?php echo $key; ?>"> <?php echo $value; ?>
+                                </label>
                             <?php
                             }
                         }
                         ?>
-                    </select>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="margin_aa"><label>
-                    选择图文模版
-                </label></div>
-            <div class="form-inline">
-                <div class="form-group">
-                    <?php
-                    if (!empty($aMediaList['item'])) {
-                        foreach ($aMediaList['item'] as $key => $value) {
-                            ?>
-                            <div class="radio">
-                                <label>
-                                    <input <?php echo (isset($aData) && $aData['media_id'] == $value['media_id']) ? 'checked' : '' ?> type="radio" name="media_id" id="media_id"
-                                           value="<?php echo $value['media_id']; ?>">
-                                </label>
-                            </div>
-                            <div class="media-div">
-                                <?php
-                                foreach ($value['content']['news_item'] as $k => $val) {
+                <div class="form-group mariginnews">
+                    <label class="col-sm-2 control-label"><strong style="color:red;">*</strong> 选择图文模版：</label>
+
+                    <div class="col-sm-10">
+                        <label id="weixinNews">
+                            <input type="radio" name="checkNewsType" value="1" checked> <span id="weixintxt">微信文章</span>
+                        </label>
+                        <label id="webNews">
+                            <input type="radio" name="checkNewsType" value="2"> <span id="webtxt">主站文章</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group mariginnews">
+                    <label class="col-sm-2 control-label"><strong style="color:red;">*</strong> 选择<span
+                            id="currNewsType">微信文章</span>：</label>
+
+                    <div class="col-sm-10">
+                        <div id="wxnewscon">
+                            <?php
+                            if (!empty($aMediaList['item'])) {
+                                foreach ($aMediaList['item'] as $key => $value) {
                                     ?>
-                                    <div class="appmsg_item">
-                                        <h4><a target="_blank"
-                                               href="<?php echo $val['url']; ?>"><?php echo $val['title']; ?></a></h4>
-                                    </div>
+                                    <label class="padding_box">
+                                        <input <?php echo (isset($aData) && $aData['media_id'] == $value['media_id']) ? 'checked' : '' ?>
+                                            type="radio" name="media_id" id="media_id"
+                                            value="<?php echo $value['media_id']; ?>">
+
+                                        <div class="form-inline">
+                                            <?php
+                                            foreach ($value['content']['news_item'] as $k => $val) {
+                                                ?>
+                                                <div class="appmsg_item">
+                                                    <h4><a target="_blank"
+                                                           href="<?php echo $val['url']; ?>"><?php echo $val['title']; ?></a>
+                                                    </h4>
+                                                </div>
+                                            <?php
+                                            }
+                                            ?>
+                                        </div>
+                                    </label>
                                 <?php
                                 }
-                                ?>
-                            </div>
-                        <?php
-
-                        }
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="margin_aa"><label>
-                    选择发送日期
-                </label></div>
-            <select name="batchDate" class="form-control" style="width: 150px">
-                <option value="">请选择发送日期</option>
-                <?php
-                if (!empty($aDateList)) {
-                    foreach ($aDateList as $key => $value) {
-                        ?>
-                        <option <?php echo (isset($aData) && $aData['send_date'] == $value) ? 'selected' : '' ?> value="<?php echo $value ?>"><?php echo $value ?>号</option>
-                    <?php
-                    }
-                }
-                ?>
-            </select>
-        </div>
-        <div class="form-group">
-            <div class="margin_aa"><label>
-                    选择群发时间
-                </label></div>
-            <div class="form-inline">
-                <div class="form-group">
-                    <?php
-                    if (!empty($batchTime)) {
-                        foreach ($batchTime as $key => $value) {
+                            }
                             ?>
-                            <label>
-                                <input <?php echo (isset($aData) && $aData['send_time'] == $key) ? 'checked' : '' ?> type="radio" name="batchTime" id="batchTime"
-                                       value="<?php echo $key; ?>"> <?php echo $value; ?>
-                            </label>
-                        <?php
-                        }
-                    }
-                    ?>
+                        </div>
+                        <div id="webnewscon" style="display: none">
+                            <select multiple class="form-control" name="webnewid">
+                                <?php
+                                if (isset($aEcArticle) && !empty($aEcArticle)) {
+                                    foreach ($aEcArticle as $key => $value) {
+                                    ?>
+                                        <option value="<?php echo $value['article_id'] ?>"><?php echo $value['title'].'-'.$value['article_id']?></option>
+                                <?php
+                                }}
+                                ?>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="form-group mariginnews">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">提交</button>
+                        <button id="cancel" class="btn" onclick="location.href='<?= $sListUrl ?>';return false;">取消
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <button type="submit" class="btn btn-primary btn-lg">提交</button>
+
 </div>
 </form>
+<script>
+    $(function () {
+        $('#weixinNews').click(function () {
+            $('#currNewsType').html($('#weixintxt').html());
+            $('#wxnewscon').show();
+            $('#webnewscon').hide();
+        })
+        $('#webNews').click(function () {
+            $('#currNewsType').html($('#webtxt').html());
+            $('#wxnewscon').hide();
+            $('#webnewscon').show();
+        })
+    })
+
+</script>
 <?php include($GLOBALS['VIEWPATH'] . 'footer.phtml'); ?>
 

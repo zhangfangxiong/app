@@ -9,8 +9,9 @@ include_once("base.php");
 
 class ModelBase extends base
 {
-    function __construct()
+    /*这个应该不需要吧
+     * function __construct()
     {
 
-    }
+    }*/
 }

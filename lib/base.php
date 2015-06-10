@@ -71,10 +71,10 @@ class base
      * 获取数据库连接
      * @return DB|null
      */
-    protected function getDB()
+    protected function getDB($DataBase)
     {
         if (self::$oDb == null) {
-            self::$oDb = new DB();
+            self::$oDb = new DB($DataBase);
         }
         return self::$oDb;
     }

@@ -3,6 +3,7 @@ include_once(dirname(dirname(__FILE__))."/baseWeixin.php");
 include_once(dirname(dirname(__FILE__))."/model/Media.php");
 include_once(dirname(dirname(__FILE__))."/model/Group.php");
 include_once(dirname(dirname(__FILE__))."/model/User.php");
+include_once(dirname(dirname(__FILE__))."/model/ecArticle.php");
 include_once(dirname(dirname(__FILE__))."/model/Batchsend.php");
 
 
@@ -97,7 +98,7 @@ class batchsend_index extends baseWeixin
         if (empty($_GET['id'])) {
             showMsg("非法操作", false);
         }
-        $oDb = $this->getDB();
+        $oDb = $this->getDB('weixin');
         $result = $oDb->update('batchsend', array('status' => 0), 'id = ' . intval($_GET['id']));
         if ($result) {
             $oMem = $this->getMem();
@@ -132,12 +133,14 @@ class batchsend_index extends baseWeixin
     {
         $sToken = $this->getAccessToken();
         $aMediaList = Media::getMediaByType($sToken, "news");//新闻媒体列表
+        $aEcArticle = ecArticle::getArticleList();//ECShop的微信文章列表
         $this->assign('aMediaList', $aMediaList);
+        $this->assign('aEcArticle', $aEcArticle);
         $this->assign('batchTime', self::$batchTime);
         $this->assign('aAgeList', $this->getSendAges());
         $this->assign('aDateList', $this->getSendDate());
         if ($_GET['id']) {//是编辑界面
-            $oDB = $this->getDB();
+            $oDB = $this->getDB('weixin');
             $aData = $oDB->get_one('SELECT * FROM batchsend WHERE id = ' . intval($_GET['id']));
             if (!empty($aData)) {
                 $this->assign('aData', $aData);
@@ -170,7 +173,7 @@ class batchsend_index extends baseWeixin
         $aNews['send_time'] = $_POST['batchTime'];
         $aNews['send_age'] = intval($_POST['batchAge']);
         $aNews['status'] = 1;
-        $oDB = $this->getDB();
+        $oDB = $this->getDB('weixin');
         $oMem = $this->getMem();
         if (!empty($_POST['id'])) {
             //是编辑
@@ -198,7 +201,7 @@ class batchsend_index extends baseWeixin
             $oMem = $this->getMem();
             $aData = $oMem->get('aSendList');
             if (empty($aData)) {
-                $oDB = $this->getDB();
+                $oDB = $this->getDB('weixin');
                 $aData = $oDB->get_all('SELECT * FROM batchsend WHERE status = 1');
                 $oMem->set('aSendList', $aData);
             }
@@ -210,7 +213,7 @@ class batchsend_index extends baseWeixin
     //按条件获取群发成功的log表
     protected function getSendSeccList($param = array())
     {
-        $oDB = $this->getDB();
+        $oDB = $this->getDB('weixin');
         $sql = 'SELECT * FROM batchsendlog WHERE 1';
         if (isset($param['startTime']) && !empty($param['startTime'])) {
             $sql .= ' AND iSeccTime >=' . strtotime($param['startTime']);
@@ -245,7 +248,7 @@ class batchsend_index extends baseWeixin
                 $aTmp[$value['name']] = $value;
             }
             $aGroupList = $aTmp;
-            $oDB = $this->getDB();
+            $oDB = $this->getDB('weixin');
             foreach ($aData as $key => $value) {
                 $sSendTime = self::$batchTime[$value['send_time']];//发送时间
                 $sSendFullTime = $sCurrDate . ' ' . $sSendTime;//发送的完整时间

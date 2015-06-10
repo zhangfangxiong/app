@@ -8,7 +8,6 @@
 include_once("../lib/DB.php");
 include_once("../lib/function.php");
 include_once("../lib/base.php");
-include_once("../config/DBconf_tool.php");
 include_once("../config/globalConfig.php");
 
 class baseTool extends base

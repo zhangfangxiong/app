@@ -14,7 +14,7 @@ class qqTool extends baseTool
     public function explodeFileListAction()
     {
         $sSql = "SELECT * FROM eximLog WHERE type=0";
-        $oDB = $this->getDB();
+        $oDB = $this->getDB('tool');
         $aData = $oDB->get_all($sSql);
 
         $this->assign('aImportTimes', $aData);
@@ -82,7 +82,7 @@ class qqTool extends baseTool
         $oFile = fopen($GLOBALS['FILEPATH'] . $sFileName, "r");
         $iTime = (isset($_POST['CreateTime']) && $_POST['CreateTime']) ? strtotime($_POST['CreateTime']) : time();
         if ($oFile) {
-            $oDB = $this->getDB();
+            $oDB = $this->getDB('tool');
             while (!feof($oFile)) {
                 //组装成存入数据表格式
                 $sData = trim(fgets($oFile));
@@ -119,7 +119,7 @@ class qqTool extends baseTool
             showError("已存在已该名存在的文件，请更改文件名以免覆盖", true);
         }
         $sNum = $_POST['sExplodeNum'];//导出数量
-        $oDb = $this->getDB();
+        $oDb = $this->getDB('tool');
         $sSql = "SELECT COUNT(*) AS count FROM qqlist a WHERE qqnum NOT IN (SELECT qqnum FROM qqDetail)";
         $iTotalNum = $oDb->get_one($sSql);//总条数
         $iTotalNum = min($sNum,$iTotalNum['count']);
@@ -177,7 +177,7 @@ class qqTool extends baseTool
         if ($_POST['importType'] == 2 && !$endTime) {
             $endTime = date("Y-m-d H:i:s", time());
         }
-        $oDb = $this->getDB();
+        $oDb = $this->getDB('tool');
         if ($_POST['importType'] == 1) {
             $sSql = "SELECT COUNT(*) AS count FROM qqlist WHERE CreateTime=" . strtotime($_POST['importtime']);
         } else {
@@ -232,7 +232,7 @@ class qqTool extends baseTool
      */
     private function _operateLog($iType, $iTime)
     {
-        $oDB = $this->getDB();
+        $oDB = $this->getDB('tool');
         $aData = array(
             'type' => $iType,
             'time' => $iTime,

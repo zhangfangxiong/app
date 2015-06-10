@@ -13,7 +13,7 @@ class Model_Provice extends base
             //$aData = $oMem->get("Tool_Province_List");
             //if (!$aData) {
                 $sSql = "SELECT * FROM province";
-                $oDB = self::getDB();
+                $oDB = self::getDB('tool');
                 $aData = $oDB->get_all($sSql,"code");
                 //$oMem->set("Tool_Province_List",$aData);
             //}

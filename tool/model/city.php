@@ -14,7 +14,7 @@ class Model_city extends base
             $aData = $oMem->get("Tool_City_List");
             if (!$aData) {
                 $sSql = "SELECT * FROM city";
-                $oDB = self::getDB();
+                $oDB = self::getDB('tool');
                 $aData = $oDB->get_all($sSql,"code");
                 $oMem->set("Tool_City_List",$aData);
             }
@@ -49,7 +49,7 @@ class Model_city extends base
             $aData = $oMem->get("Tool_City_List_".$sCode);
             if (!$aData) {
                 $sSql = "SELECT * FROM city WHERE provincecode=".$sCode;
-                $oDB = self::getDB();
+                $oDB = self::getDB('tool');
                 $aData = $oDB->get_all($sSql,"code");
                 $oMem->set("Tool_City_List_".$sCode,$aData);
             }

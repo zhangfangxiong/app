@@ -10,7 +10,6 @@ include_once(dirname(dirname(__FILE__))."/lib/DB.php");
 include_once(dirname(dirname(__FILE__))."/lib/memcache.php");
 include_once(dirname(dirname(__FILE__))."/lib/function.php");
 include_once(dirname(dirname(__FILE__))."/lib/base.php");
-include_once(dirname(dirname(__FILE__))."/config/DBconf_weixin.php");
 include_once(dirname(dirname(__FILE__))."/config/globalConfig.php");
 
 class baseWeixin extends base

@@ -97,7 +97,7 @@ class qqDetailTool extends baseTool
         $oFile = fopen($GLOBALS['FILEPATH'] . $sFileName, "r");
         $aCheck = array_flip($this->_aCheck);
         if ($oFile) {
-            $oDB = $this->getDB();
+            $oDB = $this->getDB('tool');
             $i = 1;
             while (!feof($oFile)) {
                 //组装成存入数据表格式
@@ -144,7 +144,7 @@ class qqDetailTool extends baseTool
         $oFile = fopen($GLOBALS['FILEPATH'] . $sFileName, "r");
         $iTime = (isset($_POST['CreateTime']) && $_POST['CreateTime']) ? strtotime($_POST['CreateTime']) : time();
         if ($oFile) {
-            $oDB = $this->getDB();
+            $oDB = $this->getDB('tool');
             $oProvince = new Model_Provice();
             $oCity = new Model_city();
             $i = 1;
@@ -198,7 +198,7 @@ class qqDetailTool extends baseTool
         echo (memory_get_usage() / 1024) . "<br>";
         $aData = $oData->sheets[0]['cells'];
         $iTime = (isset($_POST['CreateTime']) && $_POST['CreateTime']) ? strtotime($_POST['CreateTime']) : time();
-        $oDB = $this->getDB();
+        $oDB = $this->getDB('tool');
         if (!empty($aData)) {
             foreach ($aData as $key => $value) {
                 if ($key == 1) {
@@ -363,7 +363,7 @@ class qqDetailTool extends baseTool
         if ($sWhere) {
             $sSql .= "AND " . $sWhere.'1 ';
         }
-        $oDb = $this->getDB();
+        $oDb = $this->getDB('tool');
         $iTotalNum = $oDb->get_one($sSql);//总条数
         $iTotalNum = MIN($iTotalNum['count'], $_POST['sExplodeNum']);
         $sSql = "SELECT * FROM  qqDetail WHERE adoption=0 ";
@@ -440,7 +440,7 @@ class qqDetailTool extends baseTool
      */
     private function _operateLog($iType, $iTime)
     {
-        $oDB = $this->getDB();
+        $oDB = $this->getDB('tool');
         $aData = array(
             'type' => $iType,
             'time' => $iTime,
