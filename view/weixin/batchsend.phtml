@@ -95,9 +95,14 @@
                         <label id="weixinNews">
                             <input type="radio" name="checkNewsType" value="1" checked> <span id="weixintxt">微信文章</span>
                         </label>
-                        <label id="webNews">
+                        <?php if (!isset($aData)) {
+                            ?>
+                            <label id="webNews">
                             <input type="radio" name="checkNewsType" value="2"> <span id="webtxt">主站文章</span>
                         </label>
+                        <?php
+                        } ?>
+
                     </div>
                 </div>
                 <div class="form-group mariginnews">
@@ -135,7 +140,8 @@
                             ?>
                         </div>
                         <div id="webnewscon" style="display: none">
-                            <select multiple class="form-control" name="webnewid">
+1,文章已上传缩略图并且有作者才是有效文章<br>2,某篇文章没有缩略图自动跳过<br>3,没有一篇文章有缩略图则上传失败<br>
+                            <select multiple class="form-control" name="webnewid[]">
                                 <?php
                                 if (isset($aEcArticle) && !empty($aEcArticle)) {
                                     foreach ($aEcArticle as $key => $value) {

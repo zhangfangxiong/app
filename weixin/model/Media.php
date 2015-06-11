@@ -1,5 +1,6 @@
 <?php
 /**
+ * 所有中文都需要先urlencode加码，然后urldecode解码
  * Created by PhpStorm.
  * User: zhangfangxiong
  * Date: 15/3/28
@@ -151,10 +152,11 @@ class Media extends ModelBase
         if (count($aData["articles"]) > 9) {
             showError("微信最多支持9个图文消息", true);
         }
-        $aFile = json_encode($aData);
+        $aFile = urldecode(json_encode($aData));//中文解码
         $sUploadUrl = self::PERMANENTNEWS . "?access_token=" . $sToken;
         $sReturn = self::curl($sUploadUrl, true, $aFile);
         $aData = json_decode($sReturn, true);
+        return $aData;
     }
 
     /**

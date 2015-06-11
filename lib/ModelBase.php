@@ -9,9 +9,6 @@ include_once("base.php");
 
 class ModelBase extends base
 {
-    /*这个应该不需要吧
-     * function __construct()
-    {
-
-    }*/
+    const qidishuUrl = 'http://www.qidishu.com/';//启迪树网址
+    const qidishuRoot = '/home/wwwroot/qidishucom/public_html';//启迪树根目录
 }

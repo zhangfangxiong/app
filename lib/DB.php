@@ -6,6 +6,7 @@ Class DB
     private $handle;
     private $is_log;
     private $time;
+    public $DataBase;//当前数据库名
 
     /**
      * 构造函数
@@ -13,7 +14,7 @@ Class DB
      */
     public function __construct($DataBase)
     {
-        $db_config = include_once(dirname(dirname(__FILE__))."/config/DBconf.php");
+        $db_config = include(dirname(dirname(__FILE__))."/config/DBconf.php");//用include_once这里第二次引用得到的是1
         $this->time = $this->microtime_float();
         if (isset($db_config['database'][$DataBase])) {
             $aCurrDB = $db_config['database'][$DataBase];
@@ -26,6 +27,7 @@ Class DB
             $handle = fopen($aCurrDB["logfilepath"] . "dblog.txt", "a+");
             $this->handle = $handle;
         }
+        $this->DataBase = $DataBase;
     }
 
     //数据库连接

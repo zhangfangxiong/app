@@ -38,5 +38,4 @@ class receive_index extends baseWeixin
 }
 
 header("Content-Type:text/html;charset=utf-8");
-mysql_query("SET NAMES utf8");
 new receive_index();

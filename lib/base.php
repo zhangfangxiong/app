@@ -75,6 +75,8 @@ class base
     {
         if (self::$oDb == null) {
             self::$oDb = new DB($DataBase);
+        } elseif ($DataBase != self::$oDb->DataBase) {
+            self::$oDb = new DB($DataBase);
         }
         return self::$oDb;
     }
@@ -179,6 +181,26 @@ class base
             return true;
         }
         return false;
+    }
+
+    /**
+     * 下载远程文件到本地
+     * @param $file_url
+     * @param $save_to
+     */
+    protected function download_remote_file_with_curl($file_url, $save_to)
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_POST, 0);
+        curl_setopt($ch, CURLOPT_URL, $file_url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $file_content = curl_exec($ch);
+        curl_close($ch);
+
+        $downloaded_file = fopen($save_to, 'w');
+        $result = fwrite($downloaded_file, $file_content);
+        fclose($downloaded_file);
+        return $result;
     }
 
 

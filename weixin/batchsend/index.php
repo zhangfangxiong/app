@@ -1,10 +1,10 @@
 <?php
-include_once(dirname(dirname(__FILE__))."/baseWeixin.php");
-include_once(dirname(dirname(__FILE__))."/model/Media.php");
-include_once(dirname(dirname(__FILE__))."/model/Group.php");
-include_once(dirname(dirname(__FILE__))."/model/User.php");
-include_once(dirname(dirname(__FILE__))."/model/ecArticle.php");
-include_once(dirname(dirname(__FILE__))."/model/Batchsend.php");
+include_once(dirname(dirname(__FILE__)) . "/baseWeixin.php");
+include_once(dirname(dirname(__FILE__)) . "/model/Media.php");
+include_once(dirname(dirname(__FILE__)) . "/model/Group.php");
+include_once(dirname(dirname(__FILE__)) . "/model/User.php");
+include_once(dirname(dirname(__FILE__)) . "/model/ecArticle.php");
+include_once(dirname(dirname(__FILE__)) . "/model/Batchsend.php");
 
 
 class batchsend_index extends baseWeixin
@@ -78,7 +78,7 @@ class batchsend_index extends baseWeixin
         $aMediaList = Media::getNewsWithKey($sToken, "news");//新闻媒体列表
         $this->assign('aMediaList', $aMediaList);
         $this->assign('aData', $aData);
-        $this->assign('aParam',$aParam);
+        $this->assign('aParam', $aParam);
         $this->display("/weixin/batchsecclist.phtml");
     }
 
@@ -113,7 +113,8 @@ class batchsend_index extends baseWeixin
      */
     public function testAction()
     {
-        echo 111;die;
+        echo 111;
+        die;
         /*$sToken = $this->getAccessToken();
         //$aMediaNumList = Media::getPermanentNum($sToken);//媒体文件数目列表
         $aMediaList = Media::getMediaByType($sToken, "news");//新闻媒体列表
@@ -157,15 +158,78 @@ class batchsend_index extends baseWeixin
         if (intval($_POST['batchAge']) == 10000) {
             showError("请选择年龄段", true);
         }
-        if (empty($_POST['media_id'])) {
-            showError("请选择图文模版", true);
-        }
         if (empty($_POST['batchDate'])) {
             showError("请选择群发日期", true);
         }
         if ($_POST['batchTime'] === null) {
             showError("请选择群发时间", true);
         }
+        if (($_POST['checkNewsType'] == 1 && empty($_POST['media_id'])) || ($_POST['checkNewsType'] == 2 && empty($_POST['webnewid']))) {
+            showError("请选择图文模版", true);
+        }
+        if ($_POST['checkNewsType'] == 2 && count($_POST['webnewid']) > 9) {
+            showError("最多上传9篇文章", true);
+        }
+        if ($_POST['checkNewsType'] == 2) {
+            $aUploadNews['articles'] = array();//要上传的图文
+            //群发主站文章
+            $aTmp = ecArticle::getArticleByID($_POST['webnewid'], true ,true);
+            if (empty($aTmp)) {
+                showError("没有一篇是有效文章", true);
+            }
+            $has_digest = count($aTmp) > 1 ? false : true;
+            $sToken = $this->getAccessToken();
+            foreach ($aTmp as $key => $value) {
+                //如果之前没有上传过该文章缩略图
+                if (empty($value['wx_media_id'])) {
+                    $sFileUrl = ecArticle::qidishuUrl . $value['file_url'];
+                    $aFileName = explode('/', $value['file_url']);
+                    $sFileName = $GLOBALS['DOWNLOAD'] . $aFileName[2];
+                    if (!file_exists($sFileName)) {
+                        $downLoad = $this->download_remote_file_with_curl($sFileUrl, $sFileName);//下载远程文件到本地
+                        if ($downLoad === false) {
+                            showError('图文缩略图上传失败');
+                        }
+                    }
+
+                    //上传到微信
+                    $result = Media::uploadPermanentFile($sFileName, $sToken, 'image');
+                    if (isset($result['errcode']) && $result['errcode'] > 0) {
+                        //缩略图上传失败
+                        continue;
+                    }
+                    //将媒体ID存入主站文章字段中
+                    $update = array(
+                        'wx_media_id' => $result['media_id'],
+                        'wx_media_url' => $result['url']
+                    );
+                    $value['wx_media_id'] = $result['media_id'];
+                    $value['wx_media_url'] = $result['url'];
+                    ecArticle::updateArticle($value['article_id'],$update);
+                }
+
+                $aUpTmp['title'] = urlencode($value['title']);//标题
+                $aUpTmp['thumb_media_id'] = $value['wx_media_id'];//缩略图ID
+                //$aUpTmp['wx_media_url'] = $value['wx_media_url'];//缩略图ID
+                $aUpTmp['author'] = urlencode($value['author']);//$value['author'];//作者
+                $aUpTmp['digest'] = $has_digest ? urlencode($value['description']) : '';//是否要描述，只有单图文需要
+                $aUpTmp['show_cover_pic'] = 1;//是否显示缩略图
+                $aUpTmp['content'] = urlencode($value['content']);//内容
+                $aUpTmp['content_source_url'] = ecArticle::NEWSURL . $value['article_id'];//源地址
+                $aUploadNews['articles'][] = $aUpTmp;
+            }
+            if (empty($aUploadNews['articles'])) {
+                showError('主站文章同步失败',true);
+            }
+            unset($aTmp);
+            //上传图文
+            $result = Media::initPermanentNews($sToken,$aUploadNews);
+            if (!isset($result['media_id'])) {
+                showError('主站文章同步失败',true);
+            }
+            $_POST['media_id'] = $result['media_id'];
+        }
+
         $aNews['created_at'] = time();
         $aNews['type'] = 'news';
         $aNews['media_id'] = $_POST['media_id'];
