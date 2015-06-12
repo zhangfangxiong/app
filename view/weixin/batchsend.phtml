@@ -140,7 +140,7 @@
                             ?>
                         </div>
                         <div id="webnewscon" style="display: none">
-1,文章已上传缩略图并且有作者才是有效文章<br>2,某篇文章没有缩略图自动跳过<br>3,没有一篇文章有缩略图则上传失败<br>
+1,文章有内容已上传缩略图并且有作者才是有效文章<br>2,某篇文章没有缩略图自动跳过<br>3,没有一篇文章有缩略图则上传失败<br>
                             <select multiple class="form-control" name="webnewid[]">
                                 <?php
                                 if (isset($aEcArticle) && !empty($aEcArticle)) {
@@ -157,7 +157,7 @@
                 <div class="form-group mariginnews">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" class="btn btn-primary">提交</button>
-                        <button id="cancel" class="btn" onclick="location.href='<?= $sListUrl ?>';return false;">取消
+                        <button id="cancel" class="btn" onclick="javascript:history.go(-1);return false;">取消
                         </button>
                     </div>
                 </div>

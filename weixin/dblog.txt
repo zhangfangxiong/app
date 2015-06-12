@@ -1,0 +1,980 @@
+2015-06-10 14:28:01 查询 SELECT * FROM ecs_article WHERE article_id=104
+2015-06-10 14:28:01 获取全部记录 SELECT * FROM ecs_article WHERE article_id=104
+2015-06-10 14:28:01 释放结果集
+2015-06-10 14:28:01 完成整个查询任务,所用时间为0.00166416168213
+2015-06-10 15:23:24 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 15:23:24 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 15:23:24 释放结果集
+2015-06-10 15:23:24 完成整个查询任务,所用时间为0.00306606292725
+2015-06-10 15:24:36 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 15:24:36 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 15:24:36 释放结果集
+2015-06-10 15:24:36 完成整个查询任务,所用时间为0.00348997116089
+2015-06-10 15:48:13 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 15:48:13 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 15:48:13 释放结果集
+2015-06-10 15:48:13 完成整个查询任务,所用时间为0.0105590820312
+2015-06-10 16:02:18 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:02:18 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:02:18 释放结果集
+2015-06-10 16:02:18 完成整个查询任务,所用时间为0.00540399551392
+2015-06-10 16:07:26 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:07:26 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:07:26 释放结果集
+2015-06-10 16:07:26 完成整个查询任务,所用时间为0.00617718696594
+2015-06-10 16:09:50 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:09:50 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:09:50 释放结果集
+2015-06-10 16:09:50 完成整个查询任务,所用时间为0.00633597373962
+2015-06-10 16:10:07 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:10:07 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:10:07 释放结果集
+2015-06-10 16:10:07 完成整个查询任务,所用时间为0.00571012496948
+2015-06-10 16:10:42 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:10:42 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:10:42 释放结果集
+2015-06-10 16:10:42 完成整个查询任务,所用时间为0.0068371295929
+2015-06-10 16:10:54 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:10:54 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:10:54 释放结果集
+2015-06-10 16:10:54 完成整个查询任务,所用时间为0.00417304039001
+2015-06-10 16:11:05 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:11:05 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:11:05 释放结果集
+2015-06-10 16:11:05 完成整个查询任务,所用时间为0.0044219493866
+2015-06-10 16:15:37 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:15:37 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:15:37 释放结果集
+2015-06-10 16:15:37 完成整个查询任务,所用时间为0.0092511177063
+2015-06-10 16:15:45 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:15:45 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:15:45 释放结果集
+2015-06-10 16:15:45 完成整个查询任务,所用时间为0.00483393669128
+2015-06-10 16:16:12 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:16:12 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:16:12 释放结果集
+2015-06-10 16:16:12 完成整个查询任务,所用时间为0.00634217262268
+2015-06-10 16:16:46 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:16:46 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:16:46 释放结果集
+2015-06-10 16:16:46 完成整个查询任务,所用时间为0.00515079498291
+2015-06-10 16:22:46 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-10 16:22:46 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-10 16:22:47 释放结果集
+2015-06-10 16:22:47 完成整个查询任务,所用时间为0.507520914078
+2015-06-10 16:36:42 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:36:42 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:36:42 释放结果集
+2015-06-10 16:36:42 完成整个查询任务,所用时间为0.00496912002563
+2015-06-10 16:42:13 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:42:13 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:42:13 释放结果集
+2015-06-10 16:42:13 完成整个查询任务,所用时间为0.00646686553955
+2015-06-10 16:43:57 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:43:57 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:43:57 释放结果集
+2015-06-10 16:43:57 完成整个查询任务,所用时间为0.00449204444885
+2015-06-10 16:47:18 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:47:18 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:47:18 释放结果集
+2015-06-10 16:47:18 完成整个查询任务,所用时间为0.00938487052917
+2015-06-10 16:48:29 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:48:29 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:48:29 释放结果集
+2015-06-10 16:48:29 完成整个查询任务,所用时间为0.0172281265259
+2015-06-10 16:50:23 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:50:23 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:50:23 释放结果集
+2015-06-10 16:50:23 完成整个查询任务,所用时间为0.00532484054565
+2015-06-10 16:52:25 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:52:25 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:52:25 释放结果集
+2015-06-10 16:52:25 完成整个查询任务,所用时间为0.00500917434692
+2015-06-10 16:54:38 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:54:38 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:54:38 释放结果集
+2015-06-10 16:54:38 完成整个查询任务,所用时间为0.00708699226379
+2015-06-10 16:55:08 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:55:08 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:55:08 释放结果集
+2015-06-10 16:55:08 完成整个查询任务,所用时间为0.00627088546753
+2015-06-10 16:58:18 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:58:18 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 16:58:18 释放结果集
+2015-06-10 16:58:18 完成整个查询任务,所用时间为0.00493097305298
+2015-06-10 17:07:38 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:07:38 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:07:38 释放结果集
+2015-06-10 17:07:38 完成整个查询任务,所用时间为0.00653195381165
+2015-06-10 17:08:11 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:08:11 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:08:11 释放结果集
+2015-06-10 17:08:11 完成整个查询任务,所用时间为0.0045862197876
+2015-06-10 17:12:29 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:12:29 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:12:29 释放结果集
+2015-06-10 17:12:29 完成整个查询任务,所用时间为0.00470495223999
+2015-06-10 17:13:31 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:13:31 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:13:31 释放结果集
+2015-06-10 17:13:31 完成整个查询任务,所用时间为0.00422191619873
+2015-06-10 17:14:24 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:14:24 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:14:24 释放结果集
+2015-06-10 17:14:24 完成整个查询任务,所用时间为0.00601983070374
+2015-06-10 17:15:15 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:15:15 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:15:15 释放结果集
+2015-06-10 17:15:15 完成整个查询任务,所用时间为0.00625801086426
+2015-06-10 17:15:53 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:15:53 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:15:53 释放结果集
+2015-06-10 17:15:53 完成整个查询任务,所用时间为0.00434494018555
+2015-06-10 17:16:15 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:16:15 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:16:15 释放结果集
+2015-06-10 17:16:15 完成整个查询任务,所用时间为0.00611996650696
+2015-06-10 17:19:33 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:19:33 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:19:33 释放结果集
+2015-06-10 17:19:33 完成整个查询任务,所用时间为0.00665998458862
+2015-06-10 17:23:47 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:23:47 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:23:47 释放结果集
+2015-06-10 17:23:47 完成整个查询任务,所用时间为0.00538396835327
+2015-06-10 17:25:09 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:25:09 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:25:09 释放结果集
+2015-06-10 17:25:09 完成整个查询任务,所用时间为0.00518298149109
+2015-06-10 17:25:28 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:25:28 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:25:28 释放结果集
+2015-06-10 17:25:28 完成整个查询任务,所用时间为0.00681400299072
+2015-06-10 17:25:43 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:25:43 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:25:43 释放结果集
+2015-06-10 17:25:43 完成整个查询任务,所用时间为0.00493788719177
+2015-06-10 17:25:55 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:25:55 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:25:55 释放结果集
+2015-06-10 17:25:55 完成整个查询任务,所用时间为0.00584602355957
+2015-06-10 17:28:27 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:28:27 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:28:27 释放结果集
+2015-06-10 17:28:27 完成整个查询任务,所用时间为0.0109031200409
+2015-06-10 17:29:24 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:29:24 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:29:24 释放结果集
+2015-06-10 17:29:24 完成整个查询任务,所用时间为0.00585913658142
+2015-06-10 17:32:03 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:32:03 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:32:03 释放结果集
+2015-06-10 17:32:03 完成整个查询任务,所用时间为0.00573301315308
+2015-06-10 17:34:00 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:34:00 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:34:00 释放结果集
+2015-06-10 17:34:00 完成整个查询任务,所用时间为0.00677490234375
+2015-06-10 17:35:03 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:35:03 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:35:03 释放结果集
+2015-06-10 17:35:03 完成整个查询任务,所用时间为0.00509095191956
+2015-06-10 17:35:52 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:35:52 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:35:52 释放结果集
+2015-06-10 17:35:52 完成整个查询任务,所用时间为0.00671911239624
+2015-06-10 17:36:18 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:36:18 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:36:18 释放结果集
+2015-06-10 17:36:18 完成整个查询任务,所用时间为0.00600290298462
+2015-06-10 17:37:09 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:37:09 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:37:09 释放结果集
+2015-06-10 17:37:09 完成整个查询任务,所用时间为0.00490784645081
+2015-06-10 17:37:58 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:37:58 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:37:58 释放结果集
+2015-06-10 17:37:58 完成整个查询任务,所用时间为0.00520706176758
+2015-06-10 17:47:43 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:47:43 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:47:43 释放结果集
+2015-06-10 17:47:43 完成整个查询任务,所用时间为0.00687789916992
+2015-06-10 17:49:56 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:49:56 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:49:56 释放结果集
+2015-06-10 17:49:56 完成整个查询任务,所用时间为0.0128910541534
+2015-06-10 17:54:55 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:54:55 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:54:55 释放结果集
+2015-06-10 17:54:55 完成整个查询任务,所用时间为0.00767612457275
+2015-06-10 17:56:30 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:56:30 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:56:30 释放结果集
+2015-06-10 17:56:30 完成整个查询任务,所用时间为0.00510907173157
+2015-06-10 17:56:55 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:56:55 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:56:55 释放结果集
+2015-06-10 17:56:55 完成整个查询任务,所用时间为0.00676393508911
+2015-06-10 17:58:02 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:58:02 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 17:58:02 释放结果集
+2015-06-10 17:58:02 完成整个查询任务,所用时间为0.00456094741821
+2015-06-10 18:01:47 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:01:47 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:01:47 释放结果集
+2015-06-10 18:01:47 完成整个查询任务,所用时间为0.00491380691528
+2015-06-10 18:02:05 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:02:05 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:02:05 释放结果集
+2015-06-10 18:02:05 完成整个查询任务,所用时间为0.00485992431641
+2015-06-10 18:08:10 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:08:10 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:08:10 释放结果集
+2015-06-10 18:08:10 完成整个查询任务,所用时间为0.00264310836792
+2015-06-10 18:11:07 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:11:08 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:11:08 释放结果集
+2015-06-10 18:11:08 完成整个查询任务,所用时间为0.00686812400818
+2015-06-10 18:11:39 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:11:39 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:11:39 释放结果集
+2015-06-10 18:11:39 完成整个查询任务,所用时间为0.00633907318115
+2015-06-10 18:11:42 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:11:42 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:11:42 释放结果集
+2015-06-10 18:11:42 完成整个查询任务,所用时间为0.00486993789673
+2015-06-10 18:12:39 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:12:39 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:12:39 释放结果集
+2015-06-10 18:12:39 完成整个查询任务,所用时间为0.00530695915222
+2015-06-10 18:13:19 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:19 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:19 释放结果集
+2015-06-10 18:13:19 完成整个查询任务,所用时间为0.00707602500916
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00463104248047
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.0112221240997
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00622987747192
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.0162110328674
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.0051908493042
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00542902946472
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.0116658210754
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00723600387573
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.0118930339813
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.0133399963379
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.0116500854492
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00507402420044
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00558114051819
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00499510765076
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00561714172363
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00577712059021
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.0153641700745
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00818586349487
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00453996658325
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.0045599937439
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00418710708618
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.0180938243866
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00658106803894
+2015-06-10 18:13:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:20 释放结果集
+2015-06-10 18:13:20 完成整个查询任务,所用时间为0.00497889518738
+2015-06-10 18:13:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:21 释放结果集
+2015-06-10 18:13:21 完成整个查询任务,所用时间为0.00895214080811
+2015-06-10 18:13:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:21 释放结果集
+2015-06-10 18:13:21 完成整个查询任务,所用时间为0.00632190704346
+2015-06-10 18:13:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:21 释放结果集
+2015-06-10 18:13:21 完成整个查询任务,所用时间为0.00518012046814
+2015-06-10 18:13:24 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:24 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:24 释放结果集
+2015-06-10 18:13:24 完成整个查询任务,所用时间为0.00699019432068
+2015-06-10 18:13:26 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:26 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:26 释放结果集
+2015-06-10 18:13:26 完成整个查询任务,所用时间为0.00682306289673
+2015-06-10 18:13:27 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:27 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:27 释放结果集
+2015-06-10 18:13:27 完成整个查询任务,所用时间为0.00459980964661
+2015-06-10 18:13:31 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:31 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:31 释放结果集
+2015-06-10 18:13:31 完成整个查询任务,所用时间为0.00481200218201
+2015-06-10 18:13:34 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:34 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:34 释放结果集
+2015-06-10 18:13:34 完成整个查询任务,所用时间为0.00420808792114
+2015-06-10 18:13:35 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 释放结果集
+2015-06-10 18:13:35 完成整个查询任务,所用时间为0.00637912750244
+2015-06-10 18:13:35 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 释放结果集
+2015-06-10 18:13:35 完成整个查询任务,所用时间为0.00895094871521
+2015-06-10 18:13:35 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 释放结果集
+2015-06-10 18:13:35 完成整个查询任务,所用时间为0.0154190063477
+2015-06-10 18:13:35 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 释放结果集
+2015-06-10 18:13:35 完成整个查询任务,所用时间为0.00660490989685
+2015-06-10 18:13:35 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 释放结果集
+2015-06-10 18:13:35 完成整个查询任务,所用时间为0.00622892379761
+2015-06-10 18:13:35 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 释放结果集
+2015-06-10 18:13:35 完成整个查询任务,所用时间为0.0132310390472
+2015-06-10 18:13:35 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 释放结果集
+2015-06-10 18:13:35 完成整个查询任务,所用时间为0.00486588478088
+2015-06-10 18:13:35 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 释放结果集
+2015-06-10 18:13:35 完成整个查询任务,所用时间为0.00575995445251
+2015-06-10 18:13:35 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 释放结果集
+2015-06-10 18:13:35 完成整个查询任务,所用时间为0.00475597381592
+2015-06-10 18:13:35 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 释放结果集
+2015-06-10 18:13:35 完成整个查询任务,所用时间为0.00678992271423
+2015-06-10 18:13:35 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:13:35 释放结果集
+2015-06-10 18:13:35 完成整个查询任务,所用时间为0.00732421875
+2015-06-10 18:16:53 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:16:53 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:16:53 释放结果集
+2015-06-10 18:16:53 完成整个查询任务,所用时间为0.010320186615
+2015-06-10 18:17:57 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:17:57 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:17:57 释放结果集
+2015-06-10 18:17:57 完成整个查询任务,所用时间为0.00567007064819
+2015-06-10 18:18:00 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:18:00 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:18:00 释放结果集
+2015-06-10 18:18:00 完成整个查询任务,所用时间为0.00470900535583
+2015-06-10 18:24:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:24:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:24:20 释放结果集
+2015-06-10 18:24:20 完成整个查询任务,所用时间为0.00609016418457
+2015-06-10 18:27:22 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:27:22 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:27:22 释放结果集
+2015-06-10 18:27:22 完成整个查询任务,所用时间为0.00555801391602
+2015-06-10 18:29:36 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:29:36 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:29:36 释放结果集
+2015-06-10 18:29:36 完成整个查询任务,所用时间为0.00541496276855
+2015-06-10 18:30:08 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:30:08 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:30:08 释放结果集
+2015-06-10 18:30:08 完成整个查询任务,所用时间为0.00511002540588
+2015-06-10 18:30:16 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:30:16 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:30:16 释放结果集
+2015-06-10 18:30:16 完成整个查询任务,所用时间为0.0059380531311
+2015-06-10 18:30:19 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:30:19 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-10 18:30:19 释放结果集
+2015-06-10 18:30:19 完成整个查询任务,所用时间为0.00712203979492
+2015-06-11 09:32:52 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:32:52 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:32:52 释放结果集
+2015-06-11 09:32:52 完成整个查询任务,所用时间为0.00975394248962
+2015-06-11 09:33:19 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:19 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:19 释放结果集
+2015-06-11 09:33:19 完成整个查询任务,所用时间为0.00548601150513
+2015-06-11 09:33:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:20 释放结果集
+2015-06-11 09:33:20 完成整个查询任务,所用时间为0.00569295883179
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.0243539810181
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.0151360034943
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.0154111385345
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.0231058597565
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.0351169109344
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.00536799430847
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.0061891078949
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.00498795509338
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.00628399848938
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.0121638774872
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.00756812095642
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.0114049911499
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.00466203689575
+2015-06-11 09:33:21 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:33:21 释放结果集
+2015-06-11 09:33:21 完成整个查询任务,所用时间为0.0101389884949
+2015-06-11 09:48:56 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:48:56 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:48:56 释放结果集
+2015-06-11 09:48:56 完成整个查询任务,所用时间为0.00655508041382
+2015-06-11 09:51:19 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433987479','news','','4','1','6','1')
+2015-06-11 09:51:19 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433987479','news','','4','1','6','1')
+2015-06-11 09:51:19 最后插入的id为12
+2015-06-11 09:51:19 释放结果集
+2015-06-11 09:51:19 完成整个查询任务,所用时间为0.00223207473755
+2015-06-11 09:52:32 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:52:32 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 09:52:32 释放结果集
+2015-06-11 09:52:32 完成整个查询任务,所用时间为0.0159740447998
+2015-06-11 10:21:12 释放结果集
+2015-06-11 10:21:12 完成整个查询任务,所用时间为0.000786066055298
+2015-06-11 10:21:54 释放结果集
+2015-06-11 10:21:54 完成整个查询任务,所用时间为0.000725030899048
+2015-06-11 10:22:09 释放结果集
+2015-06-11 10:22:09 完成整个查询任务,所用时间为0.00963687896729
+2015-06-11 10:22:56 释放结果集
+2015-06-11 10:22:56 完成整个查询任务,所用时间为0.000648975372314
+2015-06-11 10:25:01 释放结果集
+2015-06-11 10:25:01 完成整个查询任务,所用时间为0.0140371322632
+2015-06-11 10:25:40 释放结果集
+2015-06-11 10:25:40 完成整个查询任务,所用时间为0.000566005706787
+2015-06-11 10:26:25 释放结果集
+2015-06-11 10:26:25 完成整个查询任务,所用时间为0.00127601623535
+2015-06-11 10:27:06 释放结果集
+2015-06-11 10:27:06 完成整个查询任务,所用时间为0.000683069229126
+2015-06-11 10:27:28 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id =333
+2015-06-11 10:27:28 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id =333
+2015-06-11 10:27:28 释放结果集
+2015-06-11 10:27:28 完成整个查询任务,所用时间为0.00098705291748
+2015-06-11 10:28:10 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 10:28:10 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 10:28:10 释放结果集
+2015-06-11 10:28:10 完成整个查询任务,所用时间为0.00197005271912
+2015-06-11 11:39:08 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 11:39:08 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 11:39:08 释放结果集
+2015-06-11 11:39:08 完成整个查询任务,所用时间为0.0190119743347
+2015-06-11 11:43:10 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 11:43:10 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 11:43:10 释放结果集
+2015-06-11 11:43:10 完成整个查询任务,所用时间为0.00121903419495
+2015-06-11 13:38:39 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 13:38:39 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 13:38:39 释放结果集
+2015-06-11 13:38:39 完成整个查询任务,所用时间为0.0169169902802
+2015-06-11 13:39:55 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 13:39:55 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 13:39:58 释放结果集
+2015-06-11 13:39:58 完成整个查询任务,所用时间为3.06146192551
+2015-06-11 13:43:09 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 13:43:09 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 13:43:09 释放结果集
+2015-06-11 13:43:09 完成整个查询任务,所用时间为0.0024881362915
+2015-06-11 13:43:30 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 13:43:30 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 13:43:30 释放结果集
+2015-06-11 13:43:30 完成整个查询任务,所用时间为0.00218200683594
+2015-06-11 13:44:22 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 13:44:22 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 13:44:22 释放结果集
+2015-06-11 13:44:22 完成整个查询任务,所用时间为0.00168204307556
+2015-06-11 13:45:41 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 13:45:41 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 13:45:41 释放结果集
+2015-06-11 13:45:41 完成整个查询任务,所用时间为0.00227904319763
+2015-06-11 14:03:11 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:03:11 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:03:11 释放结果集
+2015-06-11 14:03:11 完成整个查询任务,所用时间为0.191529035568
+2015-06-11 14:05:50 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:05:50 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:05:50 释放结果集
+2015-06-11 14:05:50 完成整个查询任务,所用时间为0.0790281295776
+2015-06-11 14:20:52 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:20:52 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:20:52 释放结果集
+2015-06-11 14:20:52 完成整个查询任务,所用时间为0.00168204307556
+2015-06-11 14:24:37 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:24:37 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:24:42 释放结果集
+2015-06-11 14:24:42 完成整个查询任务,所用时间为5.4204750061
+2015-06-11 14:26:17 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:26:17 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:26:22 释放结果集
+2015-06-11 14:26:22 完成整个查询任务,所用时间为5.04974579811
+2015-06-11 14:28:29 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:28:29 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:28:35 释放结果集
+2015-06-11 14:28:35 完成整个查询任务,所用时间为5.12961602211
+2015-06-11 14:39:58 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:39:58 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:39:58 释放结果集
+2015-06-11 14:39:58 完成整个查询任务,所用时间为0.0377011299133
+2015-06-11 14:41:10 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:41:10 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:41:10 释放结果集
+2015-06-11 14:41:10 完成整个查询任务,所用时间为0.453477144241
+2015-06-11 14:41:45 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:41:45 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 14:41:46 释放结果集
+2015-06-11 14:41:46 完成整个查询任务,所用时间为1.25161194801
+2015-06-11 15:04:13 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 15:04:13 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 15:04:13 释放结果集
+2015-06-11 15:04:13 完成整个查询任务,所用时间为0.00167989730835
+2015-06-11 15:04:24 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 15:04:24 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 15:04:24 释放结果集
+2015-06-11 15:04:24 完成整个查询任务,所用时间为0.00169491767883
+2015-06-11 15:22:41 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 15:22:41 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 15:22:41 释放结果集
+2015-06-11 15:22:41 完成整个查询任务,所用时间为0.00183486938477
+2015-06-11 15:22:52 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 15:22:52 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND article_id IN (817,1283,1305)
+2015-06-11 15:22:52 释放结果集
+2015-06-11 15:22:52 完成整个查询任务,所用时间为0.00233888626099
+2015-06-11 15:23:08 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 15:23:08 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 15:23:08 释放结果集
+2015-06-11 15:23:08 完成整个查询任务,所用时间为0.00203490257263
+2015-06-11 16:16:06 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:16:06 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:16:07 更新 update ecs_article set wx_media_id = 'T0ssyJhek80WxQIWip4HRDPjAdeif_Qx-fsh5IFg0Sw',wx_media_url = 'https://mmbiz.qlogo.cn/mmbiz/tUKWrawYkM6TG5RLNFzPb2v8Ql3oO55zwDBNy003q8libPibXv2s6JkBSfrn6Y5UerIxLyJ7ibHUyMFmiavibLHUWuw/0?wx_fmt=jpeg' where 1=1 and article_id=817
+2015-06-11 16:16:07 查询 update ecs_article set wx_media_id = 'T0ssyJhek80WxQIWip4HRDPjAdeif_Qx-fsh5IFg0Sw',wx_media_url = 'https://mmbiz.qlogo.cn/mmbiz/tUKWrawYkM6TG5RLNFzPb2v8Ql3oO55zwDBNy003q8libPibXv2s6JkBSfrn6Y5UerIxLyJ7ibHUyMFmiavibLHUWuw/0?wx_fmt=jpeg' where 1=1 and article_id=817
+2015-06-11 16:16:07 释放结果集
+2015-06-11 16:16:07 完成整个查询任务,所用时间为1.12933397293
+2015-06-11 16:16:38 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:16:38 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:16:38 释放结果集
+2015-06-11 16:16:38 完成整个查询任务,所用时间为0.00199413299561
+2015-06-11 16:16:43 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:16:43 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:16:43 释放结果集
+2015-06-11 16:16:43 完成整个查询任务,所用时间为0.0018310546875
+2015-06-11 16:16:47 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:16:47 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:16:47 释放结果集
+2015-06-11 16:16:47 完成整个查询任务,所用时间为0.00120401382446
+2015-06-11 16:16:52 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:16:52 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:16:52 释放结果集
+2015-06-11 16:16:52 完成整个查询任务,所用时间为0.00117993354797
+2015-06-11 16:45:16 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:45:16 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:45:16 释放结果集
+2015-06-11 16:45:16 完成整个查询任务,所用时间为0.00188994407654
+2015-06-11 16:45:21 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:45:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:45:21 释放结果集
+2015-06-11 16:45:21 完成整个查询任务,所用时间为0.00683903694153
+2015-06-11 16:49:19 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:49:19 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (817,1283,1305)
+2015-06-11 16:49:19 释放结果集
+2015-06-11 16:49:19 完成整个查询任务,所用时间为0.00844693183899
+2015-06-11 16:49:30 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 16:49:30 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 16:49:30 释放结果集
+2015-06-11 16:49:30 完成整个查询任务,所用时间为0.0381560325623
+2015-06-11 16:49:51 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:49:51 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:49:51 更新 update ecs_article set wx_media_id = '',wx_media_url = '' where 1=1 and article_id=65
+2015-06-11 16:49:51 查询 update ecs_article set wx_media_id = '',wx_media_url = '' where 1=1 and article_id=65
+2015-06-11 16:49:52 更新 update ecs_article set wx_media_id = 'K06WM0xKI5ZZIk02WJU5KbsI4HTaAvPbQLOcaXE0apU',wx_media_url = 'https://mmbiz.qlogo.cn/mmbiz/tUKWrawYkM6TG5RLNFzPb2v8Ql3oO55zdcncDPr55k6BcFzz8vYRFQFoWytB41MvfJ42IEibMmIpM9S6ZkoX98g/0?wx_fmt=jpeg' where 1=1 and article_id=258
+2015-06-11 16:49:52 查询 update ecs_article set wx_media_id = 'K06WM0xKI5ZZIk02WJU5KbsI4HTaAvPbQLOcaXE0apU',wx_media_url = 'https://mmbiz.qlogo.cn/mmbiz/tUKWrawYkM6TG5RLNFzPb2v8Ql3oO55zdcncDPr55k6BcFzz8vYRFQFoWytB41MvfJ42IEibMmIpM9S6ZkoX98g/0?wx_fmt=jpeg' where 1=1 and article_id=258
+2015-06-11 16:49:52 更新 update ecs_article set wx_media_id = 'K06WM0xKI5ZZIk02WJU5KWHxbe69jyxOI8jDj0PBeGY',wx_media_url = 'https://mmbiz.qlogo.cn/mmbiz/tUKWrawYkM6TG5RLNFzPb2v8Ql3oO55zehTiaaKGBtIafbFIGibOK9hcZPno6Kwa7WiblkZ6AU65Uu4sFq1fRLJag/0?wx_fmt=jpeg' where 1=1 and article_id=981
+2015-06-11 16:49:52 查询 update ecs_article set wx_media_id = 'K06WM0xKI5ZZIk02WJU5KWHxbe69jyxOI8jDj0PBeGY',wx_media_url = 'https://mmbiz.qlogo.cn/mmbiz/tUKWrawYkM6TG5RLNFzPb2v8Ql3oO55zehTiaaKGBtIafbFIGibOK9hcZPno6Kwa7WiblkZ6AU65Uu4sFq1fRLJag/0?wx_fmt=jpeg' where 1=1 and article_id=981
+2015-06-11 16:49:52 释放结果集
+2015-06-11 16:49:52 完成整个查询任务,所用时间为1.38140010834
+2015-06-11 16:50:21 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:50:21 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:50:21 更新 update ecs_article set wx_media_id = '',wx_media_url = '' where 1=1 and article_id=65
+2015-06-11 16:50:21 查询 update ecs_article set wx_media_id = '',wx_media_url = '' where 1=1 and article_id=65
+2015-06-11 16:50:21 释放结果集
+2015-06-11 16:50:21 完成整个查询任务,所用时间为0.232650995255
+2015-06-11 16:52:23 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:52:23 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:52:24 更新 update ecs_article set wx_media_id = '',wx_media_url = '' where 1=1 and article_id=65
+2015-06-11 16:52:24 查询 update ecs_article set wx_media_id = '',wx_media_url = '' where 1=1 and article_id=65
+2015-06-11 16:52:24 释放结果集
+2015-06-11 16:52:24 完成整个查询任务,所用时间为0.257235050201
+2015-06-11 16:52:57 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:52:57 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:52:57 更新 update ecs_article set wx_media_id = '',wx_media_url = '' where 1=1 and article_id=65
+2015-06-11 16:52:57 查询 update ecs_article set wx_media_id = '',wx_media_url = '' where 1=1 and article_id=65
+2015-06-11 16:52:57 释放结果集
+2015-06-11 16:52:57 完成整个查询任务,所用时间为0.258725166321
+2015-06-11 16:53:39 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:53:39 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:53:39 更新 update ecs_article set wx_media_id = '',wx_media_url = '' where 1=1 and article_id=65
+2015-06-11 16:53:39 查询 update ecs_article set wx_media_id = '',wx_media_url = '' where 1=1 and article_id=65
+2015-06-11 16:53:39 释放结果集
+2015-06-11 16:53:39 完成整个查询任务,所用时间为0.258828878403
+2015-06-11 16:56:08 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:56:08 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:56:08 释放结果集
+2015-06-11 16:56:08 完成整个查询任务,所用时间为0.00217390060425
+2015-06-11 16:57:00 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:57:00 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:57:01 释放结果集
+2015-06-11 16:57:01 完成整个查询任务,所用时间为0.280852079391
+2015-06-11 16:57:43 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:57:43 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 16:57:43 释放结果集
+2015-06-11 16:57:43 完成整个查询任务,所用时间为0.00215697288513
+2015-06-11 17:02:59 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:02:59 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:02:59 释放结果集
+2015-06-11 17:02:59 完成整个查询任务,所用时间为0.268415927887
+2015-06-11 17:04:52 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:04:52 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:04:52 释放结果集
+2015-06-11 17:04:52 完成整个查询任务,所用时间为0.258988142014
+2015-06-11 17:05:19 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:05:19 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:05:19 释放结果集
+2015-06-11 17:05:19 完成整个查询任务,所用时间为0.251657009125
+2015-06-11 17:17:14 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:17:14 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:17:15 释放结果集
+2015-06-11 17:17:15 完成整个查询任务,所用时间为1.01566100121
+2015-06-11 17:17:40 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:17:40 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:17:41 释放结果集
+2015-06-11 17:17:41 完成整个查询任务,所用时间为0.254477977753
+2015-06-11 17:17:53 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 17:17:53 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 17:17:53 释放结果集
+2015-06-11 17:17:53 完成整个查询任务,所用时间为0.00660610198975
+2015-06-11 17:17:59 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:17:59 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:17:59 释放结果集
+2015-06-11 17:17:59 完成整个查询任务,所用时间为0.266531944275
+2015-06-11 17:18:12 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 17:18:12 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 17:18:12 释放结果集
+2015-06-11 17:18:12 完成整个查询任务,所用时间为0.00608801841736
+2015-06-11 17:18:15 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 17:18:15 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 17:18:15 释放结果集
+2015-06-11 17:18:15 完成整个查询任务,所用时间为0.00531601905823
+2015-06-11 17:18:23 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:18:23 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:18:23 释放结果集
+2015-06-11 17:18:23 完成整个查询任务,所用时间为0.277810096741
+2015-06-11 17:19:47 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:19:47 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:19:48 释放结果集
+2015-06-11 17:19:48 完成整个查询任务,所用时间为0.605339050293
+2015-06-11 17:20:29 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:20:29 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:20:33 释放结果集
+2015-06-11 17:20:33 完成整个查询任务,所用时间为3.75150895119
+2015-06-11 17:29:24 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:29:24 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:29:25 释放结果集
+2015-06-11 17:29:25 完成整个查询任务,所用时间为0.275710821152
+2015-06-11 17:45:52 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:45:52 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:45:56 释放结果集
+2015-06-11 17:45:56 完成整个查询任务,所用时间为3.45115399361
+2015-06-11 17:51:34 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:51:34 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:51:38 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434016298','news','KscCxtDYGO-THcOwkaBHjvt6eTbfVQiB1ZmxFuSAdCo','4','1','6','1')
+2015-06-11 17:51:38 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434016298','news','KscCxtDYGO-THcOwkaBHjvt6eTbfVQiB1ZmxFuSAdCo','4','1','6','1')
+2015-06-11 17:51:38 Query Error: insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434016298','news','KscCxtDYGO-THcOwkaBHjvt6eTbfVQiB1ZmxFuSAdCo','4','1','6','1')
+Table 'qidishucom.batchsend' doesn't exist
+2015-06-11 17:51:38 释放结果集
+2015-06-11 17:51:38 完成整个查询任务,所用时间为3.14471387863
+2015-06-11 17:52:08 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:52:08 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 17:52:11 释放结果集
+2015-06-11 17:52:11 完成整个查询任务,所用时间为3.70843100548
+2015-06-11 19:23:39 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:23:39 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:23:42 释放结果集
+2015-06-11 19:23:42 完成整个查询任务,所用时间为3.62825512886
+2015-06-11 19:24:07 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:24:07 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:24:11 释放结果集
+2015-06-11 19:24:11 完成整个查询任务,所用时间为3.89320397377
+2015-06-11 19:26:24 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:26:24 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:26:27 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434021987','news','7M_QAGSurjLCVF_CuazkGdzr5NSyOnhpADG6qk-w_zA','4','1','6','1')
+2015-06-11 19:26:27 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434021987','news','7M_QAGSurjLCVF_CuazkGdzr5NSyOnhpADG6qk-w_zA','4','1','6','1')
+2015-06-11 19:26:27 Query Error: insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434021987','news','7M_QAGSurjLCVF_CuazkGdzr5NSyOnhpADG6qk-w_zA','4','1','6','1')
+Table 'qidishucom.batchsend' doesn't exist
+2015-06-11 19:26:27 释放结果集
+2015-06-11 19:26:27 完成整个查询任务,所用时间为3.5017721653
+2015-06-11 19:28:51 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:28:51 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:28:54 释放结果集
+2015-06-11 19:28:54 完成整个查询任务,所用时间为3.68955397606
+2015-06-11 19:30:22 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:30:22 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:30:25 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434022225','news','9F1Ceb5LeHHQwbQx5dKrTb1z8p75k6ccw2ZOuk0uH0o','4','1','6','1')
+2015-06-11 19:30:25 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434022225','news','9F1Ceb5LeHHQwbQx5dKrTb1z8p75k6ccw2ZOuk0uH0o','4','1','6','1')
+2015-06-11 19:30:25 Query Error: insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434022225','news','9F1Ceb5LeHHQwbQx5dKrTb1z8p75k6ccw2ZOuk0uH0o','4','1','6','1')
+Table 'qidishucom.batchsend' doesn't exist
+2015-06-11 19:30:25 释放结果集
+2015-06-11 19:30:25 完成整个查询任务,所用时间为3.38483500481
+2015-06-11 19:37:55 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:37:55 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:40:31 释放结果集
+2015-06-11 19:40:31 完成整个查询任务,所用时间为0.000944852828979
+2015-06-11 19:40:50 释放结果集
+2015-06-11 19:40:50 完成整个查询任务,所用时间为0.000545024871826
+2015-06-11 19:44:53 释放结果集
+2015-06-11 19:44:53 完成整个查询任务,所用时间为0.000550985336304
+2015-06-11 19:45:11 释放结果集
+2015-06-11 19:45:11 完成整个查询任务,所用时间为0.00236296653748
+2015-06-11 19:45:55 释放结果集
+2015-06-11 19:45:55 完成整个查询任务,所用时间为0.000769853591919
+2015-06-11 19:46:49 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:46:49 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:46:53 释放结果集
+2015-06-11 19:46:53 完成整个查询任务,所用时间为3.90249705315
+2015-06-11 19:49:15 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:49:15 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:49:18 释放结果集
+2015-06-11 19:49:18 完成整个查询任务,所用时间为3.39213609695
+2015-06-11 19:50:13 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:50:13 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:50:16 释放结果集
+2015-06-11 19:50:16 完成整个查询任务,所用时间为3.61309909821
+2015-06-11 19:51:53 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:51:53 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 19:51:56 释放结果集
+2015-06-11 19:51:56 完成整个查询任务,所用时间为3.56163406372
+2015-06-11 19:51:56 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434023516','news','9F1Ceb5LeHHQwbQx5dKrTQ0KmteFcmo8Oc6C06RNII4','4','1','6','1')
+2015-06-11 19:51:56 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434023516','news','9F1Ceb5LeHHQwbQx5dKrTQ0KmteFcmo8Oc6C06RNII4','4','1','6','1')
+2015-06-11 19:51:56 最后插入的id为13
+2015-06-11 19:51:56 释放结果集
+2015-06-11 19:51:56 完成整个查询任务,所用时间为0.00807213783264
+2015-06-11 19:52:06 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 19:52:06 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 19:52:06 释放结果集
+2015-06-11 19:52:06 完成整个查询任务,所用时间为0.00519895553589
+2015-06-11 19:52:06 查询 SELECT * FROM batchsend WHERE id = 13
+2015-06-11 19:52:06 获取一条记录 SELECT * FROM batchsend WHERE id = 13
+2015-06-11 19:52:06 释放结果集
+2015-06-11 19:52:06 完成整个查询任务,所用时间为0.00630378723145
+2015-06-11 19:56:26 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 19:56:26 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 19:56:26 释放结果集
+2015-06-11 19:56:26 完成整个查询任务,所用时间为0.00612592697144
+2015-06-11 19:56:26 查询 SELECT * FROM batchsend WHERE id = 13
+2015-06-11 19:56:26 获取一条记录 SELECT * FROM batchsend WHERE id = 13
+2015-06-11 19:56:26 释放结果集
+2015-06-11 19:56:26 完成整个查询任务,所用时间为0.00406193733215
+2015-06-11 19:57:07 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 19:57:07 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 19:57:07 释放结果集
+2015-06-11 19:57:07 完成整个查询任务,所用时间为0.00428104400635
+2015-06-11 19:57:07 查询 SELECT * FROM batchsend WHERE id = 13
+2015-06-11 19:57:07 获取一条记录 SELECT * FROM batchsend WHERE id = 13
+2015-06-11 19:57:07 释放结果集
+2015-06-11 19:57:07 完成整个查询任务,所用时间为0.00711822509766
+2015-06-11 19:59:39 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 19:59:39 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 19:59:39 释放结果集
+2015-06-11 19:59:39 完成整个查询任务,所用时间为0.00548601150513
+2015-06-11 19:59:39 查询 SELECT * FROM batchsend WHERE id = 13
+2015-06-11 19:59:39 获取一条记录 SELECT * FROM batchsend WHERE id = 13
+2015-06-11 19:59:39 释放结果集
+2015-06-11 19:59:39 完成整个查询任务,所用时间为0.0043351650238
+2015-06-11 20:00:10 更新 update batchsend set status = '0' where 1=1 and id = 13
+2015-06-11 20:00:10 查询 update batchsend set status = '0' where 1=1 and id = 13
+2015-06-11 20:00:10 释放结果集
+2015-06-11 20:00:10 完成整个查询任务,所用时间为0.0103149414062
+2015-06-11 20:00:11 查询 SELECT * FROM batchsend WHERE status = 1
+2015-06-11 20:00:11 获取全部记录 SELECT * FROM batchsend WHERE status = 1
+2015-06-11 20:00:12 释放结果集
+2015-06-11 20:00:12 完成整个查询任务,所用时间为0.367386102676
+2015-06-11 20:00:16 更新 update batchsend set status = '0' where 1=1 and id = 12
+2015-06-11 20:00:16 查询 update batchsend set status = '0' where 1=1 and id = 12
+2015-06-11 20:00:16 释放结果集
+2015-06-11 20:00:16 完成整个查询任务,所用时间为0.00142383575439
+2015-06-11 20:00:17 查询 SELECT * FROM batchsend WHERE status = 1
+2015-06-11 20:00:17 获取全部记录 SELECT * FROM batchsend WHERE status = 1
+2015-06-11 20:00:17 释放结果集
+2015-06-11 20:00:17 完成整个查询任务,所用时间为0.212949991226
+2015-06-11 20:00:20 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:00:20 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:00:20 释放结果集
+2015-06-11 20:00:20 完成整个查询任务,所用时间为0.00544691085815
+2015-06-11 20:00:32 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434024032','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','9','0','4','1')
+2015-06-11 20:00:32 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434024032','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','9','0','4','1')
+2015-06-11 20:00:32 最后插入的id为14
+2015-06-11 20:00:32 释放结果集
+2015-06-11 20:00:32 完成整个查询任务,所用时间为0.0122678279877
+2015-06-11 20:00:35 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:00:35 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:00:35 释放结果集
+2015-06-11 20:00:35 完成整个查询任务,所用时间为0.00539779663086
+2015-06-11 20:01:01 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 20:01:01 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 20:01:04 释放结果集
+2015-06-11 20:01:04 完成整个查询任务,所用时间为3.34028887749
+2015-06-11 20:01:04 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434024064','news','BAhFz6d7rNYfP4reCbKrKkc1JB6nbRsiTxjMOrfWBjI','6','1','9','1')
+2015-06-11 20:01:04 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1434024064','news','BAhFz6d7rNYfP4reCbKrKkc1JB6nbRsiTxjMOrfWBjI','6','1','9','1')
+2015-06-11 20:01:04 最后插入的id为15
+2015-06-11 20:01:04 释放结果集
+2015-06-11 20:01:04 完成整个查询任务,所用时间为0.00322389602661
+2015-06-11 20:01:12 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:01:12 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:01:12 释放结果集
+2015-06-11 20:01:12 完成整个查询任务,所用时间为0.00419402122498
+2015-06-11 20:01:12 查询 SELECT * FROM batchsend WHERE id = 15
+2015-06-11 20:01:12 获取一条记录 SELECT * FROM batchsend WHERE id = 15
+2015-06-11 20:01:12 释放结果集
+2015-06-11 20:01:12 完成整个查询任务,所用时间为0.00498104095459
+2015-06-11 20:01:17 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:01:17 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:01:17 释放结果集
+2015-06-11 20:01:17 完成整个查询任务,所用时间为0.00576996803284
+2015-06-11 20:01:17 查询 SELECT * FROM batchsend WHERE id = 15
+2015-06-11 20:01:17 获取一条记录 SELECT * FROM batchsend WHERE id = 15
+2015-06-11 20:01:17 释放结果集
+2015-06-11 20:01:17 完成整个查询任务,所用时间为0.00976300239563
+2015-06-11 20:05:32 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:05:32 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:05:32 释放结果集
+2015-06-11 20:05:32 完成整个查询任务,所用时间为0.005126953125
+2015-06-11 20:05:46 查询 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND LENGTH(author) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 20:05:46 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin > 0 AND LENGTH(file_url) > 0 AND LENGTH(author) > 0 AND article_id IN (65,258,817,981,1283,1305)
+2015-06-11 20:05:46 释放结果集
+2015-06-11 20:05:46 完成整个查询任务,所用时间为0.00151896476746
+2015-06-11 20:06:25 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:06:25 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:06:25 释放结果集
+2015-06-11 20:06:25 完成整个查询任务,所用时间为0.00633311271667
+2015-06-11 20:06:39 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:06:39 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:06:39 释放结果集
+2015-06-11 20:06:39 完成整个查询任务,所用时间为0.0682561397552
+2015-06-11 20:06:40 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:06:40 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:06:40 释放结果集
+2015-06-11 20:06:40 完成整个查询任务,所用时间为0.102620124817
+2015-06-11 20:07:54 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:07:54 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-11 20:07:54 释放结果集
+2015-06-11 20:07:54 完成整个查询任务,所用时间为0.0070059299469
+2015-06-12 13:41:53 查询 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-12 13:41:53 获取全部记录 SELECT * FROM ecs_article WHERE is_weixin>0
+2015-06-12 13:41:53 释放结果集
+2015-06-12 13:41:53 完成整个查询任务,所用时间为0.00709700584412

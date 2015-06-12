@@ -1,0 +1,365 @@
+<?php
+include_once("baseTool.php");
+include_once("model/province.php");
+include_once("model/city.php");
+include_once('../lib/memcache.php');
+include_once('../lib/excelReader.php');
+
+
+class qqDetailTool extends baseTool
+{
+    private $_iImportSupportType = array(".xls",".csv",".txt");//支持导入的格式
+    const EXLODENUM = 50000;//每次读取表的数据条数
+    const BOY = "男";
+    const GIRL = "女";
+
+    public function indexAction()
+    {
+        $this->display("qqDetail/index.phtml");
+    }
+
+    public function explodeFileListAction()
+    {
+        $sSql = "SELECT * FROM eximLog WHERE type=0";
+        $oDB = $this->getDB();
+        $aData = $oDB->get_all($sSql);
+
+        $this->assign('aImportTimes', $aData);
+        $this->display("qqDetail/explodeFileList.phtml");
+    }
+
+    /**
+     * 获取QQ列表
+     */
+    public function getQqListAction()
+    {
+
+    }
+
+    /**
+     * 导入QQ数据
+     */
+    public function importDataAction()
+    {
+        $sFileName = $_POST['sFileName'];
+        $iImportType = $_POST['iImportType'];
+        //$sFileName = $_GET['sFileName'];
+        if (!$sFileName) {
+            showError("请选择文件", true);
+        }
+        if (!isset($_POST['iImportType'])) {
+            showError("请选择导入种类",true);
+        }
+        $aFilesnames = scandir($GLOBALS['FILEPATH']);
+
+        if (!in_array($sFileName, $aFilesnames)) {
+            showError("该文件不存在", true);
+        }
+        $bResult = $this->_readFileBatch($sFileName);
+        if ($bResult) {
+            showOk("文件导入完成", $GLOBALS['CURRURL']);
+        }
+    }
+
+    /**
+     * 获取文件列表
+     */
+    public function getFileListAction()
+    {
+        //获取本文件目录的文件夹地址
+        $aFilesNames = scandir($GLOBALS['FILEPATH']);
+        //前面两个去掉
+        array_shift($aFilesNames);
+        array_shift($aFilesNames);
+        $this->assign('aFilesNames', $aFilesNames);
+        $this->display("qqDetail/getFileList.phtml");
+    }
+
+    private function _importCsv($sFileName)//csv格式导入
+    {
+        $file = fopen($GLOBALS['FILEPATH'] . $sFileName,"r");
+
+        while(! feof($file))
+        {
+            print_r(fgetcsv($file));
+        }
+
+        fclose($file);
+    }
+
+    /**
+     * 修改字段
+     * @param $sFileName
+     * @param $iType1验证种类2生日导入
+     * @return bool
+     */
+    private function _updateTxt($sFileName)
+    {
+        $oFile = fopen($GLOBALS['FILEPATH'] . $sFileName, "r");
+        if ($oFile) {
+            $oDB = $this->getDB();
+            $i = 1;
+            while (!feof($oFile)) {
+                //组装成存入数据表格式
+                $sData = preg_replace("/\s/","",fgets($oFile));
+                $aData = explode("|",$sData);
+                if (count($aData) != 2) {
+                    //showError("txt第".$i."行数据格式有误",true);
+                    continue;
+                }
+
+                if (!empty($aData)) {
+                    if ($_POST['iImportType'] == 1) {
+                        $aDataChange = array('checktype' => intval($aData[1]));
+                        $sWhere = "qqnum='".$aData[0]."'";
+                        $oDB->update( "qqDetail",$aDataChange,$sWhere);
+                    } else if ($_POST['iImportType'] == 2) {
+                        $iBirth = strtotime($aData[1]);
+                        if (!$iBirth) {
+                            //showError("txt第".$i."行数据生日格式有误",true);
+                            continue;
+                        }
+                        $sql = "INSERT INTO qqDetail (qqnum,birth) VALUES ($aData[0],$iBirth) ON DUPLICATE KEY UPDATE birth=$iBirth";
+                        $oDB->query($sql);
+                    }
+
+                }
+                $i++;
+            }
+        }
+        fclose($oFile);
+        return true;
+    }
+
+    private function _importTxt($sFileName)//txt格式导入
+    {
+        $oFile = fopen($GLOBALS['FILEPATH'] . $sFileName, "r");
+        $iTime = (isset($_POST['CreateTime']) && $_POST['CreateTime']) ? strtotime($_POST['CreateTime']) : time();
+        if ($oFile) {
+            $oDB = $this->getDB();
+            $oProvince = new Model_Provice();
+            $oCity = new Model_city();
+            $i = 1;
+            while (!feof($oFile)) {
+                //组装成存入数据表格式
+                $sData = preg_replace("/\s/","",fgets($oFile));
+                $aData = explode("|",$sData);
+                if (count($aData) != 5) {
+                    //showError("txt第".$i."行数据格式有误",true);
+                    continue;
+                }
+                if ($sData) {
+                    $aProvince = $oProvince->getProvinceByName($aData[1]);
+                    $aCity = $oCity->getCityByName($aData[2]);
+                    $iProvinceID = empty($aProvince) ? 0 :$aProvince['code'];
+                    $iCityID = empty($aCity) ? 0 : $aCity['code'];
+                    if ($aData[3] == self::BOY) {
+                        $aData[3] = 1;
+                    } else if ($aData[3] == self::GIRL) {
+                        $aData[3] = 2;
+                    } else {
+                        $aData[3] = 0;
+                    }
+
+                    $aTmp = array(
+                        'qqnum' => $aData[0],
+                        'province' => $iProvinceID,
+                        'city' => $iCityID,
+                        'sex' => $aData[3],
+                        'age' => $aData[4],
+                        'importtime' => $iTime
+                    );
+                    $oDB->insert('qqDetail', $aTmp, 'ignore');
+                }
+                $i++;
+            }
+        }
+        fclose($oFile);
+        return true;
+    }
+
+    private function _importxls($sFileName)//xls格式的最多支持6W数据，需要先把内存调到512
+    {
+        $oProvince = new Model_Provice();
+        $oCity = new Model_city();
+        echo (memory_get_usage()/1024)."<br>";
+        $oData = new Spreadsheet_Excel_Reader($GLOBALS['FILEPATH'] . $sFileName);
+        echo (memory_get_usage()/1024)."<br>";
+        $aData = $oData->sheets[0]['cells'];
+        $iTime = (isset($_POST['CreateTime']) && $_POST['CreateTime']) ? strtotime($_POST['CreateTime']) : time();
+        $oDB = $this->getDB();
+        if (!empty($aData)) {
+            foreach ($aData as $key => $value) {
+                if ( $key == 1 ) {
+                    continue;
+                }
+                $aProvince = $oProvince->getProvinceByName($value[2]);
+                $aCity = $oCity->getCityByName($value[3]);
+                $iProvinceID = empty($aProvince) ? 0 :$aProvince['code'];
+                $iCityID = empty($aCity) ? 0 : $aCity['code'];
+                if ($value[4] == self::BOY) {
+                    $value[4] = 1;
+                } else if ($value[4] == self::GIRL) {
+                    $value[4] = 2;
+                } else {
+                    $value[4] = 0;
+                }
+
+                $aTmp = array(
+                    'qqnum' => $value[1],
+                    'province' => $iProvinceID,
+                    'city' => $iCityID,
+                    'sex' => $value[4],
+                    'age' => $value[5],
+                    'importtime' => $iTime
+                );
+                $oDB->insert('qqDetail', $aTmp, 'ignore');
+            }
+        }
+        echo (memory_get_usage()/1024)."<br>";
+        echo count($aData);
+        die;
+    }
+
+    /**
+     * 读取文件批处理
+     * @param $sFileName
+     * return array
+     */
+    private function _readFileBatch($sFileName)
+    {
+        $iSuffix = substr($sFileName, strpos($sFileName, '.'), strlen($sFileName) - 1);
+        if (!in_array($iSuffix, $this->_iImportSupportType)) {
+            showError("不支持该种格式", true);
+        }
+        switch($iSuffix) {
+            case ".xls":
+                $this->_importxls($sFileName);
+                break;
+            case ".csv":
+                $this->_importcsv($sFileName);
+                break;
+            case ".txt":
+                if ($_POST['iImportType'] > 0) {
+                    $this->_updateTxt($sFileName);
+                } else {
+                    $this->_importtxt($sFileName);
+                }
+
+                break;
+        }
+        return true;
+    }
+
+    /**
+     * 导出文件
+     */
+    public function exportFileAction()
+    {
+        if (!$_POST['importType']) {
+            showError("请选择导出方式", true);
+        }
+        if (!$_POST['sExplodeName']) {
+            showError("请输入导出名", true);
+        }
+        $sFileName = $_POST['sExplodeName'];
+        $iSuffix = substr($sFileName, strpos($sFileName, '.'), strlen($sFileName) - 1);
+        if (!in_array($iSuffix, $this->_iImportSupportType)) {
+            showError("不支持导出" . $iSuffix . "格式文件", true);
+        }
+        //获取本文件目录的文件夹地址
+        $aFilesNames = scandir($GLOBALS['FILEPATH']);
+        if (in_array($sFileName, $aFilesNames)) {
+            showError("已存在已该名存在的文件，请更改文件名以免覆盖", true);
+        }
+        if ($_POST['importType'] == 1 && !$_POST['importtime']) {
+            showError("请选择导出时间", true);
+        }
+        $startTime = $_POST['startTime'];
+        $endTime = $_POST['endTime'];
+        if ($_POST['importType'] == 2 && !$startTime) {
+            showError("请选择导出时间,开始时间必须输入", true);
+        }
+        if ($_POST['importType'] == 2 && !$endTime) {
+            $endTime = date("Y-m-d H:i:s", time());
+        }
+        $oDb = $this->getDB();
+        if ($_POST['importType'] == 1) {
+            $sSql = "SELECT COUNT(*) AS count FROM qqlist WHERE CreateTime=" . strtotime($_POST['importtime']);
+        } else {
+            $sSql = "SELECT COUNT(*) AS count FROM qqlist WHERE CreateTime>='" . strtotime(
+                    $startTime
+                ) . "' AND CreateTime <='" . strtotime($endTime) . "'";
+        }
+        $iTotalNum = $oDb->get_one($sSql);//总条数
+        $iTotalNum = $iTotalNum['count'];
+        if ($_POST['importType'] == 1) {
+            $sSql = "SELECT id FROM qqlist WHERE CreateTime=" . strtotime(
+                    $_POST['importtime']
+                ) . " order by id Limit 1";
+        } else {
+            $sSql = "SELECT id FROM qqlist WHERE CreateTime>='" . strtotime(
+                    $startTime
+                ) . "' AND CreateTime <='" . strtotime($endTime) . "' order by id Limit 1";
+        }
+        $iFirstID = $oDb->get_one($sSql);//第一条记录id
+        $iFirstID = $iFirstID['id'];
+        $iLimit = self::EXLODENUM;//每次读取的条数
+        $iExplodeTimes = ceil($iTotalNum / $iLimit);//需要读取的总次数
+        $sFilePath = $GLOBALS['FILEPATH'];
+        $sFileName = $sFilePath . $sFileName;
+        $fp = fopen($sFileName, "w+");
+        for ($i = 0; $i < $iExplodeTimes; $i++) {
+            $iStartID = $iFirstID;
+            $iStartID += $i * $iLimit - 1;
+            $iListNum = $iTotalNum - $i * $iLimit;//剩余条数
+            $iLimitNum = $iListNum > $iLimit ? $iLimit : $iListNum;
+            $sSql = "SELECT * FROM qqlist LIMIT " . $iStartID . "," . $iLimitNum;
+            $aData = $oDb->get_all($sSql);
+            foreach ($aData as $key => $value) {
+                fwrite($fp, $value['qqnum'] . "\n");
+            }
+        }
+        fclose($fp);
+        //$this->_operateLog(1, time());//记录导出log
+        showOk("文件导出完成", $GLOBALS['CURRURL']);
+        /**
+         * Header("Content-type:application/octet-stream ");
+         * Header("Accept-Ranges:bytes ");
+         * header("Content-Disposition:attachment;filename=test.txt ");
+         * header("Expires:   0 ");
+         * header("Cache-Control:must-revalidate,post-check=0,pre-check=0 ");
+         * header("Pragma:public ");
+         */
+    }
+
+    /**
+     * 导入导出的log
+     */
+    private function _operateLog($iType, $iTime)
+    {
+        $oDB = $this->getDB();
+        $aData = array(
+            'type' => $iType,
+            'time' => $iTime,
+            'username' => $this->getCurrUser()
+        );
+
+        return $oDB->insert('eximLog', $aData);
+    }
+
+    /**
+     * 删除缓存
+     */
+    public function flushCacheAction()
+    {
+        $oMem = $this->getMem();
+        $oMem->flush();
+    }
+
+}
+
+header("Content-Type:text/html;charset=utf-8");
+mysql_query("SET NAMES utf8");
+$qqTool = new qqDetailTool();
+?>

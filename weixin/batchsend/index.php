@@ -182,6 +182,13 @@ class batchsend_index extends baseWeixin
             foreach ($aTmp as $key => $value) {
                 //如果之前没有上传过该文章缩略图
                 if (empty($value['wx_media_id'])) {
+                    /**这部分是在正式环境有的，这里不需要
+                    $sFileName = dirname($GLOBALS['BASEPATH']).'/'.$value['file_url'];
+                    if (!file_exists($sFileName)) {
+                        showError('图文缩略图文件不存在，请先上传该文章缩略图',true);
+                    }
+                     */
+
                     $sFileUrl = ecArticle::qidishuUrl . $value['file_url'];
                     $aFileName = explode('/', $value['file_url']);
                     $sFileName = $GLOBALS['DOWNLOAD'] . $aFileName[2];
@@ -225,7 +232,7 @@ class batchsend_index extends baseWeixin
             //上传图文
             $result = Media::initPermanentNews($sToken,$aUploadNews);
             if (!isset($result['media_id'])) {
-                showError('主站文章同步失败',true);
+                showError('文章上传到微信失败',true);
             }
             $_POST['media_id'] = $result['media_id'];
         }

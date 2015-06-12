@@ -1,0 +1,710 @@
+2015-04-27 00:12:49 插入 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430064769','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','106','1428336000')
+2015-04-27 00:12:49 查询 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430064769','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','106','1428336000')
+2015-04-27 00:12:49 释放结果集
+2015-04-27 00:12:49 完成整个查询任务,所用时间为0.0345129966736
+2015-04-27 00:17:09 插入 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430065029','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','106','1428336000')
+2015-04-27 00:17:09 查询 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430065029','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','106','1428336000')
+2015-04-27 00:17:09 释放结果集
+2015-04-27 00:17:09 完成整个查询任务,所用时间为0.00961995124817
+2015-04-27 00:17:35 插入 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430065055','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','108','1429070400')
+2015-04-27 00:17:35 查询 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430065055','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','108','1429070400')
+2015-04-27 00:17:35 释放结果集
+2015-04-27 00:17:35 完成整个查询任务,所用时间为0.00143885612488
+2015-04-27 00:25:16 插入 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430065516','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','137','1429632000')
+2015-04-27 00:25:16 查询 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430065516','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','137','1429632000')
+2015-04-27 00:25:16 释放结果集
+2015-04-27 00:25:16 完成整个查询任务,所用时间为0.00176382064819
+2015-04-27 00:26:35 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 00:26:35 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 00:30:48 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 00:30:48 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 00:30:49 释放结果集
+2015-04-27 00:30:49 完成整个查询任务,所用时间为0.482946872711
+2015-04-27 00:31:20 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 00:31:20 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 00:31:20 释放结果集
+2015-04-27 00:31:20 完成整个查询任务,所用时间为0.000993967056274
+2015-04-27 00:40:16 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 00:40:16 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 00:40:16 释放结果集
+2015-04-27 00:40:16 完成整个查询任务,所用时间为0.00155591964722
+2015-04-27 01:20:14 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 01:20:14 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 01:20:14 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 01:20:14 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 01:20:15 释放结果集
+2015-04-27 01:20:15 完成整个查询任务,所用时间为0.361612081528
+2015-04-27 01:20:15 释放结果集
+2015-04-27 01:20:15 完成整个查询任务,所用时间为0.407709121704
+2015-04-27 01:20:26 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 01:20:26 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 01:20:26 释放结果集
+2015-04-27 01:20:26 完成整个查询任务,所用时间为0.445497989655
+2015-04-27 01:20:43 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 01:20:43 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 01:20:44 释放结果集
+2015-04-27 01:20:44 完成整个查询任务,所用时间为0.305480957031
+2015-04-27 01:20:53 查询 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 01:20:53 获取全部记录 SELECT * FROM batchsend WHERE has_send =0
+2015-04-27 01:20:54 释放结果集
+2015-04-27 01:20:54 完成整个查询任务,所用时间为0.511575937271
+2015-04-27 23:08:23 查询 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430147293 AND send_time <=1430147313
+2015-04-27 23:08:23 获取全部记录 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430147293 AND send_time <=1430147313
+2015-04-27 23:08:23 释放结果集
+2015-04-27 23:08:23 完成整个查询任务,所用时间为0.00226807594299
+2015-04-27 23:11:58 插入 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430147518','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','137','1430143200')
+2015-04-27 23:11:58 查询 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430147518','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','137','1430143200')
+2015-04-27 23:11:58 释放结果集
+2015-04-27 23:11:58 完成整个查询任务,所用时间为0.00170207023621
+2015-04-27 23:13:07 查询 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430143987 AND send_time <=1430151187
+2015-04-27 23:13:07 获取全部记录 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430143987 AND send_time <=1430151187
+2015-04-27 23:13:07 释放结果集
+2015-04-27 23:13:07 完成整个查询任务,所用时间为0.00248098373413
+2015-04-27 23:13:43 查询 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144023 AND send_time <=1430151223
+2015-04-27 23:13:43 获取全部记录 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144023 AND send_time <=1430151223
+2015-04-27 23:13:43 释放结果集
+2015-04-27 23:13:43 完成整个查询任务,所用时间为0.00348782539368
+2015-04-27 23:17:12 插入 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430147832','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','137','1430143200')
+2015-04-27 23:17:12 查询 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430147832','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','137','1430143200')
+2015-04-27 23:17:12 释放结果集
+2015-04-27 23:17:12 完成整个查询任务,所用时间为0.0014820098877
+2015-04-27 23:22:45 查询 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144565 AND send_time <=1430151765
+2015-04-27 23:22:45 获取全部记录 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144565 AND send_time <=1430151765
+2015-04-27 23:22:45 释放结果集
+2015-04-27 23:22:45 完成整个查询任务,所用时间为0.00134992599487
+2015-04-27 23:23:00 查询 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144580 AND send_time <=1430151780
+2015-04-27 23:23:00 获取全部记录 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144580 AND send_time <=1430151780
+2015-04-27 23:23:00 释放结果集
+2015-04-27 23:23:00 完成整个查询任务,所用时间为0.00204491615295
+2015-04-27 23:24:23 查询 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144663 AND send_time <=1430151863
+2015-04-27 23:24:23 获取全部记录 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144663 AND send_time <=1430151863
+2015-04-27 23:24:23 释放结果集
+2015-04-27 23:24:23 完成整个查询任务,所用时间为0.00163984298706
+2015-04-27 23:25:06 插入 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430148306','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','137','1430146800')
+2015-04-27 23:25:06 查询 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1430148306','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','137','1430146800')
+2015-04-27 23:25:06 释放结果集
+2015-04-27 23:25:06 完成整个查询任务,所用时间为0.00168395042419
+2015-04-27 23:25:34 查询 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144734 AND send_time <=1430151934
+2015-04-27 23:25:34 获取全部记录 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144734 AND send_time <=1430151934
+2015-04-27 23:25:34 释放结果集
+2015-04-27 23:25:34 完成整个查询任务,所用时间为0.00217318534851
+2015-04-27 23:25:35 查询 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144735 AND send_time <=1430151935
+2015-04-27 23:25:35 获取全部记录 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144735 AND send_time <=1430151935
+2015-04-27 23:25:35 释放结果集
+2015-04-27 23:25:35 完成整个查询任务,所用时间为0.00219511985779
+2015-04-27 23:26:23 查询 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144783 AND send_time <=1430151983
+2015-04-27 23:26:23 获取全部记录 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144783 AND send_time <=1430151983
+2015-04-27 23:26:23 释放结果集
+2015-04-27 23:26:23 完成整个查询任务,所用时间为0.00178003311157
+2015-04-27 23:26:33 查询 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144793 AND send_time <=1430151993
+2015-04-27 23:26:33 获取全部记录 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144793 AND send_time <=1430151993
+2015-04-27 23:26:33 释放结果集
+2015-04-27 23:26:33 完成整个查询任务,所用时间为0.00788903236389
+2015-04-27 23:28:56 查询 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144936 AND send_time <=1430152136
+2015-04-27 23:28:56 获取全部记录 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1430144936 AND send_time <=1430152136
+2015-04-27 23:28:57 更新 update batchsend set has_send = '1',send_secc_time = '1430148536' where 1=1 and id=1
+2015-04-27 23:28:57 查询 update batchsend set has_send = '1',send_secc_time = '1430148536' where 1=1 and id=1
+2015-04-27 23:28:57 释放结果集
+2015-04-27 23:28:57 完成整个查询任务,所用时间为0.447505950928
+2015-05-16 16:31:34 查询 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1431761494 AND send_time <=1431768694
+2015-05-16 16:31:34 获取全部记录 SELECT * FROM batchsend WHERE has_send =0 AND send_time >=1431761494 AND send_time <=1431768694
+2015-05-16 16:31:34 释放结果集
+2015-05-16 16:31:34 完成整个查询任务,所用时间为0.0766868591309
+2015-05-28 15:32:58 插入 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1432798378','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','','')
+2015-05-28 15:32:58 查询 insert into batchsend(created_at,type,media_id,group_id,send_time) values('1432798378','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','','')
+2015-05-28 15:32:58 释放结果集
+2015-05-28 15:32:58 完成整个查询任务,所用时间为0.0415680408478
+2015-05-28 16:44:35 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age) values('1432802675','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','7','1','0')
+2015-05-28 16:44:35 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age) values('1432802675','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','7','1','0')
+2015-05-28 16:44:35 释放结果集
+2015-05-28 16:44:35 完成整个查询任务,所用时间为0.00140190124512
+2015-05-28 17:23:21 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age) values('1432805001','news','gqUNsalFUwb7Jlp-DW0Q_xDc2T5-Dc-coSrdNBqwa_M','13','1','6')
+2015-05-28 17:23:21 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age) values('1432805001','news','gqUNsalFUwb7Jlp-DW0Q_xDc2T5-Dc-coSrdNBqwa_M','13','1','6')
+2015-05-28 17:23:21 释放结果集
+2015-05-28 17:23:21 完成整个查询任务,所用时间为0.00185799598694
+2015-06-01 09:37:54 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age) values('1433122674','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','16','1','11')
+2015-06-01 09:37:54 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age) values('1433122674','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','16','1','11')
+2015-06-01 09:37:54 释放结果集
+2015-06-01 09:37:54 完成整个查询任务,所用时间为0.0465471744537
+2015-06-01 10:43:28 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433126608','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','1','0','0','1')
+2015-06-01 10:43:28 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433126608','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','1','0','0','1')
+2015-06-01 10:43:28 查询 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-01 10:43:28 获取全部记录 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-01 10:43:28 释放结果集
+2015-06-01 10:43:28 完成整个查询任务,所用时间为0.00514698028564
+2015-06-01 10:44:15 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433126655','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','1','0','0','1')
+2015-06-01 10:44:15 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433126655','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','1','0','0','1')
+2015-06-01 10:44:15 最后插入的id为9
+2015-06-01 10:44:15 释放结果集
+2015-06-01 10:44:15 完成整个查询任务,所用时间为0.00466990470886
+2015-06-01 10:45:42 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433126742','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','1','0','0','1')
+2015-06-01 10:45:42 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433126742','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','1','0','0','1')
+2015-06-01 10:45:42 最后插入的id为10
+2015-06-01 10:45:42 释放结果集
+2015-06-01 10:45:42 完成整个查询任务,所用时间为0.00245404243469
+2015-06-01 10:46:02 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433126762','news','gqUNsalFUwb7Jlp-DW0Q_xDc2T5-Dc-coSrdNBqwa_M','5','3','5','1')
+2015-06-01 10:46:02 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433126762','news','gqUNsalFUwb7Jlp-DW0Q_xDc2T5-Dc-coSrdNBqwa_M','5','3','5','1')
+2015-06-01 10:46:02 最后插入的id为11
+2015-06-01 10:46:02 释放结果集
+2015-06-01 10:46:02 完成整个查询任务,所用时间为0.0124080181122
+2015-06-01 15:27:38 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433143658','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','17','0','1','1')
+2015-06-01 15:27:38 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433143658','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','17','0','1','1')
+2015-06-01 15:27:38 最后插入的id为12
+2015-06-01 15:27:38 释放结果集
+2015-06-01 15:27:38 完成整个查询任务,所用时间为0.003986120224
+2015-06-01 16:32:00 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147520','1433147520')
+2015-06-01 16:32:00 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147520','1433147520')
+2015-06-01 16:32:00 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSeccTime,iGroupID,iGroupName) values('9','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147520','1433147520')
+2015-06-01 16:32:00 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSeccTime,iGroupID,iGroupName) values('9','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147520','1433147520')
+2015-06-01 16:32:00 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSeccTime,iGroupID,iGroupName) values('10','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147520','1433147520')
+2015-06-01 16:32:00 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSeccTime,iGroupID,iGroupName) values('10','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147520','1433147520')
+2015-06-01 16:32:00 释放结果集
+2015-06-01 16:32:00 完成整个查询任务,所用时间为0.00315093994141
+2015-06-01 16:37:37 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147857','1433147857','1433147857')
+2015-06-01 16:37:37 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147857','1433147857','1433147857')
+2015-06-01 16:37:37 Query Error: insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147857','1433147857','1433147857')
+Duplicate entry '8' for key 'iSendID'
+2015-06-01 16:37:37 释放结果集
+2015-06-01 16:37:37 完成整个查询任务,所用时间为0.00191307067871
+2015-06-01 16:39:49 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147989','1433147989','1433147989')
+2015-06-01 16:39:49 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147989','1433147989','1433147989')
+2015-06-01 16:39:49 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('9','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147989','1433147989','1433147989')
+2015-06-01 16:39:49 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('9','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147989','1433147989','1433147989')
+2015-06-01 16:39:49 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('10','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147989','1433147989','1433147989')
+2015-06-01 16:39:49 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('10','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','16:00:00','1433147989','1433147989','1433147989')
+2015-06-01 16:39:49 释放结果集
+2015-06-01 16:39:49 完成整个查询任务,所用时间为0.00231218338013
+2015-06-01 16:51:02 释放结果集
+2015-06-01 16:51:02 完成整个查询任务,所用时间为0.000986099243164
+2015-06-01 16:59:03 释放结果集
+2015-06-01 16:59:03 完成整个查询任务,所用时间为0.294761896133
+2015-06-01 17:09:58 释放结果集
+2015-06-01 17:09:58 完成整个查询任务,所用时间为0.00160384178162
+2015-06-01 17:10:08 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','17:00:00','1433149807','130','201506')
+2015-06-01 17:10:08 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','17:00:00','1433149807','130','201506')
+2015-06-01 17:10:08 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('9','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','17:00:00','1433149807','130','201506')
+2015-06-01 17:10:08 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('9','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','17:00:00','1433149807','130','201506')
+2015-06-01 17:10:08 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('10','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','17:00:00','1433149807','130','201506')
+2015-06-01 17:10:08 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('10','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','0','1','17:00:00','1433149807','130','201506')
+2015-06-01 17:10:08 释放结果集
+2015-06-01 17:10:08 完成整个查询任务,所用时间为0.00455904006958
+2015-06-01 17:32:00 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433151120','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','1','0','7','1')
+2015-06-01 17:32:00 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433151120','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','1','0','7','1')
+2015-06-01 17:32:00 最后插入的id为13
+2015-06-01 17:32:00 释放结果集
+2015-06-01 17:32:00 完成整个查询任务,所用时间为0.00322389602661
+2015-06-01 17:39:17 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433151557','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','1','0','4','1')
+2015-06-01 17:39:17 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433151557','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','1','0','4','1')
+2015-06-01 17:39:17 查询 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-01 17:39:17 获取全部记录 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-01 17:39:17 最后插入的id为14
+2015-06-01 17:39:17 释放结果集
+2015-06-01 17:39:17 完成整个查询任务,所用时间为0.0219550132751
+2015-06-01 17:43:07 查询 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-01 17:43:07 获取全部记录 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-01 17:43:07 释放结果集
+2015-06-01 17:43:07 完成整个查询任务,所用时间为0.00278091430664
+2015-06-01 17:43:24 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433151804','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','1','0','4','1')
+2015-06-01 17:43:24 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433151804','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','1','0','4','1')
+2015-06-01 17:43:24 查询 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-01 17:43:24 获取全部记录 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-01 17:43:24 最后插入的id为1
+2015-06-01 17:43:24 释放结果集
+2015-06-01 17:43:24 完成整个查询任务,所用时间为0.00546598434448
+2015-06-01 20:03:55 查询 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-01 20:03:55 获取全部记录 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-01 20:03:55 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433160235','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','1','0','5','1')
+2015-06-01 20:03:55 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433160235','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','1','0','5','1')
+2015-06-01 20:03:55 最后插入的id为1
+2015-06-01 20:03:55 释放结果集
+2015-06-01 20:03:55 完成整个查询任务,所用时间为0.002601146698
+2015-06-01 20:07:28 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433160448','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','16','0','11','1')
+2015-06-01 20:07:28 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433160448','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','16','0','11','1')
+2015-06-01 20:07:28 最后插入的id为2
+2015-06-01 20:07:28 释放结果集
+2015-06-01 20:07:28 完成整个查询任务,所用时间为0.00148701667786
+2015-06-01 20:29:01 释放结果集
+2015-06-01 20:29:01 完成整个查询任务,所用时间为0.0109438896179
+2015-06-01 20:29:36 释放结果集
+2015-06-01 20:29:36 完成整个查询任务,所用时间为0.00129890441895
+2015-06-01 20:36:53 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('1','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','1','20:00:00','1433162213','125','201501')
+2015-06-01 20:36:53 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('1','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','1','20:00:00','1433162213','125','201501')
+2015-06-01 20:36:53 释放结果集
+2015-06-01 20:36:53 完成整个查询任务,所用时间为0.3570728302
+2015-06-01 20:40:24 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433162424','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','1','0','0','1')
+2015-06-01 20:40:24 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433162424','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','1','0','0','1')
+2015-06-01 20:40:24 最后插入的id为3
+2015-06-01 20:40:24 释放结果集
+2015-06-01 20:40:24 完成整个查询任务,所用时间为0.0019838809967
+2015-06-01 20:43:09 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('1','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','1','20:00:00','1433162588','125','201501')
+2015-06-01 20:43:09 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('1','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','1','20:00:00','1433162588','125','201501')
+2015-06-01 20:43:09 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('3','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','0','1','20:00:00','1433162588','130','201506')
+2015-06-01 20:43:09 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('3','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','0','1','20:00:00','1433162588','130','201506')
+2015-06-01 20:43:09 释放结果集
+2015-06-01 20:43:09 完成整个查询任务,所用时间为0.53290104866
+2015-06-01 20:50:56 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('1','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','1','20:00:00','1433163056','125','201501')
+2015-06-01 20:50:56 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('1','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','1','20:00:00','1433163056','125','201501')
+2015-06-01 20:50:56 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('1','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','1','20:00:00','1433163056','125','201501')
+2015-06-01 20:50:56 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('1','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','1','20:00:00','1433163056','125','201501')
+2015-06-01 20:50:57 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('3','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','0','1','20:00:00','1433163056','130','201506')
+2015-06-01 20:50:57 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('3','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','0','1','20:00:00','1433163056','130','201506')
+2015-06-01 20:50:57 释放结果集
+2015-06-01 20:50:57 完成整个查询任务,所用时间为0.606027841568
+2015-06-01 20:50:57 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('3','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','0','1','20:00:00','1433163056','130','201506')
+2015-06-01 20:50:57 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('3','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','0','1','20:00:00','1433163056','130','201506')
+2015-06-01 20:50:57 释放结果集
+2015-06-01 20:50:57 完成整个查询任务,所用时间为0.561233997345
+2015-06-01 20:50:57 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('1','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','1','20:00:00','1433163057','125','201501')
+2015-06-01 20:50:57 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('1','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','1','20:00:00','1433163057','125','201501')
+2015-06-01 20:50:58 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('3','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','0','1','20:00:00','1433163057','130','201506')
+2015-06-01 20:50:58 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('3','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','0','1','20:00:00','1433163057','130','201506')
+2015-06-01 20:50:58 释放结果集
+2015-06-01 20:50:58 完成整个查询任务,所用时间为0.504418849945
+2015-06-01 20:53:00 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('1','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','1','20:00:00','1433163179','125','201501')
+2015-06-01 20:53:00 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('1','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','1','20:00:00','1433163179','125','201501')
+2015-06-01 20:53:00 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('3','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','0','1','20:00:00','1433163179','130','201506')
+2015-06-01 20:53:00 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('3','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','0','1','20:00:00','1433163179','130','201506')
+2015-06-01 20:53:00 释放结果集
+2015-06-01 20:53:00 完成整个查询任务,所用时间为0.621462106705
+2015-06-01 21:04:29 释放结果集
+2015-06-01 21:04:29 完成整个查询任务,所用时间为0.00387096405029
+2015-06-02 00:03:38 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433174618','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','2','0','1','1')
+2015-06-02 00:03:38 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433174618','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','2','0','1','1')
+2015-06-02 00:03:38 最后插入的id为4
+2015-06-02 00:03:38 释放结果集
+2015-06-02 00:03:38 完成整个查询任务,所用时间为0.00189900398254
+2015-06-02 00:14:36 释放结果集
+2015-06-02 00:14:36 完成整个查询任务,所用时间为0.00119590759277
+2015-06-02 00:16:48 释放结果集
+2015-06-02 00:16:48 完成整个查询任务,所用时间为0.00136089324951
+2015-06-02 00:17:47 释放结果集
+2015-06-02 00:17:47 完成整个查询任务,所用时间为0.00152611732483
+2015-06-02 00:18:51 释放结果集
+2015-06-02 00:18:51 完成整个查询任务,所用时间为0.00120711326599
+2015-06-02 00:19:06 释放结果集
+2015-06-02 00:19:06 完成整个查询任务,所用时间为0.00124716758728
+2015-06-02 00:21:21 释放结果集
+2015-06-02 00:21:21 完成整个查询任务,所用时间为0.000851154327393
+2015-06-02 00:21:39 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('4','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','1','2','00:00:00','1433175698','129','201505')
+2015-06-02 00:21:39 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('4','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','1','2','00:00:00','1433175698','129','201505')
+2015-06-02 00:21:39 释放结果集
+2015-06-02 00:21:39 完成整个查询任务,所用时间为0.317944049835
+2015-06-03 21:52:33 释放结果集
+2015-06-03 21:52:33 完成整个查询任务,所用时间为0.0429310798645
+2015-06-04 00:12:31 更新 update batchsend set status = '0' where 1=1 and id = 0
+2015-06-04 00:12:31 查询 update batchsend set status = '0' where 1=1 and id = 0
+2015-06-04 00:12:31 释放结果集
+2015-06-04 00:12:31 完成整个查询任务,所用时间为0.00186514854431
+2015-06-04 00:13:23 更新 update batchsend set status = '0' where 1=1 and id = 0
+2015-06-04 00:13:23 查询 update batchsend set status = '0' where 1=1 and id = 0
+2015-06-04 00:13:23 释放结果集
+2015-06-04 00:13:23 完成整个查询任务,所用时间为0.00601506233215
+2015-06-04 00:13:33 更新 update batchsend set status = '0' where 1=1 and id = 0
+2015-06-04 00:13:33 查询 update batchsend set status = '0' where 1=1 and id = 0
+2015-06-04 00:13:33 释放结果集
+2015-06-04 00:13:33 完成整个查询任务,所用时间为0.00262784957886
+2015-06-04 00:14:02 更新 update batchsend set status = '0' where 1=1 and id = 0
+2015-06-04 00:14:02 查询 update batchsend set status = '0' where 1=1 and id = 0
+2015-06-04 00:14:02 释放结果集
+2015-06-04 00:14:02 完成整个查询任务,所用时间为0.00240397453308
+2015-06-04 00:15:02 更新 update batchsend set status = '0' where 1=1 and id = 0
+2015-06-04 00:15:02 查询 update batchsend set status = '0' where 1=1 and id = 0
+2015-06-04 00:15:02 释放结果集
+2015-06-04 00:15:02 完成整个查询任务,所用时间为0.00111198425293
+2015-06-04 00:15:39 查询 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-04 00:15:39 获取全部记录 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-04 00:15:39 释放结果集
+2015-06-04 00:15:39 完成整个查询任务,所用时间为0.359245061874
+2015-06-04 00:15:49 更新 update batchsend set status = '0' where 1=1 and id = 0
+2015-06-04 00:15:49 查询 update batchsend set status = '0' where 1=1 and id = 0
+2015-06-04 00:15:49 释放结果集
+2015-06-04 00:15:49 完成整个查询任务,所用时间为0.0104429721832
+2015-06-04 00:15:54 查询 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-04 00:15:54 获取全部记录 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-04 00:15:55 释放结果集
+2015-06-04 00:15:55 完成整个查询任务,所用时间为0.34890794754
+2015-06-04 00:16:50 释放结果集
+2015-06-04 00:16:50 完成整个查询任务,所用时间为0.000997066497803
+2015-06-04 00:18:35 更新 update batchsend set status = '0' where 1=1 and id = 1
+2015-06-04 00:18:35 查询 update batchsend set status = '0' where 1=1 and id = 1
+2015-06-04 00:18:35 释放结果集
+2015-06-04 00:18:35 完成整个查询任务,所用时间为0.0054669380188
+2015-06-04 00:18:37 查询 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-04 00:18:37 获取全部记录 SELECT * FROM batchsend WHERE STATUS = 1
+2015-06-04 00:18:37 释放结果集
+2015-06-04 00:18:37 完成整个查询任务,所用时间为0.347161054611
+2015-06-04 00:30:54 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433349054','news','r6z0rLdTfvxrP57THIXbMugHg-eHU4U2DRjmqzl5MN4','15','1','8','1')
+2015-06-04 00:30:54 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433349054','news','r6z0rLdTfvxrP57THIXbMugHg-eHU4U2DRjmqzl5MN4','15','1','8','1')
+2015-06-04 00:30:54 最后插入的id为5
+2015-06-04 00:30:54 释放结果集
+2015-06-04 00:30:54 完成整个查询任务,所用时间为0.00193905830383
+2015-06-04 00:40:13 查询 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:40:13 获取一条记录 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:40:13 释放结果集
+2015-06-04 00:40:13 完成整个查询任务,所用时间为0.00163102149963
+2015-06-04 00:43:50 查询 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:43:50 获取一条记录 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:43:50 释放结果集
+2015-06-04 00:43:50 完成整个查询任务,所用时间为0.00327301025391
+2015-06-04 00:50:13 查询 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:50:13 获取一条记录 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:50:13 释放结果集
+2015-06-04 00:50:13 完成整个查询任务,所用时间为0.00378608703613
+2015-06-04 00:53:21 查询 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:53:21 获取一条记录 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:53:21 释放结果集
+2015-06-04 00:53:21 完成整个查询任务,所用时间为0.0030620098114
+2015-06-04 00:55:30 查询 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:55:30 获取一条记录 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:55:30 释放结果集
+2015-06-04 00:55:30 完成整个查询任务,所用时间为0.00466513633728
+2015-06-04 00:57:38 查询 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:57:38 获取一条记录 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:57:38 释放结果集
+2015-06-04 00:57:38 完成整个查询任务,所用时间为0.00411295890808
+2015-06-04 00:58:45 查询 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:58:45 获取一条记录 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:58:45 释放结果集
+2015-06-04 00:58:45 完成整个查询任务,所用时间为0.00335693359375
+2015-06-04 00:59:49 查询 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:59:49 获取一条记录 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 00:59:49 释放结果集
+2015-06-04 00:59:49 完成整个查询任务,所用时间为0.00405502319336
+2015-06-04 01:02:41 查询 SELECT * FROM batchsend WHERE id = 3
+2015-06-04 01:02:41 获取一条记录 SELECT * FROM batchsend WHERE id = 3
+2015-06-04 01:02:41 释放结果集
+2015-06-04 01:02:41 完成整个查询任务,所用时间为0.0046021938324
+2015-06-04 01:03:50 查询 SELECT * FROM batchsend WHERE id = 3
+2015-06-04 01:03:50 获取一条记录 SELECT * FROM batchsend WHERE id = 3
+2015-06-04 01:03:50 释放结果集
+2015-06-04 01:03:50 完成整个查询任务,所用时间为0.00341796875
+2015-06-04 01:04:18 查询 SELECT * FROM batchsend WHERE id = 4
+2015-06-04 01:04:18 获取一条记录 SELECT * FROM batchsend WHERE id = 4
+2015-06-04 01:04:18 释放结果集
+2015-06-04 01:04:18 完成整个查询任务,所用时间为0.00345087051392
+2015-06-04 01:04:32 查询 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:04:32 获取一条记录 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:04:32 释放结果集
+2015-06-04 01:04:32 完成整个查询任务,所用时间为0.00398516654968
+2015-06-04 01:07:18 查询 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:07:18 获取一条记录 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:07:18 释放结果集
+2015-06-04 01:07:18 完成整个查询任务,所用时间为0.00304198265076
+2015-06-04 01:08:25 查询 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:08:25 获取一条记录 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:08:25 释放结果集
+2015-06-04 01:08:25 完成整个查询任务,所用时间为0.00321698188782
+2015-06-04 01:09:05 查询 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:09:05 获取一条记录 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:09:05 释放结果集
+2015-06-04 01:09:05 完成整个查询任务,所用时间为0.00757002830505
+2015-06-04 01:09:32 查询 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:09:32 获取一条记录 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:09:32 释放结果集
+2015-06-04 01:09:32 完成整个查询任务,所用时间为0.00298500061035
+2015-06-04 01:09:53 查询 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:09:53 获取一条记录 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:09:53 释放结果集
+2015-06-04 01:09:53 完成整个查询任务,所用时间为0.00599193572998
+2015-06-04 01:13:20 查询 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:13:20 获取一条记录 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:13:20 释放结果集
+2015-06-04 01:13:20 完成整个查询任务,所用时间为0.00319004058838
+2015-06-04 01:14:45 查询 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:14:45 获取一条记录 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:14:45 释放结果集
+2015-06-04 01:14:45 完成整个查询任务,所用时间为0.00364995002747
+2015-06-04 01:14:52 查询 SELECT * FROM batchsend WHERE id = 3
+2015-06-04 01:14:52 获取一条记录 SELECT * FROM batchsend WHERE id = 3
+2015-06-04 01:14:52 释放结果集
+2015-06-04 01:14:52 完成整个查询任务,所用时间为0.00303816795349
+2015-06-04 01:14:58 查询 SELECT * FROM batchsend WHERE id = 4
+2015-06-04 01:14:58 获取一条记录 SELECT * FROM batchsend WHERE id = 4
+2015-06-04 01:14:58 释放结果集
+2015-06-04 01:14:58 完成整个查询任务,所用时间为0.00939178466797
+2015-06-04 01:15:03 查询 SELECT * FROM batchsend WHERE id = 5
+2015-06-04 01:15:03 获取一条记录 SELECT * FROM batchsend WHERE id = 5
+2015-06-04 01:15:03 释放结果集
+2015-06-04 01:15:03 完成整个查询任务,所用时间为0.00308799743652
+2015-06-04 01:18:40 查询 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:18:40 获取一条记录 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:18:40 释放结果集
+2015-06-04 01:18:40 完成整个查询任务,所用时间为0.00282216072083
+2015-06-04 01:20:02 查询 SELECT * FROM batchsend WHERE id = 5
+2015-06-04 01:20:02 获取一条记录 SELECT * FROM batchsend WHERE id = 5
+2015-06-04 01:20:02 释放结果集
+2015-06-04 01:20:02 完成整个查询任务,所用时间为0.00394988059998
+2015-06-04 01:28:11 更新 update batchsend set created_at = '1433352491',type = 'news',media_id = 'r6z0rLdTfvxrP57THIXbMugHg-eHU4U2DRjmqzl5MN4',send_date = '15',send_time = '4',send_age = '8',status = '1' where 1=1 and id = 5
+2015-06-04 01:28:11 查询 update batchsend set created_at = '1433352491',type = 'news',media_id = 'r6z0rLdTfvxrP57THIXbMugHg-eHU4U2DRjmqzl5MN4',send_date = '15',send_time = '4',send_age = '8',status = '1' where 1=1 and id = 5
+2015-06-04 01:28:11 释放结果集
+2015-06-04 01:28:11 完成整个查询任务,所用时间为0.00187206268311
+2015-06-04 01:28:13 查询 SELECT * FROM batchsend WHERE status = 1
+2015-06-04 01:28:13 获取全部记录 SELECT * FROM batchsend WHERE status = 1
+2015-06-04 01:28:13 释放结果集
+2015-06-04 01:28:13 完成整个查询任务,所用时间为0.249246835709
+2015-06-04 01:28:19 查询 SELECT * FROM batchsend WHERE id = 5
+2015-06-04 01:28:19 获取一条记录 SELECT * FROM batchsend WHERE id = 5
+2015-06-04 01:28:19 释放结果集
+2015-06-04 01:28:19 完成整个查询任务,所用时间为0.00299596786499
+2015-06-04 01:28:24 更新 update batchsend set created_at = '1433352504',type = 'news',media_id = 'r6z0rLdTfvxrP57THIXbMugHg-eHU4U2DRjmqzl5MN4',send_date = '16',send_time = '4',send_age = '8',status = '1' where 1=1 and id = 5
+2015-06-04 01:28:24 查询 update batchsend set created_at = '1433352504',type = 'news',media_id = 'r6z0rLdTfvxrP57THIXbMugHg-eHU4U2DRjmqzl5MN4',send_date = '16',send_time = '4',send_age = '8',status = '1' where 1=1 and id = 5
+2015-06-04 01:28:24 释放结果集
+2015-06-04 01:28:24 完成整个查询任务,所用时间为0.00128388404846
+2015-06-04 01:28:25 查询 SELECT * FROM batchsend WHERE status = 1
+2015-06-04 01:28:25 获取全部记录 SELECT * FROM batchsend WHERE status = 1
+2015-06-04 01:28:25 释放结果集
+2015-06-04 01:28:25 完成整个查询任务,所用时间为0.200830221176
+2015-06-04 01:28:35 查询 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:28:35 获取一条记录 SELECT * FROM batchsend WHERE id = 1
+2015-06-04 01:28:35 释放结果集
+2015-06-04 01:28:35 完成整个查询任务,所用时间为0.00321793556213
+2015-06-04 01:28:40 查询 SELECT * FROM batchsend WHERE id = 5
+2015-06-04 01:28:40 获取一条记录 SELECT * FROM batchsend WHERE id = 5
+2015-06-04 01:28:40 释放结果集
+2015-06-04 01:28:40 完成整个查询任务,所用时间为0.00376105308533
+2015-06-04 01:28:50 查询 SELECT * FROM batchsend WHERE id = 4
+2015-06-04 01:28:50 获取一条记录 SELECT * FROM batchsend WHERE id = 4
+2015-06-04 01:28:50 释放结果集
+2015-06-04 01:28:50 完成整个查询任务,所用时间为0.00285387039185
+2015-06-04 01:29:00 查询 SELECT * FROM batchsend WHERE id = 3
+2015-06-04 01:29:00 获取一条记录 SELECT * FROM batchsend WHERE id = 3
+2015-06-04 01:29:00 释放结果集
+2015-06-04 01:29:00 完成整个查询任务,所用时间为0.00512099266052
+2015-06-04 01:29:05 更新 update batchsend set created_at = '1433352545',type = 'news',media_id = 'KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo',send_date = '1',send_time = '3',send_age = '0',status = '1' where 1=1 and id = 3
+2015-06-04 01:29:05 查询 update batchsend set created_at = '1433352545',type = 'news',media_id = 'KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo',send_date = '1',send_time = '3',send_age = '0',status = '1' where 1=1 and id = 3
+2015-06-04 01:29:05 释放结果集
+2015-06-04 01:29:05 完成整个查询任务,所用时间为0.00171899795532
+2015-06-04 01:29:06 查询 SELECT * FROM batchsend WHERE status = 1
+2015-06-04 01:29:06 获取全部记录 SELECT * FROM batchsend WHERE status = 1
+2015-06-04 01:29:06 释放结果集
+2015-06-04 01:29:06 完成整个查询任务,所用时间为0.201760053635
+2015-06-04 01:29:18 查询 SELECT * FROM batchsend WHERE id = 3
+2015-06-04 01:29:18 获取一条记录 SELECT * FROM batchsend WHERE id = 3
+2015-06-04 01:29:18 释放结果集
+2015-06-04 01:29:18 完成整个查询任务,所用时间为0.0045919418335
+2015-06-04 01:29:27 更新 update batchsend set created_at = '1433352567',type = 'news',media_id = 'KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo',send_date = '18',send_time = '3',send_age = '6',status = '1' where 1=1 and id = 3
+2015-06-04 01:29:27 查询 update batchsend set created_at = '1433352567',type = 'news',media_id = 'KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo',send_date = '18',send_time = '3',send_age = '6',status = '1' where 1=1 and id = 3
+2015-06-04 01:29:27 释放结果集
+2015-06-04 01:29:27 完成整个查询任务,所用时间为0.00138211250305
+2015-06-04 01:29:29 查询 SELECT * FROM batchsend WHERE status = 1
+2015-06-04 01:29:29 获取全部记录 SELECT * FROM batchsend WHERE status = 1
+2015-06-04 01:29:29 释放结果集
+2015-06-04 01:29:29 完成整个查询任务,所用时间为0.241208076477
+2015-06-04 01:30:52 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433352652','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','17','1','4','1')
+2015-06-04 01:30:52 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433352652','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','17','1','4','1')
+2015-06-04 01:30:52 最后插入的id为6
+2015-06-04 01:30:52 释放结果集
+2015-06-04 01:30:52 完成整个查询任务,所用时间为0.00251793861389
+2015-06-04 21:57:42 查询 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 21:57:42 获取一条记录 SELECT * FROM batchsend WHERE id = 2
+2015-06-04 21:57:42 释放结果集
+2015-06-04 21:57:42 完成整个查询任务,所用时间为0.0410940647125
+2015-06-04 21:57:49 更新 update batchsend set created_at = '1433426269',type = 'news',media_id = 'KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo',send_date = '16',send_time = '0',send_age = '11',status = '1' where 1=1 and id = 2
+2015-06-04 21:57:49 查询 update batchsend set created_at = '1433426269',type = 'news',media_id = 'KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo',send_date = '16',send_time = '0',send_age = '11',status = '1' where 1=1 and id = 2
+2015-06-04 21:57:49 释放结果集
+2015-06-04 21:57:49 完成整个查询任务,所用时间为0.00304102897644
+2015-06-04 21:57:51 查询 SELECT * FROM batchsend WHERE status = 1
+2015-06-04 21:57:51 获取全部记录 SELECT * FROM batchsend WHERE status = 1
+2015-06-04 21:57:51 释放结果集
+2015-06-04 21:57:51 完成整个查询任务,所用时间为0.41637301445
+2015-06-04 22:32:46 查询 SELECT * FROM batchsendlog WHERE 1
+2015-06-04 22:32:46 获取全部记录 SELECT * FROM batchsendlog WHERE 1
+2015-06-04 22:32:46 释放结果集
+2015-06-04 22:32:46 完成整个查询任务,所用时间为0.00248908996582
+2015-06-04 22:46:23 查询 SELECT * FROM batchsendlog WHERE 1
+2015-06-04 22:46:23 获取全部记录 SELECT * FROM batchsendlog WHERE 1
+2015-06-04 22:46:23 释放结果集
+2015-06-04 22:46:23 完成整个查询任务,所用时间为0.398837089539
+2015-06-04 22:48:31 查询 SELECT * FROM batchsendlog WHERE 1
+2015-06-04 22:48:31 获取全部记录 SELECT * FROM batchsendlog WHERE 1
+2015-06-04 22:48:31 释放结果集
+2015-06-04 22:48:31 完成整个查询任务,所用时间为0.370640039444
+2015-06-04 22:50:44 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 22:50:44 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 22:50:44 释放结果集
+2015-06-04 22:50:44 完成整个查询任务,所用时间为0.360095024109
+2015-06-04 23:36:37 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:36:37 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:36:37 释放结果集
+2015-06-04 23:36:37 完成整个查询任务,所用时间为0.350331068039
+2015-06-04 23:36:47 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:36:47 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:36:47 释放结果集
+2015-06-04 23:36:47 完成整个查询任务,所用时间为0.346279859543
+2015-06-04 23:38:03 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:38:03 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:38:03 释放结果集
+2015-06-04 23:38:03 完成整个查询任务,所用时间为0.257683038712
+2015-06-04 23:38:38 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:38:38 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:38:38 释放结果集
+2015-06-04 23:38:38 完成整个查询任务,所用时间为0.337892055511
+2015-06-04 23:42:12 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:42:12 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:42:13 释放结果集
+2015-06-04 23:42:13 完成整个查询任务,所用时间为0.370779037476
+2015-06-04 23:45:29 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:45:29 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:45:29 释放结果集
+2015-06-04 23:45:29 完成整个查询任务,所用时间为0.381010055542
+2015-06-04 23:50:17 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:50:17 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:50:17 释放结果集
+2015-06-04 23:50:17 完成整个查询任务,所用时间为0.246397018433
+2015-06-04 23:51:14 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:51:14 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:51:14 释放结果集
+2015-06-04 23:51:14 完成整个查询任务,所用时间为0.406891107559
+2015-06-04 23:53:29 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:53:29 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:53:29 释放结果集
+2015-06-04 23:53:29 完成整个查询任务,所用时间为0.348888158798
+2015-06-04 23:54:13 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:54:13 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-04 23:54:13 释放结果集
+2015-06-04 23:54:13 完成整个查询任务,所用时间为0.233202934265
+2015-06-04 23:54:21 查询 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=2015-06-17 00:00:00 AND iSeccTime <=2015-06-23 00:00:00 ORDER BY iSeccTime DESC
+2015-06-04 23:54:21 Query Error: SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=2015-06-17 00:00:00 AND iSeccTime <=2015-06-23 00:00:00 ORDER BY iSeccTime DESC
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '00:00:00 AND iSeccTime <=2015-06-23 00:00:00 ORDER BY iSeccTime DESC' at line 1
+2015-06-04 23:54:21 释放结果集
+2015-06-04 23:54:21 完成整个查询任务,所用时间为0.00159907341003
+2015-06-04 23:55:25 查询 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=1434470400 AND iSeccTime <=1434988800 ORDER BY iSeccTime DESC
+2015-06-04 23:55:25 获取全部记录 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=1434470400 AND iSeccTime <=1434988800 ORDER BY iSeccTime DESC
+2015-06-04 23:55:25 释放结果集
+2015-06-04 23:55:25 完成整个查询任务,所用时间为0.385794878006
+2015-06-04 23:57:20 查询 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=1433347200 AND iSeccTime <=1433865600 ORDER BY iSeccTime DESC
+2015-06-04 23:57:20 获取全部记录 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=1433347200 AND iSeccTime <=1433865600 ORDER BY iSeccTime DESC
+2015-06-04 23:57:20 释放结果集
+2015-06-04 23:57:20 完成整个查询任务,所用时间为0.242499113083
+2015-06-04 23:59:52 查询 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=1433347200 AND iSeccTime <=1433865600 ORDER BY iSeccTime DESC
+2015-06-04 23:59:52 获取全部记录 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=1433347200 AND iSeccTime <=1433865600 ORDER BY iSeccTime DESC
+2015-06-04 23:59:52 释放结果集
+2015-06-04 23:59:52 完成整个查询任务,所用时间为0.56796002388
+2015-06-04 23:59:58 查询 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=1433088000 AND iSeccTime <=1433865600 ORDER BY iSeccTime DESC
+2015-06-04 23:59:58 获取全部记录 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=1433088000 AND iSeccTime <=1433865600 ORDER BY iSeccTime DESC
+2015-06-04 23:59:59 释放结果集
+2015-06-04 23:59:59 完成整个查询任务,所用时间为0.355539083481
+2015-06-05 00:00:35 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-05 00:00:35 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-05 00:00:36 释放结果集
+2015-06-05 00:00:36 完成整个查询任务,所用时间为0.286086082458
+2015-06-05 00:02:02 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-05 00:02:02 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-05 00:02:02 释放结果集
+2015-06-05 00:02:02 完成整个查询任务,所用时间为0.409559965134
+2015-06-05 00:02:34 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-05 00:02:34 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-05 00:02:34 释放结果集
+2015-06-05 00:02:34 完成整个查询任务,所用时间为0.35293507576
+2015-06-05 00:08:18 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-05 00:08:18 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-05 00:08:19 释放结果集
+2015-06-05 00:08:19 完成整个查询任务,所用时间为0.294988870621
+2015-06-05 17:51:27 释放结果集
+2015-06-05 17:51:27 完成整个查询任务,所用时间为0.038978099823
+2015-06-05 17:55:10 释放结果集
+2015-06-05 17:55:10 完成整个查询任务,所用时间为0.0104820728302
+2015-06-07 00:07:23 查询 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=1433088000 AND iSeccTime <=1433865600 ORDER BY iSeccTime DESC
+2015-06-07 00:07:23 获取全部记录 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=1433088000 AND iSeccTime <=1433865600 ORDER BY iSeccTime DESC
+2015-06-07 00:07:24 释放结果集
+2015-06-07 00:07:24 完成整个查询任务,所用时间为1.05567097664
+2015-06-07 00:07:31 查询 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=1433088000 AND iSeccTime <=1433865600 ORDER BY iSeccTime DESC
+2015-06-07 00:07:31 获取全部记录 SELECT * FROM batchsendlog WHERE 1 AND iSeccTime >=1433088000 AND iSeccTime <=1433865600 ORDER BY iSeccTime DESC
+2015-06-07 00:07:31 释放结果集
+2015-06-07 00:07:31 完成整个查询任务,所用时间为0.357789993286
+2015-06-07 00:17:31 释放结果集
+2015-06-07 00:17:31 完成整个查询任务,所用时间为0.00300002098083
+2015-06-07 00:27:58 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433608078','news','gqUNsalFUwb7Jlp-DW0Q_xDc2T5-Dc-coSrdNBqwa_M','7','0','2','1')
+2015-06-07 00:27:58 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433608078','news','gqUNsalFUwb7Jlp-DW0Q_xDc2T5-Dc-coSrdNBqwa_M','7','0','2','1')
+2015-06-07 00:27:58 最后插入的id为7
+2015-06-07 00:27:58 释放结果集
+2015-06-07 00:27:58 完成整个查询任务,所用时间为0.0213871002197
+2015-06-07 00:57:36 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433609856','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','7','0','7','1')
+2015-06-07 00:57:36 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433609856','news','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','7','0','7','1')
+2015-06-07 00:57:36 最后插入的id为8
+2015-06-07 00:57:36 释放结果集
+2015-06-07 00:57:36 完成整个查询任务,所用时间为0.0038480758667
+2015-06-07 01:05:16 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('7','gqUNsalFUwb7Jlp-DW0Q_xDc2T5-Dc-coSrdNBqwa_M','news','2','7','00:59:00','1433610315','128','201504')
+2015-06-07 01:05:16 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('7','gqUNsalFUwb7Jlp-DW0Q_xDc2T5-Dc-coSrdNBqwa_M','news','2','7','00:59:00','1433610315','128','201504')
+2015-06-07 01:05:16 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','7','7','00:59:00','1433610315','123','201411')
+2015-06-07 01:05:16 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','7','7','00:59:00','1433610315','123','201411')
+2015-06-07 01:05:16 释放结果集
+2015-06-07 01:05:16 完成整个查询任务,所用时间为0.502319097519
+2015-06-07 02:01:51 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 02:01:51 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 02:01:52 释放结果集
+2015-06-07 02:01:52 完成整个查询任务,所用时间为0.383849859238
+2015-06-07 02:02:52 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433613772','news','r6z0rLdTfvxrP57THIXbMugHg-eHU4U2DRjmqzl5MN4','7','0','0','1')
+2015-06-07 02:02:52 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433613772','news','r6z0rLdTfvxrP57THIXbMugHg-eHU4U2DRjmqzl5MN4','7','0','0','1')
+2015-06-07 02:02:52 最后插入的id为9
+2015-06-07 02:02:52 释放结果集
+2015-06-07 02:02:52 完成整个查询任务,所用时间为0.00537800788879
+2015-06-07 02:16:26 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 02:16:26 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 02:16:26 释放结果集
+2015-06-07 02:16:26 完成整个查询任务,所用时间为0.349936008453
+2015-06-07 02:24:12 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 02:24:12 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 02:24:12 释放结果集
+2015-06-07 02:24:12 完成整个查询任务,所用时间为0.26984000206
+2015-06-07 02:54:33 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 02:54:33 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 02:54:33 释放结果集
+2015-06-07 02:54:33 完成整个查询任务,所用时间为0.315280914307
+2015-06-07 02:56:11 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 02:56:11 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 02:56:12 释放结果集
+2015-06-07 02:56:12 完成整个查询任务,所用时间为0.365612030029
+2015-06-07 02:56:41 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 02:56:41 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 02:56:42 释放结果集
+2015-06-07 02:56:42 完成整个查询任务,所用时间为0.349646806717
+2015-06-07 03:50:21 释放结果集
+2015-06-07 03:50:21 完成整个查询任务,所用时间为0.00189304351807
+2015-06-07 03:51:01 释放结果集
+2015-06-07 03:51:01 完成整个查询任务,所用时间为0.00220799446106
+2015-06-07 03:51:20 释放结果集
+2015-06-07 03:51:20 完成整个查询任务,所用时间为0.00941801071167
+2015-06-07 03:51:41 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 03:51:41 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 03:51:41 释放结果集
+2015-06-07 03:51:41 完成整个查询任务,所用时间为0.357303857803
+2015-06-07 03:52:35 插入 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433620355','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','7','0','5','1')
+2015-06-07 03:52:35 查询 insert into batchsend(created_at,type,media_id,send_date,send_time,send_age,status) values('1433620355','news','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','7','0','5','1')
+2015-06-07 03:52:35 最后插入的id为10
+2015-06-07 03:52:35 释放结果集
+2015-06-07 03:52:35 完成整个查询任务,所用时间为0.00288796424866
+2015-06-07 03:52:50 释放结果集
+2015-06-07 03:52:50 完成整个查询任务,所用时间为0.0032000541687
+2015-06-07 03:53:28 释放结果集
+2015-06-07 03:53:28 完成整个查询任务,所用时间为0.00168204307556
+2015-06-07 03:53:40 释放结果集
+2015-06-07 03:53:40 完成整个查询任务,所用时间为0.00118708610535
+2015-06-07 03:55:13 释放结果集
+2015-06-07 03:55:13 完成整个查询任务,所用时间为0.00167989730835
+2015-06-07 03:56:06 释放结果集
+2015-06-07 03:56:06 完成整个查询任务,所用时间为0.00241613388062
+2015-06-07 03:56:16 释放结果集
+2015-06-07 03:56:16 完成整个查询任务,所用时间为0.0103349685669
+2015-06-07 03:56:33 释放结果集
+2015-06-07 03:56:33 完成整个查询任务,所用时间为0.00310277938843
+2015-06-07 03:56:53 释放结果集
+2015-06-07 03:56:53 完成整个查询任务,所用时间为0.00180101394653
+2015-06-07 03:57:08 释放结果集
+2015-06-07 03:57:08 完成整个查询任务,所用时间为0.0023410320282
+2015-06-07 03:58:17 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('7','gqUNsalFUwb7Jlp-DW0Q_xDc2T5-Dc-coSrdNBqwa_M','news','2','7','03:58:00','1433620696','128','201504')
+2015-06-07 03:58:17 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('7','gqUNsalFUwb7Jlp-DW0Q_xDc2T5-Dc-coSrdNBqwa_M','news','2','7','03:58:00','1433620696','128','201504')
+2015-06-07 03:58:17 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','7','7','03:58:00','1433620696','123','201411')
+2015-06-07 03:58:17 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('8','KVpcojzPB2X1DuZ3KVXELzvLAqYRCytppF6Wg66bN_I','news','7','7','03:58:00','1433620696','123','201411')
+2015-06-07 03:58:17 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('9','r6z0rLdTfvxrP57THIXbMugHg-eHU4U2DRjmqzl5MN4','news','0','7','03:58:00','1433620696','130','201506')
+2015-06-07 03:58:17 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('9','r6z0rLdTfvxrP57THIXbMugHg-eHU4U2DRjmqzl5MN4','news','0','7','03:58:00','1433620696','130','201506')
+2015-06-07 03:58:17 插入 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('10','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','7','03:58:00','1433620696','125','201501')
+2015-06-07 03:58:17 查询 insert into batchsendlog(iSendID,iMediaID,iType,iSendAge,iSendDate,iSendTime,iSeccTime,iGroupID,iGroupName) values('10','KVpcojzPB2X1DuZ3KVXEL_MagE3HhwolBmpsgv7mIPo','news','5','7','03:58:00','1433620696','125','201501')
+2015-06-07 03:58:17 释放结果集
+2015-06-07 03:58:17 完成整个查询任务,所用时间为0.928642988205
+2015-06-07 04:05:27 查询 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 04:05:27 获取全部记录 SELECT * FROM batchsendlog WHERE 1 ORDER BY iSeccTime DESC
+2015-06-07 04:05:28 释放结果集
+2015-06-07 04:05:28 完成整个查询任务,所用时间为0.24365901947
+2015-06-09 10:12:14 释放结果集
+2015-06-09 10:12:14 完成整个查询任务,所用时间为0.0240092277527
