@@ -10,8 +10,8 @@ include_once(dirname(dirname(__FILE__)) . "/model/Batchsend.php");
 class batchsend_index extends baseWeixin
 {
 
-    //private static $batchTime = array('00:00:00', '12:00:00', '18:00:00', '22:00:00', '23:00:00');//群发时间点，定死的
     private static $batchTime = array('09:30:00', '12:30:00', '18:30:00', '21:30:00', '23:00:00');//群发时间点，定死的
+    //private static $batchTime = array('11:00:00', '12:30:00', '18:30:00', '21:30:00', '23:30:00');//群发时间点，定死的
     private static $ages = array();
     private static $date = array();
     protected static $aSendList = array();
@@ -182,13 +182,12 @@ class batchsend_index extends baseWeixin
             foreach ($aTmp as $key => $value) {
                 //如果之前没有上传过该文章缩略图
                 if (empty($value['wx_media_id'])) {
-                    /**这部分是在正式环境有的，这里不需要
                     $sFileName = dirname($GLOBALS['BASEPATH']).'/'.$value['file_url'];
                     if (!file_exists($sFileName)) {
                         showError('图文缩略图文件不存在，请先上传该文章缩略图',true);
                     }
-                     */
 
+                    /**这部分是在测试环境有的，这里不需要
                     $sFileUrl = ecArticle::qidishuUrl . $value['file_url'];
                     $aFileName = explode('/', $value['file_url']);
                     $sFileName = $GLOBALS['DOWNLOAD'] . $aFileName[2];
@@ -198,6 +197,7 @@ class batchsend_index extends baseWeixin
                             showError('图文缩略图上传失败');
                         }
                     }
+                     */
 
                     //上传到微信
                     $result = Media::uploadPermanentFile($sFileName, $sToken, 'image');

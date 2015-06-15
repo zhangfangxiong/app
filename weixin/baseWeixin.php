@@ -1,5 +1,6 @@
 <?php
 /**
+ * 这是正式环境微信基类，不能用测试环境基类直接覆盖
  * Created by PhpStorm.
  * User: zhangfangxiong
  * Date: 15/3/8
@@ -17,13 +18,13 @@ class baseWeixin extends base
     protected $tokenParamArr = array();
     protected $AccessToken = "";//这个应该存到memcache里面
 
-    const APPID = "wx9b2a25e390a27d33";
-    const APPSECRET = "84796fa0c79fd86b5087263cbbb27268";
-    const TOKEN = "bcgyez1427551875";
+    const APPID = "wx10af5b99e80b760d";
+    const APPSECRET = "f75479d51b17f8305a31abc11276fbeb";
+    const TOKEN = "qidishu";
     const ACCESSTOKENURL = "https://api.weixin.qq.com/cgi-bin/token";//获取TOKEN接口
     const GETWEIXINIPURL = "https://api.weixin.qq.com/cgi-bin/getcallbackip";//获取IP接口
     const RESTYPE = "text";//回复的类型
-    const ACCESSTOKENKEY = 'test';//用户区分测试环境和正式环境存在memcache的accesstoken
+    const ACCESSTOKENKEY = 'qidishu';//用户区分测试环境和正式环境存在memcache的accesstoken
 
     public function __construct()
     {
