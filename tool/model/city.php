@@ -11,12 +11,12 @@ class Model_city extends base
     {
         if (empty(self::$aCityList)) {
             $oMem = self::getMem();
-            $aData = $oMem->get("Tool_City_List");
+            $aData = $oMem->get(self::$memKey."_Tool_City_List");
             if (!$aData) {
                 $sSql = "SELECT * FROM city";
                 $oDB = self::getDB('tool');
                 $aData = $oDB->get_all($sSql,"code");
-                $oMem->set("Tool_City_List",$aData);
+                $oMem->set(self::$memKey."_Tool_City_List",$aData);
             }
             self::$aCityList = $aData;
         }
@@ -46,12 +46,12 @@ class Model_city extends base
     {
         if (empty(self::$aProvinceCitys)) {
             $oMem = self::getMem();
-            $aData = $oMem->get("Tool_City_List_".$sCode);
+            $aData = $oMem->get(self::$memKey."_Tool_City_List_".$sCode);
             if (!$aData) {
                 $sSql = "SELECT * FROM city WHERE provincecode=".$sCode;
                 $oDB = self::getDB('tool');
                 $aData = $oDB->get_all($sSql,"code");
-                $oMem->set("Tool_City_List_".$sCode,$aData);
+                $oMem->set(self::$memKey."_Tool_City_List_".$sCode,$aData);
             }
             self::$aProvinceCitys = $aData;
         }

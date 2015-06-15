@@ -102,7 +102,7 @@ class batchsend_index extends baseWeixin
         $result = $oDb->update('batchsend', array('status' => 0), 'id = ' . intval($_GET['id']));
         if ($result) {
             $oMem = $this->getMem();
-            $oMem->delete('aSendList');
+            $oMem->delete(self::$memKey.'_aSendList');
             showMsg("删除成功", true);
         }
         showMsg("删除失败", false);
@@ -250,7 +250,7 @@ class batchsend_index extends baseWeixin
             //是编辑
             $result = $oDB->update('batchsend', $aNews, 'id = ' . intval($_POST['id']));
             if ($result) {
-                $oMem->delete('aSendList');
+                $oMem->delete(self::$memKey.'_aSendList');
                 showOk('修改成功', '?action=batchList');
             }
         } else {
@@ -270,7 +270,7 @@ class batchsend_index extends baseWeixin
     {
         if (empty(self::$aSendList)) {
             $oMem = $this->getMem();
-            $aData = $oMem->get('aSendList');
+            $aData = $oMem->get(self::$memKey.'_aSendList');
             if (empty($aData)) {
                 $oDB = $this->getDB('weixin');
                 $aData = $oDB->get_all('SELECT * FROM batchsend WHERE status = 1');

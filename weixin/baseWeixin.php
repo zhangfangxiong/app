@@ -24,7 +24,6 @@ class baseWeixin extends base
     const ACCESSTOKENURL = "https://api.weixin.qq.com/cgi-bin/token";//获取TOKEN接口
     const GETWEIXINIPURL = "https://api.weixin.qq.com/cgi-bin/getcallbackip";//获取IP接口
     const RESTYPE = "text";//回复的类型
-    const ACCESSTOKENKEY = 'qidishu';//用户区分测试环境和正式环境存在memcache的accesstoken
 
     public function __construct()
     {
@@ -67,7 +66,7 @@ class baseWeixin extends base
     protected function getAccessToken()
     {
         if (!$this->AccessToken) {
-            $sTokenKey = self::ACCESSTOKENKEY."_weixin_AccessToken";
+            $sTokenKey = self::$memKey."_weixin_AccessToken";
             $oMem = $this->getMem();
             $sAccesstoken = $oMem->get($sTokenKey);
             if (!$sAccesstoken) {

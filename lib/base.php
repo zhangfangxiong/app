@@ -11,9 +11,11 @@ class base
     protected static $oDb = null;
     protected static $oMem = null;
     protected $tplVars = array();
+    protected static $memKey = '';
 
     public function __construct()
     {
+        $GLOBALS['memkey'];
         $this->enviSet();
         set_time_limit(0);
         if ($this->getCurrSapi()) {
@@ -25,6 +27,7 @@ class base
                 $action = ($argc[1] && $argc[1]) ? $argc[1] . 'Action' : 'indexAction';
             }
         }
+        self::$memKey = $GLOBALS['memkey'];
         $this->$action();
     }
 
